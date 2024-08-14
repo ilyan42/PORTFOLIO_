@@ -17,8 +17,8 @@ loader.load('image/ordi.glb', function (gltf) {
 	scene.add(model);
 
 	// Positionner le modèle et la caméra
-	model.position.set(0, 0, 0);
-	camera.position.set(3.7, 3, 5);
+	model.position.set(2, 3.4, 0);
+	camera.position.set(5, 5, 5);
 	model.scale.set(0.7, 0.7, 0.7);
 
 	function animate() {
