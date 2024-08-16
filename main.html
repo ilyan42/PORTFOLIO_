@@ -11,8 +11,9 @@
 </head>
 
 <body>
-    <header> 
-        <div class="container">
+    <header>
+		<div class="container">
+			<div id="header-container" style="width: 100%; height: 80px;"></div>
             <h1>Code By Ilyan</h1>
             <nav>
                 <ul>
@@ -22,6 +23,7 @@
                 </ul>
             </nav>
         </div>
+        <!-- Conteneur pour le modèle 3D -->
     </header>
     
     <main>
@@ -56,8 +58,16 @@
 
 		<div id="threejs-container" style="width: 100%; height: 700px;"></div>
 
-		<div class="aria">
-			<h6>Description du jeux</h6>
+		<div class="jeux">
+			<div id="videoJeux">
+				<h6><strong>Aria and the Lost Souls</strong></h6>
+				<p>Ce jeu de plateforme captivant. Dans ce platformer, vous incarnez Aria, 
+					une héroïne courageuse en quête des âmes perdues. Ces âmes, sous forme 
+					d'armes puissantes, sont dispersées à travers différents niveaux, chaque 
+					niveau abritant une arme unique. Votre mission est de toutes les rassembler 
+					pour affronter Vespera, le grand méchant qui menace le monde et introduit 
+					l'histoire du jeu. (click sur l'ecran afin de voir une video du jeux)</p>
+			</div>
 		</div>
         
         <div class="container">
@@ -89,6 +99,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
     <script src="three.js"></script>
+	<script src="header.js"></script>
 	<script src="script.js"></script>
 </body>
 

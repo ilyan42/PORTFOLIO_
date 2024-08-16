@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const titles = document.querySelectorAll('h1, h2');
     titles.forEach(title => {
         title.addEventListener('mouseover', () => {
-            title.style.color = '#3498db';
+            title.style.color = 'green';
             title.style.transition = 'color 0.3s ease-in-out';
         });
 

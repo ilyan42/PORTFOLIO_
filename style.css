@@ -8,7 +8,7 @@
 /* Style global */
 body {
     font-family: 'Roboto', sans-serif; /* Changement de la police pour un style plus moderne */
-    background-color: #333;
+    background-color: #000000;
     color: #333;
     line-height: 1.6;
     transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
@@ -23,18 +23,26 @@ body {
 
 /* Style pour l'en-tête */
 header {
-    background-image: url('image/bg.png');
-    background-size: cover; /* L'image couvre toute la surface du header */
-    background-position: center; /* Centre l'image dans le header */
-    background-repeat: no-repeat; /* Empêche la répétition de l'image */
-    background-color: #000000;
-    height: 100vh; /* Le header prend toute la hauteur de la fenêtre */
+    height: 100vh; /* Hauteur de l'en-tête */
     padding: 40px 0;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
 }
+
+#header-container {
+    width: 100%;
+    height: 200px; /* Ajustez la hauteur selon vos besoins */
+	transform : translate(-155px, -313px);
+	background-color: #ffffff;
+}
+
+#threejs-container {
+	transform : translateY(200px);
+}
+
+
 
 /* Navigation */
 nav ul {
@@ -77,6 +85,7 @@ h1 {
     text-align: center;
     color: #ffffff;
     margin-top: 0;
+	transform: translateY(-250px);
 }
 
 h2 {
@@ -170,7 +179,7 @@ h5 .icon {
 
 /* Style pour le pied de page */
 footer {
-    background-color: #000000;
+    background-color: #333;
     color: #fff;
     text-align: center;
     padding: 15px 0;
@@ -231,7 +240,7 @@ button {
     cursor: pointer;
     font-size: 1em;
     margin-top: 20px;
-    transform: translate(80px, -280px);
+    transform: translate(70px, -700px);
 }
 
 /* Bouton de fermeture */
@@ -251,16 +260,38 @@ button {
 	transform: translate(70px, -60px);
 }
 
+
+.jeux {
+	width: 40%;
+    display: flex; /* Utilisation de Flexbox pour centrer le contenu */
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
+    padding: 20px; /* Espace autour du conteneur */
+    min-height: 300px; /* Hauteur minimale pour le conteneur */
+}
+
+#videoJeux {
+    text-align: center; /* Centre le texte */
+    border-radius: 10px;
+    border: 2px solid #ffffff; /* Bordure blanche */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre subtile */
+    padding: 20px; /* Espace interne */
+    background-color: #333; /* Couleur de fond pour contraster avec la bordure */
+	transform: translate(850px, -450px);
+}
+
 h6 {
-	font-size: 1.5em;
-	text-align: center;
-	color: #ffffff;
-	margin-right: 50px;
-	margin-left: 750px;
-	transform: translateY(-250px);
-	border-radius: 10px;
-    border: 2px solid #ffffff; /* Bordure blanche autour des cartes */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre subtile pour un effet 3D */
+    font-size: 1.5em; /* Taille du texte du titre */
+    color: #ffffff; /* Couleur du texte */
+    margin-bottom: 10px; /* Espacement sous le titre */
+}
+
+/* Style pour la description */
+p {
+    font-size: 1em; /* Taille du texte de la description */
+    color: #ffffff; /* Couleur du texte */
+    line-height: 1.6; /* Espacement entre les lignes pour une meilleure lisibilité */
+	text-align: left;
 }
 
 
