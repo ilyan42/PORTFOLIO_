@@ -1,4 +1,4 @@
-/* Reset de base pour supprimer les marges/paddings par défaut */
+/*Reset de base pour supprimer les marges/paddings par défaut */
 * {
     margin: 0;
     padding: 0;
@@ -36,7 +36,7 @@ header {
     width: 100%;
     height: 30vh; /* Hauteur relative à la hauteur de la fenêtre */
     background-color: #ffffff;
-    position: relative; /* Utilisation de `relative` pour permettre un positionnement enfant */
+    position: relative; /* Utilisation de relative pour permettre un positionnement enfant */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -214,6 +214,7 @@ footer .socials a {
     color: #fff;
     text-decoration: none;
     transition: color 0.3s ease;
+	transform: translateY(-200px);
 }
 
 footer .socials a:hover {
@@ -379,7 +380,6 @@ p {
 #projet_minishell {
 	background-color: #404040;
 	transform: translateY(0px);
-	padding: 10px;
 	margin-right: 20%;
 }
 
@@ -462,6 +462,33 @@ p {
     opacity: 1;
 }
 
+#ecole42 nav ul {
+    list-style: none; /* Enlève les puces */
+    padding: 0; /* Enlève le padding par défaut */
+    position: absolute; /* Positionnement absolu */
+    display: flex; /* Utilise Flexbox */
+    flex-direction: row; /* Aligne les éléments en ligne (horizontalement) */
+    justify-content: flex-start; /* Aligne les éléments à droite */
+    right: 0; /* Aligne le conteneur UL à droite */
+    transform: translate(-190px, 2850px); /* Ajustement pour positionner */
+}
+
+#ecole42 nav ul li a .icon{
+	width: 18px; /* Largeur de l'icône */
+	height: auto; /* Hauteur automatique pour garder les proportions */
+	margin-left: 8px; /* Espace entre l'icône et le texte */
+	transform: translateY(5px); /* Déplace l'image vers le bas */
+}
+
+#ecole42 nav ul li a {
+	text-decoration: none; /* Enlève le soulignement des liens */
+    color: #ffffff; /* Couleur du texte */
+    padding: 10px 20px; /* Padding pour plus de surface cliquable */
+    background-color: #1e1e1e; /* Couleur de fond des liens */
+    border-radius: 5px; /* Coins arrondis */
+	font-size:x-small;
+}
+
 #description_cub3d {
 	color: #ffffff; /* Couleur du texte */
 	text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8); /* Ombre bleue pour créer un effet de contour */
@@ -481,6 +508,220 @@ p {
 
 #description_cub3d.show {
 	opacity: 1;
+}
+
+#description_cub3d nav ul {
+	list-style: none; /* Enlève les puces */
+    padding: 0; /* Enlève le padding par défaut */
+    position: absolute; /* Positionnement absolu */
+    display: flex; /* Utilise Flexbox */
+    flex-direction: column; /* Aligne les éléments en colonne */
+	margin-left: 0% !important;
+	transform: translate(-350px, 300px);
+}
+
+#description_cub3d nav ul li a .icon{
+	width: 18px; /* Largeur de l'icône */
+	height: auto; /* Hauteur automatique pour garder les proportions */
+	margin-left: 8px; /* Espace entre l'icône et le texte */
+	transform: translateY(5px); /* Déplace l'image vers le bas */
+}
+
+#description_cub3d nav ul li a {
+	text-decoration: none; /* Enlève le soulignement des liens */
+    color: #ffffff; /* Couleur du texte */
+    padding: 10px 20px; /* Padding pour plus de surface cliquable */
+    background-color: #1e1e1e; /* Couleur de fond des liens */
+    border-radius: 5px; /* Coins arrondis */
+	font-size: small;
+}
+
+#description_Solong {
+	color: #ffffff; /* Couleur du texte */
+	text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8); /* Ombre bleue pour créer un effet de contour */
+	transform: translate(160px, -1710px);
+	font-size: 1.2em;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: 20; /* Makes the text thinner */
+	max-width: 40%;
+	margin-right: auto; /* Laisser l'espace restant à droite */
+	opacity: 0;
+	transition: opacity 1s ease-in-out;
+}
+
+#description_Solong p {
+	text-align: justify;
+}
+
+#description_Solong.show {
+	opacity: 1;
+}
+
+#description_Solong nav ul {
+	list-style: none; /* Enlève les puces */
+    padding: 0; /* Enlève le padding par défaut */
+    position: absolute; /* Positionnement absolu */
+    display: flex; /* Utilise Flexbox */
+    flex-direction: column; /* Aligne les éléments en colonne */
+	margin-left: 0% !important;
+	transform: translate(-350px, 300px);
+}
+
+#description_Solong nav ul li a .icon{
+	width: 18px; /* Largeur de l'icône */
+	height: auto; /* Hauteur automatique pour garder les proportions */
+	margin-left: 8px; /* Espace entre l'icône et le texte */
+	transform: translateY(5px); /* Déplace l'image vers le bas */
+}
+
+#description_Solong nav ul li a {
+	text-decoration: none; /* Enlève le soulignement des liens */
+    color: #ffffff; /* Couleur du texte */
+    padding: 10px 20px; /* Padding pour plus de surface cliquable */
+    background-color: #1e1e1e; /* Couleur de fond des liens */
+    border-radius: 5px; /* Coins arrondis */
+	font-size: small;
+}
+
+#description_pushswap {
+	color: #ffffff; /* Couleur du texte */
+	text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8); /* Ombre bleue pour créer un effet de contour */
+	transform: translate(160px, -1970px);
+	font-size: 1.2em;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: 20; /* Makes the text thinner */
+	max-width: 40%;
+	margin-right: auto; /* Laisser l'espace restant à droite */
+	opacity: 0;
+	transition: opacity 1s ease-in-out;
+}
+
+#description_pushswap p {
+	text-align: justify;
+}
+
+#description_pushswap.show {
+	opacity: 1;
+}
+
+#description_pushswap nav ul {
+	list-style: none; /* Enlève les puces */
+    padding: 0; /* Enlève le padding par défaut */
+    position: absolute; /* Positionnement absolu */
+    display: flex; /* Utilise Flexbox */
+    flex-direction: column; /* Aligne les éléments en colonne */
+	margin-left: 0% !important;
+	transform: translate(-350px, 300px);
+}
+
+#description_pushswap nav ul li a .icon{
+	width: 18px; /* Largeur de l'icône */
+	height: auto; /* Hauteur automatique pour garder les proportions */
+	margin-left: 8px; /* Espace entre l'icône et le texte */
+	transform: translateY(5px); /* Déplace l'image vers le bas */
+}
+
+#description_pushswap nav ul li a {
+	text-decoration: none; /* Enlève le soulignement des liens */
+    color: #ffffff; /* Couleur du texte */
+    padding: 10px 20px; /* Padding pour plus de surface cliquable */
+    background-color: #1e1e1e; /* Couleur de fond des liens */
+    border-radius: 5px; /* Coins arrondis */
+	font-size: small;
+}
+
+#description_philo {
+	color: #ffffff; /* Couleur du texte */
+	text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8); /* Ombre bleue pour créer un effet de contour */
+	transform: translate(160px, -2280px);
+	font-size: 1.2em;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: 20; /* Makes the text thinner */
+	max-width: 40%;
+	margin-right: auto; /* Laisser l'espace restant à droite */
+	opacity: 0;
+	transition: opacity 1s ease-in-out;
+}
+
+#description_philo p {
+	text-align: justify;
+}
+
+#description_philo.show {
+	opacity: 1;
+}
+
+#description_philo nav ul {
+	list-style: none; /* Enlève les puces */
+    padding: 0; /* Enlève le padding par défaut */
+    position: absolute; /* Positionnement absolu */
+    display: flex; /* Utilise Flexbox */
+    flex-direction: column; /* Aligne les éléments en colonne */
+	margin-left: 0% !important;
+	transform: translate(-350px, 330px);
+}
+
+#description_philo nav ul li a .icon{
+	width: 18px; /* Largeur de l'icône */
+	height: auto; /* Hauteur automatique pour garder les proportions */
+	margin-left: 8px; /* Espace entre l'icône et le texte */
+	transform: translateY(5px); /* Déplace l'image vers le bas */
+}
+
+#description_philo nav ul li a {
+	text-decoration: none; /* Enlève le soulignement des liens */
+    color: #ffffff; /* Couleur du texte */
+    padding: 10px 20px; /* Padding pour plus de surface cliquable */
+    background-color: #1e1e1e; /* Couleur de fond des liens */
+    border-radius: 5px; /* Coins arrondis */
+	font-size: small;
+}
+
+#description_minitalk {
+	color: #ffffff; /* Couleur du texte */
+	text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8); /* Ombre bleue pour créer un effet de contour */
+	transform: translate(160px, -2590px);
+	font-size: 1.2em;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: 20; /* Makes the text thinner */
+	max-width: 40%;
+	margin-right: auto; /* Laisser l'espace restant à droite */
+	opacity: 0;
+	transition: opacity 1s ease-in-out;
+}
+
+#description_minitalk p {
+	text-align: justify;
+}
+
+#description_minitalk.show {
+	opacity: 1;
+}
+
+#description_minitalk nav ul {
+	list-style: none; /* Enlève les puces */
+    padding: 0; /* Enlève le padding par défaut */
+    position: absolute; /* Positionnement absolu */
+    display: block; /* Utilise Flexbox */
+    flex-direction: column; /* Aligne les éléments en colonne */
+	margin-left: 0% !important;
+	transform: translate(-350px, 300px);
+}
+
+#description_minitalk nav ul li a .icon{
+	width: 18px; /* Largeur de l'icône */
+	height: auto; /* Hauteur automatique pour garder les proportions */
+	margin-left: 8px; /* Espace entre l'icône et le texte */
+	transform: translateY(5px); /* Déplace l'image vers le bas */
+}
+
+#description_minitalk nav ul li a {
+	text-decoration: none; /* Enlève le soulignement des liens */
+    color: #ffffff; /* Couleur du texte */
+    padding: 10px 20px; /* Padding pour plus de surface cliquable */
+    background-color: #1e1e1e; /* Couleur de fond des liens */
+    border-radius: 5px; /* Coins arrondis */
+	font-size: small;
 }
 
 /* Responsiveness */
