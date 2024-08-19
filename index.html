@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+		<div class="container">
+			<div id="header-container" style="width: 100%; height: 80px;"></div>
+            <h1>Code By Ilyan</h1>
+            <nav>
+                <ul>
+                    <li><a href="https://github.com/ilyan42" target="_blank">GitHub<img src="image/github.png" alt="GitHub" class="icon"></a></li>
+                    <li><a href="page1.php">Mail<img src="image/mail.png" alt="Mail" class="icon"></a></li>
+                    <li><a href="page2.php">Profile<img src="image/pp.png" alt="Profile" class="icon"></a></li>
+                </ul>
+            </nav>
+        </div>
+        <!-- Conteneur pour le modèle 3D -->
+    </header>
+    
+    <main>
+        <section class="about">
+            <div class="container">
+                <h2>Mon experience</h2>
+            </div>
+        </section>
+		
+        <!-- Conteneur pour le modèle 3D -->
+		<div class="cards-container">
+			<div class="card">
+				<h3><img src="image/logo42.png" alt="logo42" class="icon"> Etudiant a 42 lyon</h3>
+				<p class="custom-paragraphe">Étudiant à l'école 42, je suis passionné par l'informatique et dévoué à l'apprentissage continu, développant des compétences en programmation et en création de solutions innovantes.</p>
+				<h3>
+					<img src="image/langage C icon.png" alt="langageC" class="icon">
+					<img src="image/langage c++ icon.png" alt="langageC++" class="icon">
+				</h3>
+			</div>
+			<div class="card">
+				<h4><img src="image/logounity.png" alt="logounity" class="icon"> Game Developer</h4>
+				<p class="custom-paragraphe">En tant que passionné de jeux vidéo, je combine créativité et compétences techniques pour développer et concevoir mes propres jeux.</p>
+				<h4>
+					<img src="image/c sharp_icon.png" alt="unity" class="icon">
+				</h4>
+			</div>
+			<div class="card">
+				<h5><img src="image/skills.png" alt="skills" class="icon"> Compétences Techniques</h5>
+				<p class="custom-paragraphe">Description de la troisième carte.</p>
+			</div>
+		</div>
+
+		<h2>Mes Projets</h2>
+
+		<div class="conteneur-jeux">
+			<div id="threejs-container" style="width: 85%; height: 700px;"></div>
+		
+			<div id="unity-texte">
+				<h3><img src="image/unitybaniere.png" alt="unitybaniere" class="icon"></h3>
+			</div>
+	
+			<div class="jeux">
+				<div id="videoJeux">
+					<h6><strong>Aria and the Lost Souls</strong></h6>
+					<p>Dans ce platformer, vous incarnez Aria, 
+						une héroïne courageuse en quête des âmes perdues. Ces âmes, sous forme 
+						d'armes puissantes, sont dispersées à travers différents niveaux, chaque 
+						niveau abritant une arme unique. Votre mission est de toutes les rassembler 
+						pour affronter Vespera, le grand méchant qui menace le monde et introduit 
+						l'histoire du jeu. (Appuyez sur l'écran pour lancer une vidéo du jeu.)</p>
+				</div>
+			</div>
+			
+			<div class="container">
+				<button id="showVideoBtn"></button>
+			</div>
+			
+			
+			<div id="videoContainer">
+				<button id="closeVideoBtn" class="close-btn">×</button>
+				<video id="myVideo" controls>
+					<source src="video/trailer lv1 aria.mp4" type="video/mp4">
+					Votre navigateur ne supporte pas la vidéo HTML5.
+				</video>
+			</div>
+
+		</div>
+
+			<div class="ecole-42">
+				<div id="ecole42-container" style="width: 85%; height: 700px;"></div>
+				<div id="ecole42-texte">
+					<h3><img src="image/42.png" alt="42baniere" class="icon"></h3>
+				</div>
+				<div id="ecole42">
+					<h2>Projets</h2>
+					<h3><button id="projet_minishell" class="button">Minishell</button></h3>
+					<h3><button id="projet_cub3d" class="button">Cub3D</button></h3>
+					<h3><button id="projet_Solong" class="button">So_long</button></h3>
+					<h3><button id="projet_pushswap" class="button">Push_swap</button></h3>
+					<h3><button id="projet_philo" class="button">Philosophers</button></h3>
+					<h3><button id="projet_minitalk" class="button">Minitalk</button></h3>
+					<h4>Au cours de mon expérience en tant qu'étudiant à l'école 42, 
+						j'ai eu l'opportunité de travailler sur plusieurs projets majeurs. 
+						Ces projets m'ont permis de développer mes compétences techniques et 
+						de renforcer ma capacité à collaborer efficacement avec d'autres personnes. 
+						Parmi les projets les plus significatifs auxquels j'ai participé  Chacun 
+						de ces projets m'a offert des défis uniques et a contribué de manière substantielle 
+						à ma croissance professionnelle et personnelle. </h4>
+				</div>
+				<div id="Description_projet">
+					<div id="description_minishell">
+						<p>Minishell est un projet de l'école 42 qui consiste à recréer un shell basique. 
+							Un shell est un interpréteur de commandes qui permet à l'utilisateur de communiquer 
+							avec le système d'exploitation. Le but de ce projet est de comprendre le fonctionnement 
+							d'un shell et d'apprendre à manipuler les processus et les signaux. 
+							Pour ce faire, j'ai dû implémenter plusieurs fonctionnalités, telles que l'exécution 
+							de commandes, la gestion des variables d'environnement, la gestion des signaux, 
+							la gestion des erreurs, etc. Ce projet m'a permis de renforcer mes compétences en 
+							programmation système et de mieux comprendre le fonctionnement des systèmes d'exploitation.</p>
+					</div>
+					<div id="description_cub3d">
+						<p>Cub3D est un projet de l'école 42 qui consiste à recréer un moteur graphique en utilisant 
+							la bibliothèque graphique miniLibX. Le but de ce projet est de comprendre le fonctionnement 
+							d'un moteur graphique 3D et d'apprendre à manipuler les raycasting. 
+							Pour ce faire, j'ai dû implémenter plusieurs fonctionnalités, telles que le rendu d'une carte 
+							3D, le déplacement du joueur, la gestion des textures, la gestion des collisions, etc. 
+							Ce projet m'a permis de renforcer mes compétences en programmation graphique et de mieux 
+							comprendre le fonctionnement des moteurs graphiques 3D.</p>
+					</div>
+					<button id="backButton" class="back-button" style="display: none;">×</button>
+			</div>
+		</div>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Mon Portfolio. Tous droits réservés.</p>
+            <div class="socials">
+                <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+                <a href="https://github.com/ilyan42" target="_blank">GitHub</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Inclusion de Three.js et du chargeur GLTFLoader -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+    <script src="three.js"></script>
+	<script src="header.js"></script>
+	<script src="script.js"></script>
+
+	
+</body>
+
+</html>
+

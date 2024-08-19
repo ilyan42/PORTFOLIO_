@@ -51,7 +51,6 @@ document.addEventListener("DOMContentLoaded", () => {
     backToTopButton.style.display = 'none';
     document.body.appendChild(backToTopButton);
 
-
     // Afficher le bouton "Retour en haut" lorsque l'utilisateur fait défiler la page
     window.addEventListener('scroll', () => {
         if (window.scrollY > 300) {
@@ -61,39 +60,96 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-	
-
-    // Animation des titres lors du survol
-    const titles = document.querySelectorAll('h1, h2');
-    titles.forEach(title => {
-        title.addEventListener('mouseover', () => {
-            title.style.color = 'green';
-            title.style.transition = 'color 0.3s ease-in-out';
-        });
-
-        title.addEventListener('mouseout', () => {
-            title.style.color = '';
+    // Ajouter l'événement de clic pour remonter en haut de la page
+    backToTopButton.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
         });
     });
 
-    // Effet de tapotement sur l'accueil
+	// Affichage de la description Minishell
+// Affichage de la description Minishell
+	document.getElementById('projet_minishell').addEventListener('click', function(event) {
+		event.preventDefault();
+		
+		// Masquer la section des projets
+		document.getElementById('ecole42').style.display = 'none';
+		
+		// Afficher la section de description avec transition
+		var description = document.getElementById('description_minishell');
+		var button = document.getElementById('backButton');
+		if (description) {
+			description.classList.add('show'); // Ajouter la classe pour afficher avec glissement
+			button.style.display = 'block';
+		}
+	});
 
-    // Animation de shake
-    const styleElement = document.createElement('style');
-    styleElement.innerHTML = `
-        @keyframes shake {
-            0% { transform: translate(1px, 1px) rotate(0deg); }
-            10% { transform: translate(-1px, -2px) rotate(-1deg); }
-            20% { transform: translate(-3px, 0px) rotate(1deg); }
-            30% { transform: translate(3px, 2px) rotate(0deg); }
-            40% { transform: translate(1px, -1px) rotate(1deg); }
-            50% { transform: translate(-1px, 2px) rotate(-1deg); }
-            60% { transform: translate(-3px, 1px) rotate(0deg); }
-            70% { transform: translate(3px, 1px) rotate(-1deg); }
-            80% { transform: translate(-1px, -1px) rotate(1deg); }
-            90% { transform: translate(1px, 2px) rotate(0deg); }
-            100% { transform: translate(1px, -2px) rotate(-1deg); }
-        }
-    `;
-    document.head.appendChild(styleElement);
+	// Retour à la liste des projets
+	document.getElementById('backButton').addEventListener('click', function(event) {
+		event.preventDefault();
+
+		// Masquer la section de description avec transition
+		var description = document.getElementById('description_minishell');
+		var button = document.getElementById('backButton');
+		if (description) {
+			description.classList.remove('show'); // Retirer la classe pour cacher avec transition
+			button.style.display = 'none';
+		}
+
+		// Attendre la fin de la transition avant d'afficher la section des projets
+		setTimeout(function() {
+			document.getElementById('ecole42').style.display = 'block';
+		},1500); // Délai correspondant à la durée de la transition
+	});
+
+	// Affichage de la description cub3d
+
+	document.getElementById('projet_cub3d').addEventListener('click', function(event) {
+		event.preventDefault();
+		
+		// Masquer la section des projets
+		document.getElementById('ecole42').style.display = 'none';
+		
+		// Afficher la section de description avec transition
+		var description = document.getElementById('description_cub3d');
+		var button = document.getElementById('backButton');
+		if (description) {
+			description.classList.add('show'); // Ajouter la classe pour afficher avec glissement
+			button.style.display = 'block';
+		}
+	});
+
+	// Retour à la liste des projets
+
+	document.getElementById('backButton').addEventListener('click', function(event) {
+		event.preventDefault();
+	
+		// Masquer la section de description avec transition
+		var description = document.getElementById('description_cub3d');
+		var button = document.getElementById('backButton');
+		
+		if (description) {
+			description.classList.remove('show'); // Retirer la classe pour cacher avec transition
+			button.style.display = 'none';
+		}
+	
+		// Attendre la fin de la transition avant de réafficher la section des projets avec un fade-in
+		setTimeout(function() {
+			var ecole42 = document.getElementById('ecole42');
+			
+			// Assurer que l'élément est visible et commencer avec une opacité de 0
+			ecole42.style.display = 'block';
+			ecole42.style.opacity = 0;
+	
+			// Appliquer une transition pour un effet de fade-in
+			setTimeout(function() {
+				ecole42.style.transition = 'opacity 1.5s ease-in-out';
+				ecole42.style.opacity = 1;
+			}, 50); // Légère pause pour permettre à l'affichage de se stabiliser avant de commencer le fade-in
+		}, 1500); // Délai correspondant à la durée de la transition de fade-out
+	});
+	
+
 });
+

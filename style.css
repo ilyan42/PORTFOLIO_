@@ -12,6 +12,7 @@ body {
     color: #333;
     line-height: 1.6;
     transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+	overflow-x: hidden;
 }
 
 /* Conteneur pour centrer le contenu */
@@ -33,13 +34,27 @@ header {
 
 #header-container {
     width: 100%;
-    height: 200px; /* Ajustez la hauteur selon vos besoins */
-	transform : translate(-155px, -313px);
-	background-color: #ffffff;
+    height: 30vh; /* Hauteur relative à la hauteur de la fenêtre */
+    background-color: #ffffff;
+    position: relative; /* Utilisation de `relative` pour permettre un positionnement enfant */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#header-container img {
+    max-width: 100%; /* Limite la largeur à 100% du conteneur */
+    height: auto; /* Garde le ratio aspect de l'image */
+    object-fit: cover; /* Couvre tout le conteneur */
 }
 
 #threejs-container {
-	transform : translateY(200px);
+	transform : translate(100px, 100px);
+	border-radius: 50px;
+	border: 2px solid #ffffff; /* Bordure blanche autour des cartes */
+	overflow: hidden;
+	min-width: 250px; /* Largeur minimale pour les petites résolutions */
+    max-width: auto; /* Largeur maximale pour limiter la taille des cartes */
 }
 
 
@@ -84,15 +99,18 @@ h1 {
     font-size: 5em;
     text-align: center;
     color: #ffffff;
+    text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8); /* Ombre bleue pour créer un effet de contour */
     margin-top: 0;
-	transform: translateY(-250px);
+	transform: translateY(-300px);
 }
 
 h2 {
     font-size: 3.5em;
     text-align: center;
     color: #ffffff;
+    text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8); /* Ombre bleue pour créer un effet de contour */
     margin-top: 20px;
+	font-family: Arial, Helvetica, sans-serif;
 }
 
 /* Conteneur des cartes */
@@ -230,17 +248,17 @@ footer .socials a:hover {
 }
 
 /* Style pour le bouton */
-button {
-    background-color: rgba(14, 2, 125, 0);
-	/* background-color: #0e027d; */
-    color: #fff;
-    border: none;
-    padding: 70px 140px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1em;
-    margin-top: 20px;
-    transform: translate(70px, -700px);
+#showVideoBtn {
+		background-color: rgba(14, 2, 125, 0);
+		/* background-color: #0e027d; */
+		color: #fff;
+		border: none;
+		padding: 70px 160px;
+		border-radius: 5px;
+		cursor: pointer;
+		font-size: 1em;
+		margin-top: 20px;
+		transform: translate(150px, -730px);
 }
 
 /* Bouton de fermeture */
@@ -249,7 +267,8 @@ button {
     font-size: 30px; /* Taille du texte pour le bouton de fermeture */
 	top : 10px;
 	right : 10px;
-    color: #fff; /* Couleur du texte */
+    color: #ffffff; /* Couleur du texte */
+	background-color: #000000;
     border: none; /* Enlève les bordures par défaut du bouton */
     width: 40px; /* Largeur du bouton */
     height: 40px; /* Hauteur du bouton */
@@ -257,7 +276,7 @@ button {
     align-items: center;
     justify-content: center;
     cursor: pointer; /* Curseur pointer pour indiquer que c'est cliquable */
-	transform: translate(70px, -60px);
+	transform: translate(-40px, 50px);
 }
 
 
@@ -272,17 +291,19 @@ button {
 
 #videoJeux {
     text-align: center; /* Centre le texte */
-    border-radius: 10px;
+    border-radius: 30px;
     border: 2px solid #ffffff; /* Bordure blanche */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre subtile */
     padding: 20px; /* Espace interne */
     background-color: #333; /* Couleur de fond pour contraster avec la bordure */
-	transform: translate(850px, -450px);
+	transform: translate(700px, -720px);
 }
+
 
 h6 {
     font-size: 1.5em; /* Taille du texte du titre */
-    color: #ffffff; /* Couleur du texte */
+    color: #000000; /* Couleur du texte */
+    text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8); /* Ombre bleue pour créer un effet de contour */
     margin-bottom: 10px; /* Espacement sous le titre */
 }
 
@@ -294,6 +315,173 @@ p {
 	text-align: left;
 }
 
+#unity-texte {
+	font-size: 2.5em; /* Taille du texte de la description */
+	color: #ffffff; /* Couleur du texte */
+	line-height: 1.6; /* Espacement entre les lignes pour une meilleure lisibilité */
+	text-align: left;
+}
+
+#unity-texte h3 .icon {
+	transform: translate(100px, -570px);
+	width: 280px;
+	height: 150px;
+}
+
+#ecole42-container {
+    background-color: #404040;
+    margin: 0 auto; /* Centrer le conteneur */
+    border-radius: 50px;
+    border: 2px solid #ffffff; /* Bordure blanche autour des cartes */
+    display: flex;
+    flex-direction: column; /* Aligner les éléments verticalement sur les petits écrans */
+    padding: 20px;
+    max-width: 90%; /* Limiter la largeur maximale du conteneur à 90% de l'écran */
+    box-sizing: border-box;
+    transform: translateY(-500px); /* Utilisation de translateY pour une meilleure adaptation */
+	overflow: auto;
+	min-width: 250px; /* Largeur minimale pour les petites résolutions */
+    max-width: auto; /* Largeur maximale pour limiter la taille des cartes */
+}
+
+#ecole42-texte h3 .icon {
+	transform: translate(180px, -1150px);
+	width: 180px;
+	height: 140px;
+	border-radius: 5px;
+}
+
+#ecole42 h2 {
+	color: #000000; /* Couleur du texte */
+    text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8); /* Ombre bleue pour créer un effet de contour */
+	text-align: center;
+	transform: translate(263px, -1230px);
+	font-size: 3em;
+	font-family: Arial, Helvetica, sans-serif;
+    font-weight: 300; /* Makes the text thinner */
+}
+
+#ecole42 h3 {
+	color: #ffffff; /* Couleur du texte */
+	text-align: left;
+	transform: translate(930px, -1220px);
+	font-size: 1.5em;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: 20; /* Makes the text thinner */
+}
+
+#projet {
+	background-color: #404040;
+	transform: translateY(0px);
+	margin-right: 20%;
+}
+
+#projet_minishell {
+	background-color: #404040;
+	transform: translateY(0px);
+	padding: 10px;
+	margin-right: 20%;
+}
+
+#projet_cub3d {
+	background-color: #404040;
+	transform: translateY(0px);
+	margin-right: 20%;
+}
+
+#projet_pushswap {
+	background-color: #404040;
+	transform: translateY(0px);
+	margin-right: 20%;
+}
+
+#projet_Solong {
+	background-color: #404040;
+	transform: translateY(0px);
+	margin-right: 20%;
+}
+
+#projet_philo {
+	background-color: #404040;
+	transform: translateY(0px);
+	margin-right: 20%;
+}
+
+#projet_minitalk {
+	background-color: #404040;
+	transform: translateY(0px);
+	margin-right: 20%;
+}
+
+.button {
+    color: #000000; /* Couleur du texte en noir */
+    text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8); /* Ombre bleue pour créer un effet de contour */
+    border: none;
+    padding: 1px 1px;
+    border-radius: 1px;
+    cursor: pointer;
+    font-size: 1.1em;
+    margin-top: 0px;
+    transform: translate(930px, -1230px);
+	text-decoration: underline;
+}
+
+#ecole42 h4 {
+    color: #ffffff; /* Couleur du texte */
+    text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8); /* Ombre bleue pour créer un effet de contour */
+    text-align: justify;
+    font-size: 1.2em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 300; /* Ajustement du poids de la police */
+    padding: 10px;
+    max-width: 50%; /* Limite la largeur maximale du texte à 50% */
+    margin-left: 10%; /* Décalage vers la gauche */
+    margin-right: auto; /* Laisser l'espace restant à droite */
+	transform: translateY(-1400px);
+    box-sizing: border-box;
+}
+
+#description_minishell {
+	color: #ffffff; /* Couleur du texte */
+	text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8); /* Ombre bleue pour créer un effet de contour */
+	transform: translate(160px, -1150px);
+	font-size: 1.2em;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: 20; /* Makes the text thinner */
+	max-width: 40%;
+	margin-right: auto; /* Laisser l'espace restant à droite */
+	opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+#description_minishell p {
+	text-align: justify;
+}
+
+#description_minishell.show {
+    opacity: 1;
+}
+
+#description_cub3d {
+	color: #ffffff; /* Couleur du texte */
+	text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8); /* Ombre bleue pour créer un effet de contour */
+	transform: translate(160px, -1450px);
+	font-size: 1.2em;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: 20; /* Makes the text thinner */
+	max-width: 40%;
+	margin-right: auto; /* Laisser l'espace restant à droite */
+	opacity: 0;
+	transition: opacity 1s ease-in-out;
+}
+
+#description_cub3d p {
+	text-align: justify;
+}
+
+#description_cub3d.show {
+	opacity: 1;
+}
 
 /* Responsiveness */
 @media (max-width: 768px) {
@@ -320,3 +508,36 @@ p {
     }
 }
 
+#back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+    font-size: 24px;
+}
+
+.back-button {
+    background: url('image/flechegauche.png') no-repeat center center;
+    background-size: contain; /* S'assure que l'image s'adapte à la taille du bouton */
+    border: none;
+    color: #ffffff;
+    font-size: 1.5em;
+    cursor: pointer;
+    position: absolute;
+    width: 100px;  /* Largeur du bouton */
+    height: 100px; /* Hauteur du bouton */
+    transition: color 0.3s ease;
+	margin-left: 10%;
+	transform: translateY(-1340px);
+}
+
+
+.back-button:hover {
+    color: #00aaff;
+}
