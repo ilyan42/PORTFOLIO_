@@ -445,7 +445,7 @@ p {
 	color: #ffffff; /* Couleur du texte */
 	text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8); /* Ombre bleue pour créer un effet de contour */
 	transform: translate(160px, -1150px);
-	font-size: 1.2em;
+	font-size: 1em;
 	font-family: Arial, Helvetica, sans-serif;
 	font-weight: 20; /* Makes the text thinner */
 	max-width: 40%;
@@ -462,7 +462,7 @@ p {
     opacity: 1;
 }
 
-#ecole42 nav ul {
+#description_minishell nav ul {
     list-style: none; /* Enlève les puces */
     padding: 0; /* Enlève le padding par défaut */
     position: absolute; /* Positionnement absolu */
@@ -470,29 +470,29 @@ p {
     flex-direction: row; /* Aligne les éléments en ligne (horizontalement) */
     justify-content: flex-start; /* Aligne les éléments à droite */
     right: 0; /* Aligne le conteneur UL à droite */
-    transform: translate(-190px, 2850px); /* Ajustement pour positionner */
+    transform: translate(-350px, 300px); /* Déplace le conteneur UL */
 }
 
-#ecole42 nav ul li a .icon{
+#description_minishell nav ul li a .icon{
 	width: 18px; /* Largeur de l'icône */
 	height: auto; /* Hauteur automatique pour garder les proportions */
 	margin-left: 8px; /* Espace entre l'icône et le texte */
 	transform: translateY(5px); /* Déplace l'image vers le bas */
 }
 
-#ecole42 nav ul li a {
+#description_minishell nav ul li a {
 	text-decoration: none; /* Enlève le soulignement des liens */
     color: #ffffff; /* Couleur du texte */
     padding: 10px 20px; /* Padding pour plus de surface cliquable */
     background-color: #1e1e1e; /* Couleur de fond des liens */
     border-radius: 5px; /* Coins arrondis */
-	font-size:x-small;
+	font-size: small;
 }
 
 #description_cub3d {
 	color: #ffffff; /* Couleur du texte */
 	text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8); /* Ombre bleue pour créer un effet de contour */
-	transform: translate(160px, -1450px);
+	transform: translate(160px, -1150px);
 	font-size: 1.2em;
 	font-family: Arial, Helvetica, sans-serif;
 	font-weight: 20; /* Makes the text thinner */
@@ -539,7 +539,7 @@ p {
 #description_Solong {
 	color: #ffffff; /* Couleur du texte */
 	text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8); /* Ombre bleue pour créer un effet de contour */
-	transform: translate(160px, -1710px);
+	transform: translate(160px, -1150px);
 	font-size: 1.2em;
 	font-family: Arial, Helvetica, sans-serif;
 	font-weight: 20; /* Makes the text thinner */
@@ -586,7 +586,7 @@ p {
 #description_pushswap {
 	color: #ffffff; /* Couleur du texte */
 	text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8); /* Ombre bleue pour créer un effet de contour */
-	transform: translate(160px, -1970px);
+	transform: translate(160px, -1150px);
 	font-size: 1.2em;
 	font-family: Arial, Helvetica, sans-serif;
 	font-weight: 20; /* Makes the text thinner */
@@ -633,7 +633,7 @@ p {
 #description_philo {
 	color: #ffffff; /* Couleur du texte */
 	text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8); /* Ombre bleue pour créer un effet de contour */
-	transform: translate(160px, -2280px);
+	transform: translate(160px, -1150px);
 	font-size: 1.2em;
 	font-family: Arial, Helvetica, sans-serif;
 	font-weight: 20; /* Makes the text thinner */
@@ -680,7 +680,7 @@ p {
 #description_minitalk {
 	color: #ffffff; /* Couleur du texte */
 	text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8); /* Ombre bleue pour créer un effet de contour */
-	transform: translate(160px, -2590px);
+	transform: translate(160px, -1150px);
 	font-size: 1.2em;
 	font-family: Arial, Helvetica, sans-serif;
 	font-weight: 20; /* Makes the text thinner */
@@ -775,10 +775,19 @@ p {
     height: 100px; /* Hauteur du bouton */
     transition: color 0.3s ease;
 	margin-left: 10%;
-	transform: translateY(-1340px);
+	transform: translateY(400px);
 }
 
 
 .back-button:hover {
     color: #00aaff;
 }
+
+#video_in_description {
+    width: 80%; /* Prend toute la largeur du conteneur */
+    height: auto; /* Hauteur automatique pour garder le ratio */
+    box-shadow: 0 0 5px rgb(255, 255, 255); /* Ombre légère pour la vidéo */
+    margin-top: 20px; /* Espacement au-dessus de la vidéo */
+	transform: translate(650px, -450px);
+}
+

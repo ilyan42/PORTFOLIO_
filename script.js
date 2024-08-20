@@ -68,266 +68,93 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-	// Affichage de la description Minishell
-// Affichage de la description Minishell
-	document.getElementById('projet_minishell').addEventListener('click', function(event) {
-		event.preventDefault();
-		
+
+// Fonction pour afficher une description et cacher les autres
+	function showDescription(descriptionId) {
 		// Masquer la section des projets
 		document.getElementById('ecole42').style.display = 'none';
+
+		// Masquer toutes les descriptions avant d'en afficher une
+		document.querySelectorAll('.description').forEach(function(desc) {
+			desc.classList.remove('show');
+			desc.style.display = 'none';
+		});
+
+		// Afficher la description demandée
+		var description = document.getElementById(descriptionId);
+		var button = document.querySelector('.back-button');
+		if (description) {
+			description.style.display = 'block'; // Assurer que la section est visible
+			setTimeout(function() {
+				description.classList.add('show'); // Ajouter la classe pour afficher avec transition
+			}, 10); // Légère pause pour permettre à la section d'être affichée avant de commencer la transition
+
+			button.style.display = 'block'; // Afficher le bouton de retour
+		}
+	}
+
+	// Fonction pour cacher les descriptions et réafficher les projets
+	function hideDescription() {
+
+		var video = document.getElementById('video_in_description');
+		if (video) {
+			video.pause(); // Mettre la vidéo en pause avant de masquer la description
+		}
 		
-		// Afficher la section de description avec transition
-		var description = document.getElementById('description_minishell');
-		var button = document.getElementById('backButton');
-		if (description) {
-			description.classList.add('show'); // Ajouter la classe pour afficher avec glissement
-			button.style.display = 'block';
-		}
-	});
+		document.querySelectorAll('.description').forEach(function(description) {
+			if (description.classList.contains('show')) {
+				description.classList.remove('show'); // Retirer la classe pour cacher avec transition
+				setTimeout(function() {
+					description.style.display = 'none'; // Assurer que la section est bien cachée
+				}, 1000); // Correspond à la durée de la transition
+			}
+		});
 
-	// Retour à la liste des projets
-	document.getElementById('backButton').addEventListener('click', function(event) {
-		event.preventDefault();
-
-		// Masquer la section de description avec transition
-		var description = document.getElementById('description_minishell');
-		var button = document.getElementById('backButton');
-		if (description) {
-			description.classList.remove('show'); // Retirer la classe pour cacher avec transition
-			button.style.display = 'none';
-		}
-
-		// Attendre la fin de la transition avant d'afficher la section des projets
+		// Réafficher la section des projets
 		setTimeout(function() {
-			document.getElementById('ecole42').style.display = 'block';
-		},1000); // Délai correspondant à la durée de la transition
-	});
+			var ecole42 = document.getElementById('ecole42');
+			ecole42.style.display = 'block';
+			ecole42.style.opacity = 0;
+			setTimeout(function() {
+				ecole42.style.transition = 'opacity 1s ease-in-out';
+				ecole42.style.opacity = 1;
+			}, 50);
+		}, 1000); // Délai correspondant à la durée de la transition de fade-out
+	}
 
-	// Affichage de la description cub3d
+	// Ajout des gestionnaires d'événements pour chaque projet
+	document.getElementById('projet_minishell').addEventListener('click', function(event) {
+		showDescription('description_minishell');
+	});
 
 	document.getElementById('projet_cub3d').addEventListener('click', function(event) {
-		event.preventDefault();
-		
-		// Masquer la section des projets
-		document.getElementById('ecole42').style.display = 'none';
-		
-		// Afficher la section de description avec transition
-		var description = document.getElementById('description_cub3d');
-		var button = document.getElementById('backButton');
-		if (description) {
-			description.classList.add('show'); // Ajouter la classe pour afficher avec glissement
-			button.style.display = 'block';
-		}
+		showDescription('description_cub3d');
 	});
-
-	// Retour à la liste des projets
 
 	document.getElementById('projet_Solong').addEventListener('click', function(event) {
-		event.preventDefault();
-		
-		// Masquer la section des projets
-		document.getElementById('ecole42').style.display = 'none';
-		
-		// Afficher la section de description avec transition
-		var description = document.getElementById('description_Solong');
-		var button = document.getElementById('backButton');
-		if (description) {
-			description.classList.add('show'); // Ajouter la classe pour afficher avec glissement
-			button.style.display = 'block';
-		}
+		showDescription('description_Solong');
 	});
-
-	document.getElementById('backButton').addEventListener('click', function(event) {
-		event.preventDefault();
-	
-		// Masquer la section de description avec transition
-		var description = document.getElementById('description_Solong');
-		var button = document.getElementById('backButton');
-		
-		if (description) {
-			description.classList.remove('show'); // Retirer la classe pour cacher avec transition
-			button.style.display = 'none';
-		}
-	
-		// Attendre la fin de la transition avant de réafficher la section des projets avec un fade-in
-		setTimeout(function() {
-			var ecole42 = document.getElementById('ecole42');
-			
-			// Assurer que l'élément est visible et commencer avec une opacité de 0
-			ecole42.style.display = 'block';
-			ecole42.style.opacity = 0;
-	
-			// Appliquer une transition pour un effet de fade-in
-			setTimeout(function() {
-				ecole42.style.transition = 'opacity 1s ease-in-out';
-				ecole42.style.opacity = 1;
-			}, 50); // Légère pause pour permettre à l'affichage de se stabiliser avant de commencer le fade-in
-		}, 1000); // Délai correspondant à la durée de la transition de fade-out
-	});
-
-
-	document.getElementById('backButton').addEventListener('click', function(event) {
-		event.preventDefault();
-	
-		// Masquer la section de description avec transition
-		var description = document.getElementById('description_cub3d');
-		var button = document.getElementById('backButton');
-		
-		if (description) {
-			description.classList.remove('show'); // Retirer la classe pour cacher avec transition
-			button.style.display = 'none';
-		}
-	
-		// Attendre la fin de la transition avant de réafficher la section des projets avec un fade-in
-		setTimeout(function() {
-			var ecole42 = document.getElementById('ecole42');
-			
-			// Assurer que l'élément est visible et commencer avec une opacité de 0
-			ecole42.style.display = 'block';
-			ecole42.style.opacity = 0;
-	
-			// Appliquer une transition pour un effet de fade-in
-			setTimeout(function() {
-				ecole42.style.transition = 'opacity 1s ease-in-out';
-				ecole42.style.opacity = 1;
-			}, 50); // Légère pause pour permettre à l'affichage de se stabiliser avant de commencer le fade-in
-		}, 1000); // Délai correspondant à la durée de la transition de fade-out
-	});
-
-	// Affichage de la description push_swap
 
 	document.getElementById('projet_pushswap').addEventListener('click', function(event) {
-		event.preventDefault();
-		
-		// Masquer la section des projets
-		document.getElementById('ecole42').style.display = 'none';
-		
-		// Afficher la section de description avec transition
-		var description = document.getElementById('description_pushswap');
-		var button = document.getElementById('backButton');
-		if (description) {
-			description.classList.add('show'); // Ajouter la classe pour afficher avec glissement
-			button.style.display = 'block';
-		}
+		showDescription('description_pushswap');
 	});
-
-
-	document.getElementById('backButton').addEventListener('click', function(event) {
-		event.preventDefault();
-	
-		// Masquer la section de description avec transition
-		var description = document.getElementById('description_pushswap');
-		var button = document.getElementById('backButton');
-		
-		if (description) {
-			description.classList.remove('show'); // Retirer la classe pour cacher avec transition
-			button.style.display = 'none';
-		}
-	
-		// Attendre la fin de la transition avant de réafficher la section des projets avec un fade-in
-		setTimeout(function() {
-			var ecole42 = document.getElementById('ecole42');
-			
-			// Assurer que l'élément est visible et commencer avec une opacité de 0
-			ecole42.style.display = 'block';
-			ecole42.style.opacity = 0;
-	
-			// Appliquer une transition pour un effet de fade-in
-			setTimeout(function() {
-				ecole42.style.transition = 'opacity 1s ease-in-out';
-				ecole42.style.opacity = 1;
-			}, 50); // Légère pause pour permettre à l'affichage de se stabiliser avant de commencer le fade-in
-		}, 1000); // Délai correspondant à la durée de la transition de fade-out
-	});
-
-	// Affichage de la description philo
 
 	document.getElementById('projet_philo').addEventListener('click', function(event) {
-		event.preventDefault();
-		
-		// Masquer la section des projets
-		document.getElementById('ecole42').style.display = 'none';
-		
-		// Afficher la section de description avec transition
-		var description = document.getElementById('description_philo');
-		var button = document.getElementById('backButton');
-		if (description) {
-			description.classList.add('show'); // Ajouter la classe pour afficher avec glissement
-			button.style.display = 'block';
-		}
-	});
-
-	document.getElementById('backButton').addEventListener('click', function(event) {
-		event.preventDefault();
-	
-		// Masquer la section de description avec transition
-		var description = document.getElementById('description_philo');
-		var button = document.getElementById('backButton');
-		
-		if (description) {
-			description.classList.remove('show'); // Retirer la classe pour cacher avec transition
-			button.style.display = 'none';
-		}
-	
-		// Attendre la fin de la transition avant de réafficher la section des projets avec un fade-in
-		setTimeout(function() {
-			var ecole42 = document.getElementById('ecole42');
-			
-			// Assurer que l'élément est visible et commencer avec une opacité de 0
-			ecole42.style.display = 'block';
-			ecole42.style.opacity = 0;
-	
-			// Appliquer une transition pour un effet de fade-in
-			setTimeout(function() {
-				ecole42.style.transition = 'opacity 1s ease-in-out';
-				ecole42.style.opacity = 1;
-			}, 50); // Légère pause pour permettre à l'affichage de se stabiliser avant de commencer le fade-in
-		}, 1000); // Délai correspondant à la durée de la transition de fade-out
+		showDescription('description_philo');
 	});
 
 	document.getElementById('projet_minitalk').addEventListener('click', function(event) {
-		event.preventDefault();
-		
-		// Masquer la section des projets
-		document.getElementById('ecole42').style.display = 'none';
-		
-		// Afficher la section de description avec transition
-		var description = document.getElementById('description_minitalk');
-		var button = document.getElementById('backButton');
-		var link = document.getElementById('projet_minitalk');
-		if (description) {
-			description.classList.add('show'); // Ajouter la classe pour afficher avec glissement
-			button.style.display = 'block';
-			link.style.display = 'flex';
-		}
+		showDescription('description_minitalk');
 	});
 
-	document.getElementById('backButton').addEventListener('click', function(event) {
-		event.preventDefault();
-	
-		// Masquer la section de description avec transition
-		var description = document.getElementById('description_minitalk');
-		var button = document.getElementById('backButton');
-		
-		if (description) {
-			description.classList.remove('show'); // Retirer la classe pour cacher avec transition
-			button.style.display = 'none';
-		}
-	
-		// Attendre la fin de la transition avant de réafficher la section des projets avec un fade-in
-		setTimeout(function() {
-			var ecole42 = document.getElementById('ecole42');
-			
-			// Assurer que l'élément est visible et commencer avec une opacité de 0
-			ecole42.style.display = 'block';
-			ecole42.style.opacity = 0;
-	
-			// Appliquer une transition pour un effet de fade-in
-			setTimeout(function() {
-				ecole42.style.transition = 'opacity 1s ease-in-out';
-				ecole42.style.opacity = 1;
-			}, 50); // Légère pause pour permettre à l'affichage de se stabiliser avant de commencer le fade-in
-		}, 1000); // Délai correspondant à la durée de la transition de fade-out
+	// Gestion du bouton de retour
+	document.querySelectorAll('.back-button').forEach(function(button) {
+		button.addEventListener('click', function(event) {
+			event.preventDefault();
+			hideDescription();
+		});
 	});
+
+
 });
 

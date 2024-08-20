@@ -2,7 +2,7 @@
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
     const renderer = new THREE.WebGLRenderer();
-    renderer.setSize(window.innerWidth, 830); // Hauteur du conteneur header
+    renderer.setSize(window.innerWidth, window.innerHeight); // Hauteur du conteneur header
     document.getElementById('header-container').appendChild(renderer.domElement);
 
     // Charger la texture de l'image de fond
