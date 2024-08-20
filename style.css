@@ -331,120 +331,82 @@ p {
 
 #ecole42-container {
     background-color: #404040;
-    margin: 0 auto; /* Centrer le conteneur */
+    margin: 0 auto; /* Centrer le conteneur horizontalement */
     border-radius: 50px;
     border: 2px solid #ffffff; /* Bordure blanche autour des cartes */
     display: flex;
-    flex-direction: column; /* Aligner les éléments verticalement sur les petits écrans */
+    flex-direction: column; /* Aligner les éléments verticalement */
     padding: 20px;
-    max-width: 90%; /* Limiter la largeur maximale du conteneur à 90% de l'écran */
     box-sizing: border-box;
-    transform: translateY(-500px); /* Utilisation de translateY pour une meilleure adaptation */
-	overflow: auto;
-	min-width: 250px; /* Largeur minimale pour les petites résolutions */
-    max-width: auto; /* Largeur maximale pour limiter la taille des cartes */
+    transform: translateY(-450px); /* Réinitialiser la transformation si elle crée un espace vide */
+
+    /* Hauteur et largeur initiales avec flexibilité */
+    width: 85%; /* Largeur par défaut */
+    max-width: 1200px; /* Largeur maximale pour éviter une extension excessive */
+    min-width: 300px; /* Largeur minimale pour éviter que le conteneur ne devienne trop étroit */
+    height: auto; /* Hauteur automatique en fonction du contenu */
+    max-height: 80vh; /* Limite la hauteur maximale du conteneur en fonction de la hauteur de la fenêtre */
+    overflow: hidden; /* Affiche les barres de défilement seulement si nécessaire */
 }
 
-#ecole42-texte h3 .icon {
-	transform: translate(180px, -1150px);
-	width: 180px;
-	height: 140px;
-	border-radius: 5px;
+.image42 {
+    width: 100px; /* Prend toute la largeur du conteneur */
+    height: auto; /* Hauteur automatique pour garder le ratio */
 }
 
-#ecole42 h2 {
-	color: #000000; /* Couleur du texte */
+#ecole42-container h2 {
+    color: #000000; /* Couleur du texte */
     text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8); /* Ombre bleue pour créer un effet de contour */
-	text-align: center;
-	transform: translate(263px, -1230px);
-	font-size: 3em;
-	font-family: Arial, Helvetica, sans-serif;
-    font-weight: 300; /* Makes the text thinner */
+    text-align: right; /* Centrer le texte */
+    font-size: 2.5em; /* Ajuste la taille du texte pour être responsive */
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 300; /* Rend le texte plus léger */
+    margin: 0; /* Enlève les marges pour un ajustement fluide */
+	margin-right: 19%;
 }
 
-#ecole42 h3 {
-	color: #ffffff; /* Couleur du texte */
-	text-align: left;
-	transform: translate(930px, -1220px);
-	font-size: 1.5em;
-	font-family: Arial, Helvetica, sans-serif;
-	font-weight: 20; /* Makes the text thinner */
-}
-
-#projet {
-	background-color: #404040;
-	transform: translateY(0px);
-	margin-right: 20%;
-}
-
-#projet_minishell {
-	background-color: #404040;
-	transform: translateY(0px);
-	margin-right: 20%;
-}
-
-#projet_cub3d {
-	background-color: #404040;
-	transform: translateY(0px);
-	margin-right: 20%;
-}
-
-#projet_pushswap {
-	background-color: #404040;
-	transform: translateY(0px);
-	margin-right: 20%;
-}
-
-#projet_Solong {
-	background-color: #404040;
-	transform: translateY(0px);
-	margin-right: 20%;
-}
-
-#projet_philo {
-	background-color: #404040;
-	transform: translateY(0px);
-	margin-right: 20%;
-}
-
-#projet_minitalk {
-	background-color: #404040;
-	transform: translateY(0px);
-	margin-right: 20%;
+#ecole42-container h3 {
+    color: #ffffff; /* Couleur du texte */
+    text-align: left; /* Aligne le texte à gauche */
+    font-size: 1.5em; /* Ajuste la taille du texte pour être responsive */
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 300; /* Rend le texte plus léger */
+    margin: 10px 0; /* Ajoute une marge verticale pour espacer les titres */
+	margin-left: 70%;
 }
 
 .button {
     color: #000000; /* Couleur du texte en noir */
     text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8); /* Ombre bleue pour créer un effet de contour */
     border: none;
-    padding: 1px 1px;
-    border-radius: 1px;
+    padding: 10px 20px; /* Padding pour une meilleure surface cliquable */
+    border-radius: 5px; /* Arrondir les coins du bouton */
     cursor: pointer;
-    font-size: 1.1em;
-    margin-top: 0px;
-    transform: translate(930px, -1230px);
-	text-decoration: underline;
+    font-size: 1.1em; /* Ajuste la taille de la police */
+    text-decoration: underline;
+    background-color: #404040;
+    margin: -30px 0; /* Ajoute une marge verticale pour espacer les boutons */
 }
 
-#ecole42 h4 {
+#ecole42-container h4 {
     color: #ffffff; /* Couleur du texte */
     text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8); /* Ombre bleue pour créer un effet de contour */
-    text-align: justify;
-    font-size: 1.2em;
+    text-align: justify; /* Justifie le texte */
+    font-size: 1.2em; /* Ajuste la taille du texte pour être responsive */
     font-family: Arial, Helvetica, sans-serif;
-    font-weight: 300; /* Ajustement du poids de la police */
+    font-weight: 300; /* Rend le texte plus léger */
     padding: 10px;
-    max-width: 50%; /* Limite la largeur maximale du texte à 50% */
-    margin-left: 10%; /* Décalage vers la gauche */
-    margin-right: auto; /* Laisser l'espace restant à droite */
-	transform: translateY(-1400px);
+    margin: 10px auto; /* Centre le texte et ajoute une marge verticale */
+    width: 60%; /* Largeur du texte en pourcentage du conteneur */
     box-sizing: border-box;
+	margin-right: 37%;
+	transform: translateY(-200px);
 }
+
 
 #description_minishell {
 	color: #ffffff; /* Couleur du texte */
 	text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8); /* Ombre bleue pour créer un effet de contour */
-	transform: translate(160px, -1150px);
 	font-size: 1em;
 	font-family: Arial, Helvetica, sans-serif;
 	font-weight: 20; /* Makes the text thinner */
@@ -465,12 +427,12 @@ p {
 #description_minishell nav ul {
     list-style: none; /* Enlève les puces */
     padding: 0; /* Enlève le padding par défaut */
-    position: absolute; /* Positionnement absolu */
+    position: relative; /* Positionnement absolu */
     display: flex; /* Utilise Flexbox */
     flex-direction: row; /* Aligne les éléments en ligne (horizontalement) */
     justify-content: flex-start; /* Aligne les éléments à droite */
-    right: 0; /* Aligne le conteneur UL à droite */
-    transform: translate(-350px, 300px); /* Déplace le conteneur UL */
+    left: 0; /* Aligne le conteneur UL à droite */
+	margin-bottom: 10%;
 }
 
 #description_minishell nav ul li a .icon{
@@ -492,8 +454,7 @@ p {
 #description_cub3d {
 	color: #ffffff; /* Couleur du texte */
 	text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8); /* Ombre bleue pour créer un effet de contour */
-	transform: translate(160px, -1150px);
-	font-size: 1.2em;
+	font-size: 1em;
 	font-family: Arial, Helvetica, sans-serif;
 	font-weight: 20; /* Makes the text thinner */
 	max-width: 40%;
@@ -511,13 +472,14 @@ p {
 }
 
 #description_cub3d nav ul {
-	list-style: none; /* Enlève les puces */
+    list-style: none; /* Enlève les puces */
     padding: 0; /* Enlève le padding par défaut */
-    position: absolute; /* Positionnement absolu */
+    position: relative; /* Positionnement absolu */
     display: flex; /* Utilise Flexbox */
-    flex-direction: column; /* Aligne les éléments en colonne */
-	margin-left: 0% !important;
-	transform: translate(-350px, 300px);
+    flex-direction: row; /* Aligne les éléments en ligne (horizontalement) */
+    justify-content: flex-start; /* Aligne les éléments à droite */
+    left: 0; /* Aligne le conteneur UL à droite */
+	margin-bottom: 10%;
 }
 
 #description_cub3d nav ul li a .icon{
@@ -539,8 +501,7 @@ p {
 #description_Solong {
 	color: #ffffff; /* Couleur du texte */
 	text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8); /* Ombre bleue pour créer un effet de contour */
-	transform: translate(160px, -1150px);
-	font-size: 1.2em;
+	font-size: 1em;
 	font-family: Arial, Helvetica, sans-serif;
 	font-weight: 20; /* Makes the text thinner */
 	max-width: 40%;
@@ -558,13 +519,14 @@ p {
 }
 
 #description_Solong nav ul {
-	list-style: none; /* Enlève les puces */
+    list-style: none; /* Enlève les puces */
     padding: 0; /* Enlève le padding par défaut */
-    position: absolute; /* Positionnement absolu */
+    position: relative; /* Positionnement absolu */
     display: flex; /* Utilise Flexbox */
-    flex-direction: column; /* Aligne les éléments en colonne */
-	margin-left: 0% !important;
-	transform: translate(-350px, 300px);
+    flex-direction: row; /* Aligne les éléments en ligne (horizontalement) */
+    justify-content: flex-start; /* Aligne les éléments à droite */
+    left: 0; /* Aligne le conteneur UL à droite */
+	margin-bottom: 10%;
 }
 
 #description_Solong nav ul li a .icon{
@@ -586,8 +548,7 @@ p {
 #description_pushswap {
 	color: #ffffff; /* Couleur du texte */
 	text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8); /* Ombre bleue pour créer un effet de contour */
-	transform: translate(160px, -1150px);
-	font-size: 1.2em;
+	font-size: 1em;
 	font-family: Arial, Helvetica, sans-serif;
 	font-weight: 20; /* Makes the text thinner */
 	max-width: 40%;
@@ -605,13 +566,14 @@ p {
 }
 
 #description_pushswap nav ul {
-	list-style: none; /* Enlève les puces */
+    list-style: none; /* Enlève les puces */
     padding: 0; /* Enlève le padding par défaut */
-    position: absolute; /* Positionnement absolu */
+    position: relative; /* Positionnement absolu */
     display: flex; /* Utilise Flexbox */
-    flex-direction: column; /* Aligne les éléments en colonne */
-	margin-left: 0% !important;
-	transform: translate(-350px, 300px);
+    flex-direction: row; /* Aligne les éléments en ligne (horizontalement) */
+    justify-content: flex-start; /* Aligne les éléments à droite */
+    left: 0; /* Aligne le conteneur UL à droite */
+	margin-bottom: 10%;
 }
 
 #description_pushswap nav ul li a .icon{
@@ -633,8 +595,7 @@ p {
 #description_philo {
 	color: #ffffff; /* Couleur du texte */
 	text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8); /* Ombre bleue pour créer un effet de contour */
-	transform: translate(160px, -1150px);
-	font-size: 1.2em;
+	font-size: 1em;
 	font-family: Arial, Helvetica, sans-serif;
 	font-weight: 20; /* Makes the text thinner */
 	max-width: 40%;
@@ -652,13 +613,14 @@ p {
 }
 
 #description_philo nav ul {
-	list-style: none; /* Enlève les puces */
+    list-style: none; /* Enlève les puces */
     padding: 0; /* Enlève le padding par défaut */
-    position: absolute; /* Positionnement absolu */
+    position: relative; /* Positionnement absolu */
     display: flex; /* Utilise Flexbox */
-    flex-direction: column; /* Aligne les éléments en colonne */
-	margin-left: 0% !important;
-	transform: translate(-350px, 330px);
+    flex-direction: row; /* Aligne les éléments en ligne (horizontalement) */
+    justify-content: flex-start; /* Aligne les éléments à droite */
+    left: 0; /* Aligne le conteneur UL à droite */
+	margin-bottom: 10%;
 }
 
 #description_philo nav ul li a .icon{
@@ -680,8 +642,7 @@ p {
 #description_minitalk {
 	color: #ffffff; /* Couleur du texte */
 	text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8); /* Ombre bleue pour créer un effet de contour */
-	transform: translate(160px, -1150px);
-	font-size: 1.2em;
+	font-size: 1em;
 	font-family: Arial, Helvetica, sans-serif;
 	font-weight: 20; /* Makes the text thinner */
 	max-width: 40%;
@@ -699,13 +660,14 @@ p {
 }
 
 #description_minitalk nav ul {
-	list-style: none; /* Enlève les puces */
+    list-style: none; /* Enlève les puces */
     padding: 0; /* Enlève le padding par défaut */
-    position: absolute; /* Positionnement absolu */
-    display: block; /* Utilise Flexbox */
-    flex-direction: column; /* Aligne les éléments en colonne */
-	margin-left: 0% !important;
-	transform: translate(-350px, 300px);
+    position: relative; /* Positionnement absolu */
+    display: flex; /* Utilise Flexbox */
+    flex-direction: row; /* Aligne les éléments en ligne (horizontalement) */
+    justify-content: flex-start; /* Aligne les éléments à droite */
+    left: 0; /* Aligne le conteneur UL à droite */
+	margin-bottom: 10%;
 }
 
 #description_minitalk nav ul li a .icon{
@@ -774,8 +736,8 @@ p {
     width: 100px;  /* Largeur du bouton */
     height: 100px; /* Hauteur du bouton */
     transition: color 0.3s ease;
-	margin-left: 10%;
-	transform: translateY(400px);
+	bottom: 0;
+	right: 0;
 }
 
 
@@ -788,6 +750,7 @@ p {
     height: auto; /* Hauteur automatique pour garder le ratio */
     box-shadow: 0 0 5px rgb(255, 255, 255); /* Ombre légère pour la vidéo */
     margin-top: 20px; /* Espacement au-dessus de la vidéo */
-	transform: translate(650px, -450px);
+	margin-left: 140%;
+	transform: translateY(-400px);
 }
 

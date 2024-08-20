@@ -100,7 +100,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		if (video) {
 			video.pause(); // Mettre la vidéo en pause avant de masquer la description
 		}
-		
+
 		document.querySelectorAll('.description').forEach(function(description) {
 			if (description.classList.contains('show')) {
 				description.classList.remove('show'); // Retirer la classe pour cacher avec transition
@@ -155,6 +155,25 @@ document.addEventListener("DOMContentLoaded", () => {
 		});
 	});
 
-
+	
+	
 });
 
+function adjustScrollBehavior() {
+	var container = document.getElementById('ecole42-container');
+
+	// Vérifie si le contenu dépasse la hauteur visible
+	if (container.scrollHeight > container.clientHeight) {
+		// Si le contenu dépasse, permet le défilement
+		container.style.overflow = 'auto';
+	} else {
+		// Sinon, cache les barres de défilement
+		container.style.overflow = 'hidden';
+	}
+}
+
+// Appel de la fonction lors du chargement de la page
+window.onload = adjustScrollBehavior;
+
+// Appel de la fonction lors du redimensionnement de la fenêtre
+window.onresize = adjustScrollBehavior;
