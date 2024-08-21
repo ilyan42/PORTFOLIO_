@@ -832,12 +832,12 @@ p {
 	#ecole42-container h2 {
 		font-size: 1.5em;
 		margin-right: 10%;
-		transform: translateY(-500px);
+		transform: translate(-50px, 300px);
 	}
 	#ecole42-container h3 {
 		font-size: 1em;
 		margin-left: 65%;
-		transform: translateY(-500px);
+		transform: translate(-50px, 300px);
 	}
 	#ecole42-container h4 {
 		font-size: 0.6em;
