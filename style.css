@@ -801,13 +801,18 @@ p {
         font-size: 2em;
     }
 
+	h2 {
+		font-size: 1.5em;
+	}
+
+
 	#threejs-container {
 		transform: translate(30px, 50px);
 		height: 170vh;
 	}
 
 	#unity-texte h3 .icon {
-		transform: translate(100px, -1150px);
+		transform: translate(70px, -1150px);
 	}
 		
 

@@ -17,7 +17,7 @@
         const model = gltf.scene;
         scene.add(model);
 
-		if (window.innerWidth > 768) 
+		if (window.innerWidth > 900) 
 		{
 			model.position.set(0, 2, 0);
 			camera.position.set(5, 5, 8);
