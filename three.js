@@ -17,7 +17,7 @@
         const model = gltf.scene;
         scene.add(model);
 
-		if (window.innerWidth > 900) 
+		if (window.innerWidth > 1200) 
 		{
 			model.position.set(0, 2, 0);
 			camera.position.set(5, 5, 8);
@@ -26,9 +26,9 @@
 		else
 		{
 			renderer.setSize(3000, 1300);
-			model.position.set(1.5, 0.8, 0);
-			camera.position.set(5, 5, 8);
-			model.scale.set(0.2, 0.8, 0.2);
+			model.position.set(-3, 0, -10);
+			camera.position.set(5, 8, 8);
+			model.scale.set(0.2, 0.9, 0.3);
 		}
 
         function animateThree() {
