@@ -799,20 +799,24 @@ p {
 @media (max-width: 768px) {
     header h1 {
         font-size: 2em;
+		transform: translate(0px, 0px);
     }
 
 	h2 {
 		font-size: 1.5em;
 	}
 
+	#header-container {
+		display: none;
+	}
 
 	#threejs-container {
-		transform: translate(30px, 50px);
-		height: 170vh;
+		display: none;
+
 	}
 
 	#unity-texte h3 .icon {
-		transform: translate(70px, -1150px);
+		transform: translate(70px, 100px);
 	}
 		
 
@@ -852,6 +856,7 @@ p {
 	}
 	#ecole42-container {
 		height: 110vh;
+		transform: translateY(350px);
 	}
 	#ecole42-container h2 {
 		font-size: 1.5em;
@@ -914,7 +919,13 @@ p {
 		transform: translate(-250px, 0px);
 	}
 	#showVideoBtn {
-		transform: translate(40px, -900px);
+		transform: translate(50px, 200px);
+		background: url('image/arial.png') no-repeat center center; /* Centrer l'image et éviter la répétition */
+		background-size: contain; /* Ajuste l'image pour qu'elle soit complètement visible à l'intérieur du bouton */
+		width: 100px; /* Ajuster la largeur du bouton */
+		height: 50px; /* Ajuster la hauteur du bouton */
+		border: none; /* Retirer les bordures si nécessaire */
+		cursor: pointer; /* Changer le curseur pour indiquer que c'est un bouton cliquable */
 	}
 	.back-button {
 		width: 100px;
@@ -926,13 +937,16 @@ p {
         height: 300px; /* Ajuster la hauteur à ce que tu veux */
     }
 	#videoJeux {
-		transform: translate(40px, -1000px);
+		transform: translate(40px, 150px);
 		height: 50vh;
 		width: 120%; /* Augmente la largeur au-delà de 100% */
 		padding: 10px 20px; /* Ajoute du padding horizontal pour élargir visuellement */
 	}
 	.jeux {
 		width: 80%;
+	}
+	footer {
+		transform: translateY(400px);
 	}
 
 }
