@@ -838,8 +838,9 @@ p {
 		margin-left: 65%;
 	}
 	#ecole42-container h4 {
-		font-size: 1em;
+		font-size: 0.6em;
 		margin-left: 5%;
+		width: 90%;
 	}
 	#description_minishell {
 		font-size: 0.7em;
@@ -884,7 +885,7 @@ p {
 		transform: translateY(250px);
 	}
 	#video_in_description {
-		transform: translate(-400px, 0px);
+		transform: translate(-250px, 0px);
 	}
 	.back-button {
 		width: 100px;
