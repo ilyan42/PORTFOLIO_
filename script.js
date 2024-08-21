@@ -155,25 +155,55 @@ document.addEventListener("DOMContentLoaded", () => {
 		});
 	});
 
+	document.addEventListener('DOMContentLoaded', function () {
+		let nav = document.querySelector('.nav-center');
+		let timer = null;
+	
+		function showNav() {
+			nav.classList.remove('hidden');
+		}
+	
+		function hideNav() {
+			nav.classList.add('hidden');
+		}
+	
+		window.addEventListener('scroll', function () {
+			// Afficher la barre de navigation lorsqu'il y a du défilement
+			showNav();
+	
+			// Réinitialiser le timer pour cacher la barre après un certain délai
+			if (timer) {
+				clearTimeout(timer);
+			}
+	
+			// Cacher la barre de navigation après 1 seconde (ajuster si nécessaire)
+			timer = setTimeout(hideNav, 1000);
+		});
+	
+		// Initialement cacher la barre de navigation si l'utilisateur ne fait pas défiler
+		hideNav();
+	});
 	
 	
 });
 
-function adjustScrollBehavior() {
-	var container = document.getElementById('ecole42-container');
+// function adjustScrollBehavior() {
+// 	var container = document.getElementById('ecole42-container');
 
-	// Vérifie si le contenu dépasse la hauteur visible
-	if (container.scrollHeight > container.clientHeight) {
-		// Si le contenu dépasse, permet le défilement
-		container.style.overflow = 'auto';
-	} else {
-		// Sinon, cache les barres de défilement
-		container.style.overflow = 'hidden';
-	}
-}
+// 	// Vérifie si le contenu dépasse la hauteur visible
+// 	if (container.scrollHeight > container.clientHeight) {
+// 		// Si le contenu dépasse, permet le défilement
+// 		container.style.overflow = 'auto';
+// 	} else {
+// 		// Sinon, cache les barres de défilement
+// 		container.style.overflow = 'hidden';
+// 	}
+// }
 
-// Appel de la fonction lors du chargement de la page
-window.onload = adjustScrollBehavior;
+// // Appel de la fonction lors du chargement de la page
+// window.onload = adjustScrollBehavior;
 
-// Appel de la fonction lors du redimensionnement de la fenêtre
-window.onresize = adjustScrollBehavior;
+// // Appel de la fonction lors du redimensionnement de la fenêtre
+// window.onresize = adjustScrollBehavior;
+
+
