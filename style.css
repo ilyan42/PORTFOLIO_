@@ -48,6 +48,7 @@ header {
 	overflow: hidden;
 	min-width: 250px; /* Largeur minimale pour les petites résolutions */
     max-width: auto; /* Largeur maximale pour limiter la taille des cartes */
+	width: 85%; /* Largeur par défaut */
 }
 
 
@@ -102,11 +103,11 @@ header {
     margin: 0; /* Supprime la marge par défaut */
     display: flex; /* Utilise Flexbox pour disposer les éléments horizontalement */
     justify-content: flex-start; /* Aligne les éléments au début (gauche) */
-    gap: 20px; /* Espace entre les éléments */
+    gap: 0px; /* Espace entre les éléments */
     flex-wrap: nowrap; /* Empêche les éléments de se réorganiser en colonne */
     overflow: auto; /* Permet le défilement horizontal si nécessaire */
-	top : 5%;
-	left : 35%;
+	top : 2%;
+	left : 30%;
 	z-index: 4;
 	transition: opacity 0.3s, transform 0.3s; /* Transitions douces pour l'opacité et la transformation */
     opacity: 1; /* Opacité initiale (visible) */
@@ -126,11 +127,18 @@ header {
 /* Style pour les liens */
 .nav-center li a {
     text-decoration: none; /* Supprime la sous-ligne des liens */
-    color: #ffffff; /* Couleur du texte */
-    padding: 10px 20px; /* Padding autour du texte */
-    background-color: #000000; /* Couleur de fond des liens */
+    color: #939393; /* Couleur du texte */
+    padding: 0px 20px; /* Réduit le padding autour du texte */
     border-radius: 5px; /* Coins arrondis */
+    font-family: Arial, Helvetica, sans-serif;
     transition: background-color 0.3s, color 0.3s, transform 0.3s; /* Transition douce */
+    font-weight: normal; /* Rend le texte avec le poids normal */
+}
+
+.nav-center li a:hover {
+    color: #ffffff; /* Changer la couleur du texte */
+    background-color: transparent; /* Assurer que le fond reste transparent */
+    transform: scale(1.1); /* Agrandir légèrement le texte pour un effet de survol */
 }
 
 
@@ -152,8 +160,10 @@ h2 {
     text-align: center;
     color: #ffffff;
     text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8); /* Ombre bleue pour créer un effet de contour */
-    margin-top: 20px;
+    margin-top: 40px;
 	font-family: Arial, Helvetica, sans-serif;
+	transform: translateY(50px);
+
 }
 
 /* Conteneur des cartes */
@@ -163,7 +173,7 @@ h2 {
     padding: 20px;
     flex-wrap: wrap; /* Permet aux cartes de se replier sur la ligne suivante sur les petits écrans */
     justify-content: center; /* Centre les cartes horizontalement */
-    /* transform: translateY(50px); */
+    transform: translateY(50px);
 }
 
 /* Style des cartes */
@@ -329,7 +339,6 @@ footer .socials a:hover {
     display: flex; /* Utilisation de Flexbox pour centrer le contenu */
     justify-content: center; /* Centre horizontalement */
     align-items: center; /* Centre verticalement */
-    padding: 20px; /* Espace autour du conteneur */
     min-height: 300px; /* Hauteur minimale pour le conteneur */
 }
 
@@ -414,6 +423,7 @@ p {
     font-weight: 300; /* Rend le texte plus léger */
     margin: 10px 0; /* Ajoute une marge verticale pour espacer les titres */
 	margin-left: 70%;
+	transform: translateY(40px);
 }
 
 .button {
@@ -789,8 +799,17 @@ p {
 @media (max-width: 768px) {
     header h1 {
         font-size: 2em;
-		/* transform: translateY(450px); */
     }
+
+	#threejs-container {
+		transform: translate(30px, 50px);
+		height: 170vh;
+	}
+
+	#unity-texte h3 .icon {
+		transform: translate(100px, -1150px);
+	}
+		
 
     .nav-right ul {
         right: 10px; /* Ajuste la distance depuis la droite */
@@ -816,7 +835,7 @@ p {
     }
 
     .nav-center li a {
-        padding: 8px 16px; /* Réduit le padding des liens sur les petits écrans */
+        opacity: 0; /* Cache les liens */
     }
 
 	#header-container {
@@ -889,10 +908,26 @@ p {
 	#video_in_description {
 		transform: translate(-250px, 0px);
 	}
+	#showVideoBtn {
+		transform: translate(40px, -900px);
+	}
 	.back-button {
 		width: 100px;
 		height: 100px;
 		transform: translateX(100px);
+	}
+	#header-container canvas {
+        width: 100%;
+        height: 300px; /* Ajuster la hauteur à ce que tu veux */
+    }
+	#videoJeux {
+		transform: translate(40px, -1000px);
+		height: 50vh;
+		width: 120%; /* Augmente la largeur au-delà de 100% */
+		padding: 10px 20px; /* Ajoute du padding horizontal pour élargir visuellement */
+	}
+	.jeux {
+		width: 80%;
 	}
 
 }
