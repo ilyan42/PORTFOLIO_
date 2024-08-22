@@ -3,7 +3,7 @@
     const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
     const renderer = new THREE.WebGLRenderer();
     renderer.setSize(1400, 700); // Hauteur du conteneur three.js
-    renderer.setClearColor(0x404040); // Couleur de fond gris clair
+    renderer.setClearColor(0x363535); // Couleur de fond gris clair
     document.getElementById('threejs-container').appendChild(renderer.domElement);
 
     // Lumières

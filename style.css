@@ -382,7 +382,7 @@ p {
 }
 
 #ecole42-container {
-    background-color: #404040;
+    background-color: #36353593;
     margin: 0 auto; /* Centrer le conteneur horizontalement */
     border-radius: 50px;
     border: 2px solid #ffffff; /* Bordure blanche autour des cartes */
@@ -399,13 +399,23 @@ p {
     height: 90vh; /* Hauteur automatique en fonction du contenu */
 }
 
+.image_bg {
+    position: relative; /* Nécessaire pour que l'overlay soit positionné correctement */
+    width: 50%;
+    height: auto;
+    z-index: -2;
+    transform: translate(250px, -300px);
+}
+
+
+
 .image42 {
     width: 100px; /* Prend toute la largeur du conteneur */
     height: auto; /* Hauteur automatique pour garder le ratio */
 }
 
 #ecole42-container h2 {
-    color: #000000; /* Couleur du texte */
+    color: #ffffff; /* Couleur du texte */
     text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8); /* Ombre bleue pour créer un effet de contour */
     text-align: right; /* Centrer le texte */
     font-size: 2.5em; /* Ajuste la taille du texte pour être responsive */
@@ -427,7 +437,7 @@ p {
 }
 
 .button {
-    color: #000000; /* Couleur du texte en noir */
+    color: #fffcfc; /* Couleur du texte en noir */
     text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8); /* Ombre bleue pour créer un effet de contour */
     border: none;
     padding: 10px 20px; /* Padding pour une meilleure surface cliquable */
@@ -435,8 +445,13 @@ p {
     cursor: pointer;
     font-size: 1.1em; /* Ajuste la taille de la police */
     text-decoration: underline;
-    background-color: #404040;
+	background-color: #25252500; /* Couleur de fond blanche */
     margin: -30px 0; /* Ajoute une marge verticale pour espacer les boutons */
+}
+
+.button:hover {
+    color: #9992f4; /* Change la couleur du texte au survol */
+    text-shadow: none; /* Optionnel : supprimer l'ombre de texte au survol */
 }
 
 #ecole42-container h4 {
@@ -451,7 +466,7 @@ p {
     width: 60%; /* Largeur du texte en pourcentage du conteneur */
     box-sizing: border-box;
 	margin-right: 37%;
-	transform: translateY(-200px);
+	transform: translateY(-300px);
 }
 
 
