@@ -48,32 +48,4 @@
         camera.aspect = width / height;
         camera.updateProjectionMatrix();
     });
-
-    document.getElementById('showVideoBtn').addEventListener('click', function() {
-        const videoContainer = document.getElementById('videoContainer');
-        const video = document.getElementById('myVideo');
-
-        videoContainer.style.display = 'flex';
-		videoContainer.classList.add('fullscreen');
-        video.play();
-
-        video.addEventListener('ended', function() {
-            videoContainer.style.display = 'none';
-        });
-
-        videoContainer.addEventListener('click', function(event) {
-            if (event.target === videoContainer) {
-                video.pause();
-                videoContainer.style.display = 'none';
-            }
-        });
-    });
-
-    document.getElementById('closeVideoBtn').addEventListener('click', function() {
-        const videoContainer = document.getElementById('videoContainer');
-        const video = document.getElementById('myVideo');
-        video.pause();
-        video.currentTime = 0;
-        videoContainer.style.display = 'none';
-    });
 })();

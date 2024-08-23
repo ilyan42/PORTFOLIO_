@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", function() {
     // Animation d'apparition du contenu au chargement de la page
     const mainContent = document.querySelector('main');
     mainContent.style.opacity = 0;
@@ -30,6 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         top: targetElement.offsetTop,
                         behavior: 'smooth'
                     });
+                    adjustScrollBehavior(); // Recalcule le défilement après l'animation
                 }
             }
         });
@@ -68,142 +69,114 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
+    // Fonction pour afficher une description et cacher les autres
+    function showDescription(descriptionId) {
+        // Masquer la section des projets
+        document.getElementById('ecole42').style.display = 'none';
 
-// Fonction pour afficher une description et cacher les autres
-	function showDescription(descriptionId) {
-		// Masquer la section des projets
-		document.getElementById('ecole42').style.display = 'none';
+        // Masquer toutes les descriptions avant d'en afficher une
+        document.querySelectorAll('.description').forEach(function(desc) {
+            desc.classList.remove('show');
+            desc.style.display = 'none';
+        });
 
-		// Masquer toutes les descriptions avant d'en afficher une
-		document.querySelectorAll('.description').forEach(function(desc) {
-			desc.classList.remove('show');
-			desc.style.display = 'none';
-		});
+        // Afficher la description demandée
+        var description = document.getElementById(descriptionId);
+        var button = document.querySelector('.back-button');
+        if (description) {
+            description.style.display = 'block'; // Assurer que la section est visible
+            setTimeout(function() {
+                description.classList.add('show'); // Ajouter la classe pour afficher avec transition
+            }, 10); // Légère pause pour permettre à la section d'être affichée avant de commencer la transition
 
-		// Afficher la description demandée
-		var description = document.getElementById(descriptionId);
-		var button = document.querySelector('.back-button');
-		if (description) {
-			description.style.display = 'block'; // Assurer que la section est visible
-			setTimeout(function() {
-				description.classList.add('show'); // Ajouter la classe pour afficher avec transition
-			}, 10); // Légère pause pour permettre à la section d'être affichée avant de commencer la transition
+            button.style.display = 'block'; // Afficher le bouton de retour
+        }
+    }
 
-			button.style.display = 'block'; // Afficher le bouton de retour
-		}
-	}
+    // Fonction pour cacher les descriptions et réafficher les projets
+    function hideDescription() {
+        var video = document.getElementById('video_in_description');
+        if (video) {
+            video.pause(); // Mettre la vidéo en pause avant de masquer la description
+        }
 
-	// Fonction pour cacher les descriptions et réafficher les projets
-	function hideDescription() {
+        document.querySelectorAll('.description').forEach(function(description) {
+            if (description.classList.contains('show')) {
+                description.classList.remove('show'); // Retirer la classe pour cacher avec transition
+                setTimeout(function() {
+                    description.style.display = 'none'; // Assurer que la section est bien cachée
+                }, 1000); // Correspond à la durée de la transition
+            }
+        });
 
-		var video = document.getElementById('video_in_description');
-		if (video) {
-			video.pause(); // Mettre la vidéo en pause avant de masquer la description
-		}
+        // Réafficher la section des projets
+        setTimeout(function() {
+            var ecole42 = document.getElementById('ecole42');
+            ecole42.style.display = 'block';
+            ecole42.style.opacity = 0;
+            setTimeout(function() {
+                ecole42.style.transition = 'opacity 1s ease-in-out';
+                ecole42.style.opacity = 1;
+            }, 50);
+        }, 1000); // Délai correspondant à la durée de la transition de fade-out
+    }
 
-		document.querySelectorAll('.description').forEach(function(description) {
-			if (description.classList.contains('show')) {
-				description.classList.remove('show'); // Retirer la classe pour cacher avec transition
-				setTimeout(function() {
-					description.style.display = 'none'; // Assurer que la section est bien cachée
-				}, 1000); // Correspond à la durée de la transition
-			}
-		});
+    // Ajout des gestionnaires d'événements pour chaque projet
+    document.getElementById('projet_minishell').addEventListener('click', function(event) {
+        showDescription('description_minishell');
+    });
 
-		// Réafficher la section des projets
-		setTimeout(function() {
-			var ecole42 = document.getElementById('ecole42');
-			ecole42.style.display = 'block';
-			ecole42.style.opacity = 0;
-			setTimeout(function() {
-				ecole42.style.transition = 'opacity 1s ease-in-out';
-				ecole42.style.opacity = 1;
-			}, 50);
-		}, 1000); // Délai correspondant à la durée de la transition de fade-out
-	}
+    document.getElementById('projet_cub3d').addEventListener('click', function(event) {
+        showDescription('description_cub3d');
+    });
 
-	// Ajout des gestionnaires d'événements pour chaque projet
-	document.getElementById('projet_minishell').addEventListener('click', function(event) {
-		showDescription('description_minishell');
-	});
+    document.getElementById('projet_Solong').addEventListener('click', function(event) {
+        showDescription('description_Solong');
+    });
 
-	document.getElementById('projet_cub3d').addEventListener('click', function(event) {
-		showDescription('description_cub3d');
-	});
+    document.getElementById('projet_pushswap').addEventListener('click', function(event) {
+        showDescription('description_pushswap');
+    });
 
-	document.getElementById('projet_Solong').addEventListener('click', function(event) {
-		showDescription('description_Solong');
-	});
+    document.getElementById('projet_philo').addEventListener('click', function(event) {
+        showDescription('description_philo');
+    });
 
-	document.getElementById('projet_pushswap').addEventListener('click', function(event) {
-		showDescription('description_pushswap');
-	});
+    document.getElementById('projet_minitalk').addEventListener('click', function(event) {
+        showDescription('description_minitalk');
+    });
 
-	document.getElementById('projet_philo').addEventListener('click', function(event) {
-		showDescription('description_philo');
-	});
+    // Gestion du bouton de retour
+    document.querySelectorAll('.back-button').forEach(function(button) {
+        button.addEventListener('click', function(event) {
+            event.preventDefault();
+            hideDescription();
+        });
+    });
 
-	document.getElementById('projet_minitalk').addEventListener('click', function(event) {
-		showDescription('description_minitalk');
-	});
+    // Fonction pour ajuster le comportement de défilement
+    function adjustScrollBehavior() {
+        var container = document.getElementById('ecole42-container');
 
-	// Gestion du bouton de retour
-	document.querySelectorAll('.back-button').forEach(function(button) {
-		button.addEventListener('click', function(event) {
-			event.preventDefault();
-			hideDescription();
-		});
-	});
+        // Vérifie si le contenu dépasse la hauteur visible
+        if (container.scrollHeight > container.clientHeight) {
+            // Si le contenu dépasse, permet le défilement
+            container.style.overflow = 'auto';
+        } else {
+            // Sinon, cache les barres de défilement
+            container.style.overflow = 'hidden';
+        }
+    }
 
-	document.addEventListener('DOMContentLoaded', function () {
-		let nav = document.querySelector('.nav-center');
-		let timer = null;
-	
-		function showNav() {
-			nav.classList.remove('hidden');
-		}
-	
-		function hideNav() {
-			nav.classList.add('hidden');
-		}
-	
-		window.addEventListener('scroll', function () {
-			// Afficher la barre de navigation lorsqu'il y a du défilement
-			showNav();
-	
-			// Réinitialiser le timer pour cacher la barre après un certain délai
-			if (timer) {
-				clearTimeout(timer);
-			}
-	
-			// Cacher la barre de navigation après 1 seconde (ajuster si nécessaire)
-			timer = setTimeout(hideNav, 1000);
-		});
-	
-		// Initialement cacher la barre de navigation si l'utilisateur ne fait pas défiler
-		hideNav();
-	});
-	
-	
+    // Appel de la fonction lors du chargement de la page
+    window.onload = adjustScrollBehavior;
+
+    // Appel de la fonction lors du redimensionnement de la fenêtre
+    window.onresize = adjustScrollBehavior;
+
+    document.addEventListener('mousemove', function(e) {
+        const light = document.getElementById('cursor-light');
+        light.style.left = `${e.clientX}px`;
+        light.style.top = `${e.clientY}px`;
+    });
 });
-
-// function adjustScrollBehavior() {
-// 	var container = document.getElementById('ecole42-container');
-
-// 	// Vérifie si le contenu dépasse la hauteur visible
-// 	if (container.scrollHeight > container.clientHeight) {
-// 		// Si le contenu dépasse, permet le défilement
-// 		container.style.overflow = 'auto';
-// 	} else {
-// 		// Sinon, cache les barres de défilement
-// 		container.style.overflow = 'hidden';
-// 	}
-// }
-
-// // Appel de la fonction lors du chargement de la page
-// window.onload = adjustScrollBehavior;
-
-// // Appel de la fonction lors du redimensionnement de la fenêtre
-// window.onresize = adjustScrollBehavior;
-
-
