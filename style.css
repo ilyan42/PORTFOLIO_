@@ -290,6 +290,10 @@ h5 .icon {
 	transform: translate(700px, -720px);
 }
 
+#videoJeux p {
+	text-align: justify;
+}
+
 #videoJeux nav ul {
 	list-style: none; /* Enlève les puces */
 	padding: 0; /* Enlève le padding par défaut */
@@ -956,7 +960,7 @@ p {
     header h1 {
         font-size: 2em;
 		text-align: center;
-		transform: translate(-20px, 200px);
+		transform: translate(-35px, 200px);
     }
 
 	h2 {
@@ -1148,6 +1152,10 @@ p {
 		transform: translate(40px, 0px);
 		height: 60vh;
 		width: 100%; /* Augmente la largeur au-delà de 100% */
+	}
+	#videoJeux p {
+		font-size: 0.8em;
+		text-align: justify;
 	}
 	.jeux {
 		width: 80%;
