@@ -955,6 +955,7 @@ p {
 @media (max-width: 768px) {
     header h1 {
         font-size: 2em;
+		text-align: center;
 		transform: translate(-20px, 200px);
     }
 
@@ -979,7 +980,9 @@ p {
 	}
 
 	#unity-texte h3 .icon {
-		transform: translate(70px, 100px);
+		transform: translate(100px, 100px);
+		width: 180px;
+		height: 100px;
 	}
 		
 
@@ -1143,9 +1146,8 @@ p {
     }
 	#videoJeux {
 		transform: translate(40px, 0px);
-		height: 50vh;
-		width: 120%; /* Augmente la largeur au-delà de 100% */
-		padding: 10px 20px; /* Ajoute du padding horizontal pour élargir visuellement */
+		height: 60vh;
+		width: 100%; /* Augmente la largeur au-delà de 100% */
 	}
 	.jeux {
 		width: 80%;
@@ -1158,7 +1160,7 @@ p {
 	}
 	#contact-container {
 		transform: translateY(400px);
-		height: 80vh;
+		height: 90vh;
 	}
 	#contact-container h4 {
 		font-size: 1.5em;
@@ -1177,7 +1179,7 @@ p {
 	}
 	#contact-container h2 {
 		font-size: 1em;
-		transform: translate(180px, 340px);
+		transform: translate(110px, 340px);
 		width: 80%;
 	}
 	.image_bg {
@@ -1187,7 +1189,7 @@ p {
 	}
 	.aria_baniere {
 		display: inline; /* Affiche l'image */
-		transform: translate(90px, 600px);
+		transform: translate(90px, 650px);
 		width: 55%;
 		height: auto;
 	}
