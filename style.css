@@ -948,14 +948,25 @@ p {
 	font-family: 'Times New Roman', Times, serif;
 }
 
+.aria_baniere {
+	display: none;
+}
+
 @media (max-width: 768px) {
     header h1 {
         font-size: 2em;
-		transform: translate(0px, 0px);
+		transform: translate(-20px, 200px);
     }
 
 	h2 {
-		font-size: 1.5em;
+		font-size: 2em;
+	}
+
+	header {
+		background-image: url('image/anonyme_bgbleu.png');
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center;
 	}
 
 	#header-container {
@@ -974,7 +985,7 @@ p {
 
     .nav-right ul {
         right: 10px; /* Ajuste la distance depuis la droite */
-		top: 10%;
+		top: 5%;
     }
 
     .nav-right nav ul li {
@@ -989,6 +1000,35 @@ p {
         flex-direction: column; /* Passe en colonne sur les petits écrans */
         align-items: center; /* Centre les cartes */
     }
+	.cards-container p {
+		font-size: 0.8em;
+	}
+	.cards-container h3 {
+		font-size: 1em;
+	}
+	.cards-container h4 {
+		font-size: 1em;
+	}
+	.cards-container h5 {
+		font-size: 1em;
+	}
+	h3 .icon {
+		width: 18px; /* Largeur de l'icône */
+		height: auto; /* Hauteur automatique pour garder les proportions */
+		transform: translateY(0px);
+	}
+	h4 .icon {
+		width: 15px; /* Largeur de l'icône */
+		height: auto; /* Hauteur automatique pour garder les proportions */
+		transform: translateY(1px);
+
+	}
+	h5 .icon {
+		width: 18px; /* Largeur de l'icône */
+		height: auto; /* Hauteur automatique pour garder les proportions */
+		transform: translateY(0px);
+	}
+
 
 	.nav-center ul {
         gap: 10px; /* Réduit l'espace entre les éléments sur les petits écrans */
@@ -1013,12 +1053,12 @@ p {
 	#ecole42-container h2 {
 		font-size: 1.5em;
 		margin-right: 10%;
-		transform: translate(-50px, 250px);
+		transform: translate(-50px, 150px);
 	}
 	#ecole42-container h3 {
 		font-size: 1em;
 		margin-left: 65%;
-		transform: translate(-50px, 250px);
+		transform: translate(-50px, 150px);
 	}
 	#ecole42-container h4 {
 		font-size: 0.6em;
@@ -1049,47 +1089,60 @@ p {
 		font-size: 0.7em;
 		max-width: 80%;
 	}
+	#description_minishell h3 {
+		font-size: 1.5em;
+		transform: translate(-50px, -450px);
+	}
+	#description_cub3d h3 {
+		font-size: 1.5em;
+		transform: translate(-50px, -350px);
+	}
+	#description_Solong h3 {
+		font-size: 1.5em;
+		transform: translate(-50px, -350px);
+	}
+	#description_pushswap h3 {
+		font-size: 1.5em;
+		transform: translate(-50px, -350px);
+	}
+	#description_philo h3 {
+		font-size: 1.5em;
+		transform: translate(-50px, -400px);
+	}
+	#description_minitalk h3 {
+		font-size: 1.5em;
+		transform: translate(-50px, -350px);
+	}
 	#description_minishell nav ul {
-		transform: translateY(250px);
+		transform: translateY(50px);
+		gap : 10px;
 	}
 	#description_cub3d nav ul {
-		transform: translateY(250px);
+		transform: translateY(50px);
 	}
 	#description_Solong nav ul {
-		transform: translateY(250px);
+		transform: translateY(50px);
 	}
 	#description_pushswap nav ul {
-		transform: translateY(250px);
+		transform: translateY(50px);
 	}
 	#description_philo nav ul {
-		transform: translateY(250px);
+		transform: translateY(50px);
 	}
 	#description_minitalk nav ul {
-		transform: translateY(250px);
-	}
-	#video_in_description {
-		transform: translate(-250px, 0px);
-	}
-	#showVideoBtn {
-		transform: translate(50px, 200px);
-		background: url('image/arial.png') no-repeat center center; /* Centrer l'image et éviter la répétition */
-		background-size: contain; /* Ajuste l'image pour qu'elle soit complètement visible à l'intérieur du bouton */
-		width: 100px; /* Ajuster la largeur du bouton */
-		height: 50px; /* Ajuster la hauteur du bouton */
-		border: none; /* Retirer les bordures si nécessaire */
-		cursor: pointer; /* Changer le curseur pour indiquer que c'est un bouton cliquable */
+		transform: translateY(50px);
 	}
 	.back-button {
 		width: 100px;
 		height: 100px;
-		transform: translateX(100px);
+		transform: translate(0px, 500px);
 	}
 	#header-container canvas {
         width: 100%;
         height: 300px; /* Ajuster la hauteur à ce que tu veux */
     }
 	#videoJeux {
-		transform: translate(40px, 150px);
+		transform: translate(40px, 0px);
 		height: 50vh;
 		width: 120%; /* Augmente la largeur au-delà de 100% */
 		padding: 10px 20px; /* Ajoute du padding horizontal pour élargir visuellement */
@@ -1100,7 +1153,44 @@ p {
 	footer {
 		transform: translateY(400px);
 	}
-
+	#videoJeux nav ul {
+		transform: translate(0px, 50px);
+	}
+	#contact-container {
+		transform: translateY(400px);
+		height: 80vh;
+	}
+	#contact-container h4 {
+		font-size: 1.5em;
+		transform: translate(0px, 50px);
+	}
+	#contact-container h5 {
+		font-size: 1em;
+		transform: translate(0px, 200px);
+		width: 80%;
+	}
+	#contact nav ul {
+		transform: translate(0px, -75px);
+	}
+	#contact nav ul li a {
+		font-size: 20px;
+	}
+	#contact-container h2 {
+		font-size: 1em;
+		transform: translate(180px, 340px);
+		width: 80%;
+	}
+	.image_bg {
+		transform: translate(50px, 50px);
+		width: 80%;
+		height: auto;
+	}
+	.aria_baniere {
+		display: inline; /* Affiche l'image */
+		transform: translate(90px, 600px);
+		width: 55%;
+		height: auto;
+	}
 }
 
 
