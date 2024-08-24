@@ -292,7 +292,7 @@ h5 .icon {
 
 #videoJeux h6 {
 	font-size: 1.5em; /* Taille du texte du titre */
-    color: #ffffff; /* Couleur du texte */
+    color: #000000; /* Couleur du texte */
     text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8); /* Ombre bleue pour créer un effet de contour */
     margin-bottom: 10px; /* Espacement sous le titre */
 	font-family: 'Courier New', Courier, monospace;
@@ -964,7 +964,7 @@ p {
 	display: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 850px) {
     header h1 {
         font-size: 2em;
 		text-align: center;
