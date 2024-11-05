@@ -1,300 +1,319 @@
-/*Reset de base pour supprimer les marges/paddings par défaut */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
-/* Style global */
 body {
-    font-family: 'Roboto', sans-serif; /* Changement de la police pour un style plus moderne */
-    background-color: #000000;
-    color: #333;
-    line-height: 1.6;
-    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+	font-family: 'Roboto', sans-serif;
+	background-color: #000000;
+	color: #333;
+	line-height: 1.6;
+	transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 	overflow-x: hidden;
-	overflow-y: auto; /* Permet le défilement vertical si nécessaire */
+	overflow-y: auto;
 }
 
-/* Conteneur pour centrer le contenu */
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+	max-width: 100%;
+	width: 100%;
+	margin: 0 auto;
 }
 
-/* Style pour l'en-tête */
 header {
-    height: 100vh; /* Hauteur de l'en-tête */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
 }
 
-
-
-#header-container {
-    position: relative; /* Positionnement relatif pour permettre le positionnement absolu des éléments enfants */
-    width: 100%;
-    height: 100vh; /* Hauteur du viewport pour couvrir toute la fenêtre */
-    z-index: -1; /* Derrière les autres éléments */
-	transform: translateX(-150px);
-}
-
-#threejs-container {
-	transform : translate(100px, 100px);
-	border-radius: 50px;
-	border: 2px solid #ffffff; /* Bordure blanche autour des cartes */
-	overflow: hidden;
-	min-width: 250px; /* Largeur minimale pour les petites résolutions */
-    max-width: auto; /* Largeur maximale pour limiter la taille des cartes */
-	width: 85%; /* Largeur par défaut */
-}
-
-
-
-/* Navigation */
-/* Styles généraux */
-/* Liens en haut à droite */
-/* Style pour le conteneur des liens */
-
-/* Style pour la liste des liens */
-.nav-right ul {
+h1 {
+	font-size: 5vw;
+	text-align: center;
+	color: #ffffff;
+	text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8);
+	font-family: 'Courier New', Courier, monospace;
+	z-index: 2;
 	position: absolute;
-    list-style: none; /* Supprime les puces des listes */
-    padding: 0; /* Supprime le padding par défaut */
-    margin: 0; /* Supprime la marge par défaut */
-    display: flex; /* Utilise Flexbox pour disposer les éléments */
-    flex-direction: column; /* Dispose les éléments en colonne */
-    gap: 10px; /* Espace entre les éléments de la liste */
-    text-align: right; /* Aligne le texte à droite */
+	top: 20%;
+	left: 30%;
+}
+
+.icon {
+	width: 2vh;
+	height: 2vh;
+	margin-left: 1vh;
+	transform: translateY(20%);
+}
+
+.nav-right ul
+{
+	position: absolute;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	gap: 1vh;
+	text-align: right;
 	top : 0%;
 	right: 0%;
 }
 
-/* Style pour les éléments de liste */
-.nav-right li {
-    margin: 0; /* Supprime la marge des éléments de liste */
+.nav-right li
+{
+	margin: 0;
 }
 
-/* Style pour les liens */
 .nav-right a {
-    color: white; /* Couleur du texte des liens */
-    text-decoration: none; /* Supprime la sous-ligne des liens */
-    font-weight: bold; /* Rend le texte en gras */
-    padding: 5px 10px; /* Ajoute du padding autour du texte */
-    display: block; /* Permet de cliquer sur toute la zone autour du texte */
-    background-color: rgba(0, 0, 0, 0.5); /* Fond semi-transparent pour améliorer la lisibilité */
-    border-radius: 5px; /* Coins arrondis pour le fond */
-    transition: background-color 0.3s; /* Transition douce pour le changement de couleur de fond */
+	color: white;
+	text-decoration: none;
+	font-weight: bold;
+	padding: 5px 10px;
+	display: block;
+	background-color: rgba(0, 0, 0, 0.5);
+	border-radius: 5px;
+	transition: background-color 0.3s;
 }
 
-/* Effet au survol des liens */
 .nav-right a:hover {
-    background-color: rgba(0, 0, 0, 0.8); /* Couleur de fond plus sombre au survol */
+	background-color: rgba(0, 0, 0, 0.8);
 }
 
-
-/* Liens centrés en haut */
 .nav-center ul {
 	position: fixed;
-    list-style: none;
-    padding: 0;
-    margin: 0; /* Supprime la marge par défaut */
-    display: flex; /* Utilise Flexbox pour disposer les éléments horizontalement */
-    justify-content: flex-start; /* Aligne les éléments au début (gauche) */
-    gap: 0px; /* Espace entre les éléments */
-    flex-wrap: nowrap; /* Empêche les éléments de se réorganiser en colonne */
-    overflow: auto; /* Permet le défilement horizontal si nécessaire */
-	top : 2%;
-	left : 30%;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	justify-content: center;
+	gap: 1vh;
+	flex-wrap: wrap;
+	overflow: auto;
+	top: 2%;
+	left: 50%;
+	transform: translateX(-50%);
 	z-index: 4;
-	transition: opacity 0.3s, transform 0.3s; /* Transitions douces pour l'opacité et la transformation */
-    opacity: 1; /* Opacité initiale (visible) */
-    transform: translateY(0); /* Position initiale */
+	transition: opacity 0.3s, transform 0.3s;
+	opacity: 1;
+	max-width: 90vw;
 }
 
 .nav-center.hidden {
-    opacity: 0; /* Cacher la barre de navigation */
-    transform: translateY(-100%); /* Déplacer la barre de navigation hors de la vue */
+	opacity: 0;
+	transform: translateY(-100%);
 }
 
-/* Style pour les éléments de liste */
 .nav-center li {
-    margin: 0; /* Supprime la marge des éléments de liste */
+	margin: 0;
 }
 
-/* Style pour les liens */
 .nav-center li a {
-    text-decoration: none; /* Supprime la sous-ligne des liens */
-    color: #939393; /* Couleur du texte */
-    padding: 0px 20px; /* Réduit le padding autour du texte */
-    border-radius: 5px; /* Coins arrondis */
-    font-family: Arial, Helvetica, sans-serif;
-    transition: background-color 0.3s, color 0.3s, transform 0.3s; /* Transition douce */
-    font-weight: normal; /* Rend le texte avec le poids normal */
+	text-decoration: none;
+	color: #939393;
+	padding: 0px 20px;
+	border-radius: 5px;
+	font-family: Arial, Helvetica, sans-serif;
+	transition: background-color 0.3s, color 0.3s, transform 0.3s;
+	font-weight: normal;
 }
 
 .nav-center li a:hover {
-    color: #ffffff; /* Changer la couleur du texte */
-    background-color: transparent; /* Assurer que le fond reste transparent */
-    transform: scale(1.1); /* Agrandir légèrement le texte pour un effet de survol */
-}
-
-
-
-h1 {
-    font-size: 5em;
-    text-align: center;
-    color: #ffffff;
-    text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8); /* Ombre bleue pour créer un effet de contour */
-	z-index: 2;
-	position: absolute;
-	transform: translateY(-700px);
-	left: 30%;
-	font-family: 'Courier New', Courier, monospace;
-
+	color: #ffffff;
+	background-color: transparent;
+	transform: scale(1.1);
 }
 
 h2 {
-    font-size: 3.5em;
-    text-align: center;
-    color: #ffffff;
-    text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8); /* Ombre bleue pour créer un effet de contour */
-    margin-top: 40px;
+	font-size: 3vw;
+	text-align: center;
+	color: #ffffff;
+	text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8);
+	margin-top: 40px;
 	font-family: 'Courier New', Courier, monospace;
 	transform: translateY(50px);
 
 }
 
-/* Conteneur des cartes */
+
 .cards-container {
-    display: flex; /* Utilise Flexbox pour aligner les cartes en ligne */
-    gap: 10px; /* Espacement entre les cartes */
-    padding: 20px;
-    flex-wrap: wrap; /* Permet aux cartes de se replier sur la ligne suivante sur les petits écrans */
-    justify-content: center; /* Centre les cartes horizontalement */
-    transform: translateY(50px);
+	display: flex;
+	gap: 2vh;
+	padding: 10vh;
+	flex-wrap: wrap;
+	justify-content: center;
 }
 
-/* Style des cartes */
 .card {
-    background-color: #282828; /* Couleur de fond des cartes */
-    padding: 20px;
-    border-radius: 10px;
-    border: 2px solid #ffffff; /* Bordure blanche autour des cartes */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre subtile pour un effet 3D */
-    flex: 1; /* Permet aux cartes de prendre la même largeur */
-    min-width: 250px; /* Largeur minimale pour les petites résolutions */
-    max-width: 420px; /* Largeur maximale pour limiter la taille des cartes */
-    text-align: center;
+	background-color: #282828;
+	padding: 2vh;
+	border-radius: 2vh;
+	border: 2px solid #ffffff;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	flex: 1;
+	min-width: 25vh;
+	max-width: 42vh;
+	text-align: center;
 	font-style: justify;
 }
 
-.card h3 {
-    font-size: 1.5em;
-    margin-bottom: 5px;
-    color: #ffffff;
+
+#header-container {
+	position: relative; /* Positionnement relatif pour permettre le positionnement absolu des éléments enfants */
+	width: 100%;
+	height: 100vh; /* Hauteur du viewport pour couvrir toute la fenêtre */
+	z-index: -1; /* Derrière les autres éléments */
+	/* transform: translateX(-150px); */
+}
+
+
+
+.card h3
+{
+	font-size: 1.2vw;
+	margin-bottom: 2vh;
+	color: #ffffff;
 	text-decoration: underline;
 }
 
 .card h4 {
-	font-size: 1.5em;
-	margin-bottom: 5px;
+	font-size: 1.2vw;
+	margin-bottom: 2vh;
 	color: #ffffff;
 	text-decoration: underline;
 }
 
 .card h5 {
-	font-size: 1.5em;
-	margin-bottom: 5px;
+	font-size: 1.2vw;
+	margin-bottom: 2vh;
 	color: #ffffff;
 	text-decoration: underline;
 }
 
 .card h3 img {
-    margin-right: 10px; /* Ajoute un espace de 10 pixels à droite de chaque image */
-    vertical-align: middle; /* Aligne verticalement les images par rapport au texte */
+	margin-right: 1vh;
+	vertical-align: middle;
 }
 
 .card h5 img {
-    margin-right: 10px; /* Ajoute un espace de 10 pixels à droite de chaque image */
-    vertical-align: middle; /* Aligne verticalement les images par rapport au texte */
+	margin-right: 1vh;
+	vertical-align: middle;
 }
 
 .card p {
-    font-size: 1em;
-    color: #666;
+	font-size: 0.8vw;
+	color: #666;
 	text-align: justify !important;
 	font-family: Arial, Helvetica, sans-serif;
 }
 
 h3 .icon {
-	width: 24px;
-	height: 24px;
-	margin-left: 8px;
-	transform: translateY(4.5px);
+	max-width: 3vh;
+	width: 10%;
+	height: auto;
+	margin-left: 1vh;
 }
 
-.icon {
-    width: 24px; /* Largeur souhaitée pour toutes les icônes */
-    height: 24px; /* Hauteur souhaitée pour toutes les icônes */
-    margin-left: 8px; /* Espace entre l'icône et le texte */
-    transform: translateY(4.5px); /* Ajustement vertical pour aligner les icônes avec le texte */
-}
 
 h4 .icon {
-	width: 24px;
-	height: 24px;
-	margin-left: 8px;
-	transform: translateY(4.5px);
+	max-width: 3vh;
+	width: 10%;
+	height: auto;
+	margin-left: 1vh;
 }
 
 h5 .icon {
-	width: 24px;
-	height: 24px;
-	margin-left: 8px;
-	transform: translateY(4.5px);
+	max-width: 3vh;
+	width: 10%;
+	height: auto;
+	margin-left: 1vh;
 }
 
 .custom-paragraphe {
-	margin-top: 30px !important;
 	color: #fff !important;
 }
 
 
 #myVideo {
-    width: 90vw; /* Légèrement plus petit que la largeur de la vue */
-    height: 90vh; /* Légèrement plus petit que la hauteur de la vue */
+	width: 90vw;
+	height: 90vh;
+}
+
+#unity-texte {
+    display: flex; /* Utiliser flexbox pour aligner les éléments horizontalement */
+    align-items: center; /* Aligne les éléments verticalement au centre */
+    position: absolute; /* Positionnement absolu par rapport au conteneur */
+    top: 20%; /* Ajuster la valeur pour le positionnement vertical */
+    left: 10%; /* Ajuster la valeur pour le positionnement horizontal */
+}
+
+#unity-texte h3 {
+    font-size: 1.1vw;
+    color: #ffffff;
+    text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8);
+    font-family: 'Courier New', Courier, monospace;
+    margin-right: 10px; /* Espace entre le texte et l'image */
+}
+
+#unity-texte .icon {
+    width: 50px; /* Ajustez la taille de l'image selon vos besoins */
+    height: auto; /* Conserve les proportions de l'image */
+}
+
+.conteneur-jeux #unity-texte img {
+    max-width: 100vh;
+    width: 10%;
+    height: auto;
+    margin-left: 1vh;
 }
 
 
+.conteneur-jeux {
+    position: relative;
+}
 
-
-.jeux {
-	width: 40%;
-    display: flex; /* Utilisation de Flexbox pour centrer le contenu */
-    justify-content: center; /* Centre horizontalement */
-    align-items: center; /* Centre verticalement */
-    min-height: 300px; /* Hauteur minimale pour le conteneur */
+#threejs-container {
+    border-radius: 50px;
+    border: 2px solid #ffffff;
+    overflow: hidden;
+    min-width: 300px;
+    max-width: 2000px;
+    width: 85%;
+    height: 80vh;
+    margin: 0 auto;
+	transform : translateY(10%);
 }
 
 #videoJeux {
-    text-align: center; /* Centre le texte */
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    right: 10%;
+    bottom: 35%;
+    
+    text-align: center;
     border-radius: 30px;
-    border: 2px solid #ffffff; /* Bordure blanche */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre subtile */
-    padding: 20px; /* Espace interne */
-    background-color: #333; /* Couleur de fond pour contraster avec la bordure */
-	transform: translate(700px, -720px);
+    border: 2px solid #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    background-color: rgba(51, 51, 51, 0.9); 
+    overflow: hidden; 
+}
+
+.jeux {
+	width: 10%;
+	display: absolute;
+	justify-content: left;
+	align-items: left;
+	/* min-height: 300px; */
 }
 
 #videoJeux h6 {
-	font-size: 1.5em; /* Taille du texte du titre */
-    color: #000000; /* Couleur du texte */
-    text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8); /* Ombre bleue pour créer un effet de contour */
-    margin-bottom: 10px; /* Espacement sous le titre */
+	font-size: 1.5vw;
+    color: #000000;
+    text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8); 
+    margin-bottom: 10px;
 	font-family: 'Courier New', Courier, monospace;
 }
 
@@ -303,165 +322,167 @@ h5 .icon {
 }
 
 #videoJeux nav ul {
-	list-style: none; /* Enlève les puces */
-	padding: 0; /* Enlève le padding par défaut */
-	position: relative; /* Positionnement relatif */
-	display: flex; /* Utilise Flexbox */
-	flex-direction: column; /* Aligner les éléments verticalement */
-	justify-content: flex-start; /* Aligner les éléments au début */
-	left: 0; /* Aligner le conteneur UL à gauche */
+	list-style: none;
+	padding: 0;
+	position: relative; 
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	left: 0;
 	margin-bottom: 10%;
-	transform: translate(-150px, 50px);
+
 }
 
 #videoJeux nav ul li a .icon{
-	width: 18px; /* Largeur de l'icône */
-	height: auto; /* Hauteur automatique pour garder les proportions */
-	margin-left: 8px; /* Espace entre l'icône et le texte */
+	width: 18px;
+	height: auto;
+	margin-left: 8px;
 	border-radius: 5px;
 }
 
 #videoJeux nav ul li a {
-	text-decoration: none; /* Enlève le soulignement des liens */
-	color: #ffffff; /* Couleur du texte */
-    text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8); /* Ombre bleue pour créer un effet de contour */
-	padding: 10px 20px; /* Padding pour plus de surface cliquable */
-	background-color: #333; /* Couleur de fond des liens */
+	text-decoration: none;
+	color: #ffffff;
+    text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8);
+	padding: 10px 20px;
+	background-color: #333;
 	border-radius: 500px; /* Coins arrondis */
 	font-size: small;
 }
 
 
 h6 {
-    font-size: 1.5em; /* Taille du texte du titre */
-    color: #000000; /* Couleur du texte */
-    text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8); /* Ombre bleue pour créer un effet de contour */
-    margin-bottom: 10px; /* Espacement sous le titre */
+    font-size: 1.5vw;
+    color: #000000;
+    text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8);
+    margin-bottom: 10px;
 	font-family: 'Courier New', Courier, monospace;
 }
 
-/* Style pour la description */
+
 p {
-    font-size: 1em; /* Taille du texte de la description */
-    color: #ffffff; /* Couleur du texte */
-    line-height: 1.6; /* Espacement entre les lignes pour une meilleure lisibilité */
+    font-size: 1vw;
+    color: #ffffff;
+    line-height: 1.6;
 	text-align: left;
 }
 
 #unity-texte {
-	font-size: 2.5em; /* Taille du texte de la description */
-	color: #ffffff; /* Couleur du texte */
-	line-height: 1.6; /* Espacement entre les lignes pour une meilleure lisibilité */
+	font-size: 2.5em;
+	color: #ffffff;
+	line-height: 1.6;
 	text-align: left;
 }
 
 #unity-texte h3 .icon {
-	transform: translate(100px, -570px);
+	/* transform: translate(100px, -570px); */
 	width: 280px;
 	height: 150px;
 }
 
 #ecole42-container {
-    background-color: #36353593;
-    margin: 0 auto; /* Centrer le conteneur horizontalement */
-    border-radius: 50px;
-    border: 2px solid #ffffff; /* Bordure blanche autour des cartes */
-    display: flex;
-    flex-direction: column; /* Aligner les éléments verticalement */
-    padding: 20px;
-    box-sizing: border-box;
-    transform: translateY(-300px); /* Réinitialiser la transformation si elle crée un espace vide */
+	background-color: #36353593;
+	margin: 0 auto;
+	border-radius: 50px;
+	border: 2px solid #ffffff; 
+	display: flex;
+	flex-direction: column;
+	padding: 20px;
+	box-sizing: border-box;
 
-    /* Hauteur et largeur initiales avec flexibilité */
-    width: 85%; /* Largeur par défaut */
-    max-width: 1200px; /* Largeur maximale pour éviter une extension excessive */
-    min-width: 300px; /* Largeur minimale pour éviter que le conteneur ne devienne trop étroit */
-    height: 90vh; /* Hauteur automatique en fonction du contenu */
-	overflow: hidden !important; /* Empêche le défilement vertical */
+
+	width: 85%;
+	max-width: 1200px;
+	min-width: 300px;
+	height: 90vh; 
+	margin-top: 10%;
+	overflow: hidden !important; 
 }
 
 .image_bg {
-    position: relative; /* Nécessaire pour que l'overlay soit positionné correctement */
-    width: 50%;
-    height: auto;
-    z-index: -2;
-    transform: translate(250px, -300px);
+	position: relative;
+	width: 50%;
+	height: auto;
+	z-index: -2;
+	margin-left: 25%;
+	margin-top: -50%;
 }
 
 
 
 .image42 {
-    width: 100px; /* Prend toute la largeur du conteneur */
-    height: auto; /* Hauteur automatique pour garder le ratio */
+    width: 100%;
+    height: auto;
+    max-width: 100px;
 }
 
 #ecole42-container h2 {
-    color: #ffffff; /* Couleur du texte */
-    text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8); /* Ombre bleue pour créer un effet de contour */
-    text-align: right; /* Centrer le texte */
-    font-size: 2.5em; /* Ajuste la taille du texte pour être responsive */
+    color: #ffffff;
+    text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8); 
+    text-align: right;
+    font-size: 2.5vw;
     font-family: Arial, Helvetica, sans-serif;
-    font-weight: 300; /* Rend le texte plus léger */
-    margin: 0; /* Enlève les marges pour un ajustement fluide */
+    font-weight: 300; 
+    margin: 0;
 	margin-right: 19%;
+	margin-bottom: 5%;
+	transform: translateY(-50%);
 }
 
 #ecole42-container h3 {
-    color: #ffffff; /* Couleur du texte */
-    text-align: left; /* Aligne le texte à gauche */
-    font-size: 1.5em; /* Ajuste la taille du texte pour être responsive */
+    color: #ffffff;
+    text-align: left;
+    font-size: 1.5vw;
     font-family: Arial, Helvetica, sans-serif;
-    font-weight: 300; /* Rend le texte plus léger */
-    margin: 10px 0; /* Ajoute une marge verticale pour espacer les titres */
+    font-weight: 300;
 	margin-left: 70%;
-	transform: translateY(40px);
+	transform: translateY(-100%);
 }
 
 .button {
-    color: #fffcfc; /* Couleur du texte en noir */
-    text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8); /* Ombre bleue pour créer un effet de contour */
+    color: #fffcfc;
+    text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8);
     border: none;
-    padding: 10px 20px; /* Padding pour une meilleure surface cliquable */
-    border-radius: 5px; /* Arrondir les coins du bouton */
+    padding: 10px 20px;
+    border-radius: 5px;
     cursor: pointer;
-    font-size: 1.1em; /* Ajuste la taille de la police */
+    font-size: 1.1vw;
     text-decoration: underline;
-	background-color: #25252500; /* Couleur de fond blanche */
-    margin: -30px 0; /* Ajoute une marge verticale pour espacer les boutons */
+	background-color: #25252500;
 }
 
 .button:hover {
-    color: #9992f4; /* Change la couleur du texte au survol */
-    text-shadow: none; /* Optionnel : supprimer l'ombre de texte au survol */
+    color: #9992f4;
+    text-shadow: none;
 }
 
 #ecole42-container h4 {
-    color: #ffffff; /* Couleur du texte */
-    text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8); /* Ombre bleue pour créer un effet de contour */
-    text-align: justify; /* Justifie le texte */
-    font-size: 1.2em; /* Ajuste la taille du texte pour être responsive */
+    color: #ffffff;
+    text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8);
+    text-align: justify;
+    font-size: 1vw;
     font-family: Arial, Helvetica, sans-serif;
-    font-weight: 300; /* Rend le texte plus léger */
+    font-weight: 300;
     padding: 10px;
-    margin: 10px auto; /* Centre le texte et ajoute une marge verticale */
-    width: 60%; /* Largeur du texte en pourcentage du conteneur */
+    margin: 10px auto;
+    width: 60%;
     box-sizing: border-box;
 	margin-right: 37%;
-	transform: translateY(-300px);
+	transform: translateY(-130%);
 }
 
 
 #description_minishell {
-	color: #ffffff; /* Couleur du texte */
-	text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8); /* Ombre bleue pour créer un effet de contour */
+	color: #ffffff;
+	text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8);
 	font-size: 1.2em;
 	font-family: Arial, Helvetica, sans-serif;
-	font-weight: 20; /* Makes the text thinner */
+	font-weight: 20;
 	max-width: 70%;
-	margin-right: auto; /* Laisser l'espace restant à droite */
+	margin-right: auto;
 	opacity: 0;
     transition: opacity 1s ease-in-out;
-	transform: translateY(100px); /* Déplace l'image vers le bas */
+	transform: translateY(100px);
 }
 
 #description_minishell p {
@@ -473,46 +494,45 @@ p {
 }
 
 #description_minishell nav ul {
-    list-style: none; /* Enlève les puces */
-    padding: 0; /* Enlève le padding par défaut */
-    position: relative; /* Positionnement relatif */
-    display: flex; /* Utilise Flexbox */
-    flex-direction: column; /* Aligne les éléments en colonne (verticalement) */
-    justify-content: flex-start; /* Aligne les éléments au début */
-    left: 0; /* Aligne le conteneur UL à gauche */
+    list-style: none;
+    padding: 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    left: 0;
     margin-bottom: 10%;
-    transform: translateY(100px); /* Déplace l'image vers le bas */
+    transform: translateY(100px);
 	
 }
 
 #description_minishell nav ul li a .icon{
-	width: 18px; /* Largeur de l'icône */
-	height: auto; /* Hauteur automatique pour garder les proportions */
-	margin-left: 8px; /* Espace entre l'icône et le texte */
-	transform: translateY(5px); /* Déplace l'image vers le bas */
+	width: 18px;
+	height: auto;
+	margin-left: 8px;
+	transform: translateY(5px);
 }
 
 #description_minishell nav ul li a {
-	text-decoration: none; /* Enlève le soulignement des liens */
-    color: #ffffff; /* Couleur du texte */
-    padding: 10px 20px; /* Padding pour plus de surface cliquable */
-    background-color: #1e1e1e; /* Couleur de fond des liens */
-    border-radius: 500px; /* Coins arrondis */
+	text-decoration: none;
+    color: #ffffff;
+    padding: 10px 20px;
+    background-color: #1e1e1e;
+    border-radius: 500px;
 	font-size: small;
 }
 
 #description_cub3d {
-	color: #ffffff; /* Couleur du texte */
-	text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8); /* Ombre bleue pour créer un effet de contour */
+	color: #ffffff;
+	text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8);
 	font-size: 1.2em;
 	font-family: Arial, Helvetica, sans-serif;
-	font-weight: 20; /* Makes the text thinner */
+	font-weight: 20;
 	max-width: 70%;
-	margin-right: auto; /* Laisser l'espace restant à droite */
+	margin-right: auto;
 	opacity: 0;
 	transition: opacity 1s ease-in-out;
-	transform: translateY(100px); /* Déplace l'image vers le bas */
-
+	transform: translateY(100px);
 }
 
 #description_cub3d p {
@@ -524,46 +544,44 @@ p {
 }
 
 #description_cub3d nav ul {
-    list-style: none; /* Enlève les puces */
-    padding: 0; /* Enlève le padding par défaut */
-    position: relative; /* Positionnement absolu */
-    display: flex; /* Utilise Flexbox */
-    flex-direction: row; /* Aligne les éléments en ligne (horizontalement) */
-    justify-content: flex-start; /* Aligne les éléments à droite */
-    left: 0; /* Aligne le conteneur UL à droite */
+    list-style: none;
+    padding: 0;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    left: 0;
 	margin-bottom: 10%;
-	transform: translateY(100px); /* Déplace l'image vers le bas */
-	
+	transform: translateY(100px);
 }
 
 #description_cub3d nav ul li a .icon{
-	width: 18px; /* Largeur de l'icône */
-	height: auto; /* Hauteur automatique pour garder les proportions */
-	margin-left: 8px; /* Espace entre l'icône et le texte */
-	transform: translateY(5px); /* Déplace l'image vers le bas */
+	width: 18px;
+	height: auto;
+	margin-left: 8px;
+	transform: translateY(5px);
 }
 
 #description_cub3d nav ul li a {
-	text-decoration: none; /* Enlève le soulignement des liens */
-    color: #ffffff; /* Couleur du texte */
-    padding: 10px 20px; /* Padding pour plus de surface cliquable */
-    background-color: #1e1e1e; /* Couleur de fond des liens */
-    border-radius: 500px; /* Coins arrondis */
+	text-decoration: none;
+    color: #ffffff;
+    padding: 10px 20px;
+    background-color: #1e1e1e;
+    border-radius: 500px;
 	font-size: small;
 }
 
 #description_Solong {
-	color: #ffffff; /* Couleur du texte */
-	text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8); /* Ombre bleue pour créer un effet de contour */
+	color: #ffffff;
+	text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8);
 	font-size: 1.2em;
 	font-family: Arial, Helvetica, sans-serif;
-	font-weight: 20; /* Makes the text thinner */
+	font-weight: 20;
 	max-width: 70%;
-	margin-right: auto; /* Laisser l'espace restant à droite */
+	margin-right: auto;
 	opacity: 0;
 	transition: opacity 1s ease-in-out;
-	transform: translateY(100px); /* Déplace l'image vers le bas */
-
+	transform: translateY(100px);
 }
 
 #description_Solong p {
@@ -575,46 +593,44 @@ p {
 }
 
 #description_Solong nav ul {
-    list-style: none; /* Enlève les puces */
-    padding: 0; /* Enlève le padding par défaut */
-    position: relative; /* Positionnement absolu */
-    display: flex; /* Utilise Flexbox */
-    flex-direction: row; /* Aligne les éléments en ligne (horizontalement) */
-    justify-content: flex-start; /* Aligne les éléments à droite */
-    left: 0; /* Aligne le conteneur UL à droite */
+    list-style: none;
+    padding: 0;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    left: 0;
 	margin-bottom: 10%;
-	transform: translateY(100px); /* Déplace l'image vers le bas */
-
+	transform: translateY(100px);
 }
 
 #description_Solong nav ul li a .icon{
-	width: 18px; /* Largeur de l'icône */
-	height: auto; /* Hauteur automatique pour garder les proportions */
-	margin-left: 8px; /* Espace entre l'icône et le texte */
-	transform: translateY(5px); /* Déplace l'image vers le bas */
+	width: 18px;
+	height: auto;
+	margin-left: 8px;
+	transform: translateY(5px);
 }
 
 #description_Solong nav ul li a {
-	text-decoration: none; /* Enlève le soulignement des liens */
-    color: #ffffff; /* Couleur du texte */
-    padding: 10px 20px; /* Padding pour plus de surface cliquable */
-    background-color: #1e1e1e; /* Couleur de fond des liens */
-    border-radius: 500px; /* Coins arrondis */
+	text-decoration: none;
+    color: #ffffff;
+    padding: 10px 20px;
+    background-color: #1e1e1e;
+    border-radius: 500px;
 	font-size: small;
 }
 
 #description_pushswap {
-	color: #ffffff; /* Couleur du texte */
-	text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8); /* Ombre bleue pour créer un effet de contour */
+	color: #ffffff;
+	text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8);
 	font-size: 1.2em;
 	font-family: Arial, Helvetica, sans-serif;
-	font-weight: 20; /* Makes the text thinner */
+	font-weight: 20;
 	max-width: 70%;
-	margin-right: auto; /* Laisser l'espace restant à droite */
+	margin-right: auto;
 	opacity: 0;
 	transition: opacity 1s ease-in-out;
-	transform: translateY(100px); /* Déplace l'image vers le bas */
-
+	transform: translateY(100px);
 }
 
 #description_pushswap p {
@@ -626,46 +642,44 @@ p {
 }
 
 #description_pushswap nav ul {
-    list-style: none; /* Enlève les puces */
-    padding: 0; /* Enlève le padding par défaut */
-    position: relative; /* Positionnement absolu */
-    display: flex; /* Utilise Flexbox */
-    flex-direction: row; /* Aligne les éléments en ligne (horizontalement) */
-    justify-content: flex-start; /* Aligne les éléments à droite */
-    left: 0; /* Aligne le conteneur UL à droite */
+    list-style: none;
+    padding: 0;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    left: 0;
 	margin-bottom: 10%;
-	transform: translateY(100px); /* Déplace l'image vers le bas */
-
+	transform: translateY(100px);
 }
 
 #description_pushswap nav ul li a .icon{
-	width: 18px; /* Largeur de l'icône */
-	height: auto; /* Hauteur automatique pour garder les proportions */
-	margin-left: 8px; /* Espace entre l'icône et le texte */
-	transform: translateY(5px); /* Déplace l'image vers le bas */
+	width: 18px;
+	height: auto;
+	margin-left: 8px;
+	transform: translateY(5px);
 }
 
 #description_pushswap nav ul li a {
-	text-decoration: none; /* Enlève le soulignement des liens */
-    color: #ffffff; /* Couleur du texte */
-    padding: 10px 20px; /* Padding pour plus de surface cliquable */
-    background-color: #1e1e1e; /* Couleur de fond des liens */
-    border-radius: 500px; /* Coins arrondis */
+	text-decoration: none;
+    color: #ffffff;
+    padding: 10px 20px;
+    background-color: #1e1e1e;
+    border-radius: 500px;
 	font-size: small;
 }
 
 #description_philo {
-	color: #ffffff; /* Couleur du texte */
-	text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8); /* Ombre bleue pour créer un effet de contour */
+	color: #ffffff;
+	text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8);
 	font-size: 1.2em;
 	font-family: Arial, Helvetica, sans-serif;
-	font-weight: 20; /* Makes the text thinner */
+	font-weight: 20;
 	max-width: 70%;
-	margin-right: auto; /* Laisser l'espace restant à droite */
+	margin-right: auto;
 	opacity: 0;
 	transition: opacity 1s ease-in-out;
-	transform: translateY(100px); /* Déplace l'image vers le bas */
-
+	transform: translateY(100px);
 }
 
 #description_philo p {
@@ -779,13 +793,13 @@ p {
     background-size: contain; /* S'assure que l'image s'adapte à la taille du bouton */
     border: none;
     color: #ffffff;
-    font-size: 1.5em;
+    font-size: 1.5vw;
     cursor: pointer;
     position: absolute;
-    width: 100px;  /* Largeur du bouton */
-    height: 100px; /* Hauteur du bouton */
+    width: 10vh;  /* Largeur du bouton */
+    height: 10vh; /* Hauteur du bouton */
     transition: color 0.3s ease;
-	transform: translateY(450px);
+	transform: translateY(500%);
 }
 
 
@@ -803,63 +817,57 @@ p {
 }
 
 #description_minishell h3 {
-	font-size: 2.5em; /* Taille du texte du titre */
-	color: #ffffff; /* Couleur du texte */
-	text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8); /* Ombre bleue pour créer un effet de contour */
-	margin-bottom: 10px; /* Espacement sous le titre */
-	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-	text-align: right;
-	transform: translate(-150px, -550px);
+    font-size: 2.5vw;
+    color: #ffffff;
+    text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-left: 50%;
+	margin-top: -60%;
 }
 
 #description_cub3d h3 {
-	font-size: 2.5em; /* Taille du texte du titre */
-	color: #ffffff; /* Couleur du texte */
-	text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8); /* Ombre bleue pour créer un effet de contour */
-	margin-bottom: 10px; /* Espacement sous le titre */
-	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-	text-align: right;
-	transform: translate(-150px, -500px);
+    font-size: 2.5vw;
+    color: #ffffff;
+    text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-left: 50%;
+	margin-top: -40%;
 }
 
 #description_Solong h3 {
-	font-size: 2.5em; /* Taille du texte du titre */
-	color: #ffffff; /* Couleur du texte */
-	text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8); /* Ombre bleue pour créer un effet de contour */
-	margin-bottom: 10px; /* Espacement sous le titre */
-	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-	text-align: right;
-	transform: translate(-150px, -500px);
+    font-size: 2.5vw;
+    color: #ffffff;
+    text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-left: 50%;
+	margin-top: -40%;
 }
 
 #description_pushswap h3 {
-	font-size: 2.5em; /* Taille du texte du titre */
-	color: #ffffff; /* Couleur du texte */
-	text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8); /* Ombre bleue pour créer un effet de contour */
-	margin-bottom: 10px; /* Espacement sous le titre */
-	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-	text-align: right;
-	transform: translate(-150px, -450px);
+    font-size: 2.5vw;
+    color: #ffffff;
+    text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-left: 50%;
+	margin-top: -40%;
 }
 
 #description_philo h3 {
-	font-size: 2.5em; /* Taille du texte du titre */
-	color: #ffffff; /* Couleur du texte */
-	text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8); /* Ombre bleue pour créer un effet de contour */
-	margin-bottom: 10px; /* Espacement sous le titre */
-	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-	text-align: right;
-	transform: translate(-150px, -550px);
+    font-size: 2.5vw;
+    color: #ffffff;
+    text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-left: 50%;
+	margin-top: -40%;
 }
 
 #description_minitalk h3 {
-	font-size: 2.5em; /* Taille du texte du titre */
-	color: #ffffff; /* Couleur du texte */
-	text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8); /* Ombre bleue pour créer un effet de contour */
-	margin-bottom: 10px; /* Espacement sous le titre */
-	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-	text-align: right;
-	transform: translate(-150px, -550px);
+    font-size: 2.5vw;
+    color: #ffffff;
+    text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-left: 50%;
+	margin-top: -40%;
 }
 
 #cursor-light {
@@ -879,23 +887,23 @@ p {
 
 #contact-container {
 	background-color: #36353593;
-	margin: 0 auto; /* Centrer le conteneur horizontalement */
+	margin: 0 auto;
 	border-radius: 50px;
-	border: 2px solid #ffffff; /* Bordure blanche autour des cartes */
+	border: 2px solid #ffffff;
 	display: flex;
-	flex-direction: column; /* Aligner les éléments verticalement */
-	padding: 20px;
+	flex-direction: column;
+	padding: 2vh;
 	box-sizing: border-box;
-	transform: translateY(-200px); /* Réinitialiser la transformation si elle crée un espace vide */
-	width: 85%; /* Largeur par défaut */
-	height: 50vh; /* Hauteur automatique en fonction du contenu */
+	width: 85%;
+	height: 50vh;
+	margin-top: 10%;
 }
 
 #contact-container h3 {
-	color: #ffffff; /* Couleur du texte */
-	text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8); /* Ombre bleue pour créer un effet de contour */
-	text-align: left; /* Centrer le texte */
-	font-size: 2em; /* Ajuste la taille du texte pour être responsive */
+	color: #ffffff;
+	text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8);
+	text-align: left;
+	font-size: 2vw;
 	font-family: Arial, Helvetica, sans-serif;
 	font-weight: 300; /* Rend le texte plus léger */
 	margin: 0; /* Enlève les marges pour un ajustement fluide */
@@ -906,35 +914,39 @@ p {
 	color: #ffffff; /* Couleur du texte */
 	text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8); /* Ombre bleue pour créer un effet de contour */
 	text-align: left; /* Centrer le texte */
-	font-size: 2em; /* Ajuste la taille du texte pour être responsive */
+	font-size: 1.4vw; /* Ajuste la taille du texte pour être responsive */
 	font-family: 'Times New Roman', Times, serif;
 	font-weight: 300; /* Rend le texte plus léger */
-	margin: 10px 0; /* Ajoute une marge verticale pour espacer les titres */
-	transform: translate(100px, 50px);
+	/* transform: translate(100px, 50px); */
+	/* margin-right: 10%; */
+	margin-top: 3%;
+	margin-left: 3%;
 }
 
 #contact-container h5 {
 	color: #ffffff; /* Couleur du texte */
 	text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8); /* Ombre bleue pour créer un effet de contour */
 	text-align: justify; /* Centrer le texte */
-	font-size: 1.2em; /* Ajuste la taille du texte pour être responsive */
+	font-size: 1.2vw; /* Ajuste la taille du texte pour être responsive */
 	font-family: 'Times New Roman', Times, serif;
 	font-weight: 300; /* Rend le texte plus léger */
 	margin: 10px 0; /* Ajoute une marge verticale pour espacer les titres */
 	width: 30%;
-	transform: translate(800px, 20px);
+	/* transform: translate(800px, 20px); */
+	margin-left: 60%;
 }
 
 #contact-container h2 {
 	color: #ffffff; /* Couleur du texte */
 	text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8); /* Ombre bleue pour créer un effet de contour */
 	text-align: justify; /* Centrer le texte */
-	font-size: 1.2em; /* Ajuste la taille du texte pour être responsive */
+	font-size: 1.2vw; /* Ajuste la taille du texte pour être responsive */
 	font-family: 'Times New Roman', Times, serif;
 	font-weight: 300; /* Rend le texte plus léger */
 	margin: 10px 0; /* Ajoute une marge verticale pour espacer les titres */
 	width: 30%;
-	transform: translate(950px, 120px);
+	/* transform: translate(950px, 120px); */
+	margin-left: 60%;
 }
 
 #contact nav ul {
@@ -946,8 +958,10 @@ p {
     justify-content: flex-start; /* Aligne les éléments au début */
     left: 0; /* Aligne le conteneur UL à gauche */
     margin-bottom: 10%;
-    transform: translate(100px, -70px);
+    /* transform: translate(100px, -70px); */
 	gap : 10px;
+	margin-top: -5%;
+	margin-left: 10%;
 }
 
 #contact nav ul li a {
@@ -956,269 +970,10 @@ p {
 	text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8); /* Ombre bleue pour créer un effet de contour */
     padding: 10px 20px; /* Padding pour plus de surface cliquable */
     background-color: #1e1e1e; /* Couleur de fond des liens */
-	font-size: 30px;
+	font-size: 1.2vw;
 	font-family: 'Times New Roman', Times, serif;
 }
 
 .aria_baniere {
 	display: none;
-}
-
-@media (max-width: 850px) {
-    header h1 {
-        font-size: 2em;
-		text-align: center;
-		transform: translate(-35px, 200px);
-    }
-
-	h2 {
-		font-size: 2em;
-	}
-
-	header {
-		background-image: url('image/anonyme_bgbleu.png');
-		background-size: contain;
-		background-repeat: no-repeat;
-		background-position: center;
-	}
-
-	#header-container {
-		display: none;
-	}
-
-	#threejs-container {
-		display: none;
-
-	}
-
-	#unity-texte h3 .icon {
-		transform: translate(100px, 100px);
-		width: 180px;
-		height: 100px;
-	}
-		
-
-    .nav-right ul {
-        right: 10px; /* Ajuste la distance depuis la droite */
-		top: 5%;
-    }
-
-    .nav-right nav ul li {
-        margin: 10px 0;
-    }
-
-    .about h2 {
-        font-size: 2.2em;
-    }
-
-    .cards-container {
-        flex-direction: column; /* Passe en colonne sur les petits écrans */
-        align-items: center; /* Centre les cartes */
-    }
-	.cards-container p {
-		font-size: 0.8em;
-	}
-	.cards-container h3 {
-		font-size: 1em;
-	}
-	.cards-container h4 {
-		font-size: 1em;
-	}
-	.cards-container h5 {
-		font-size: 1em;
-	}
-	h3 .icon {
-		width: 18px; /* Largeur de l'icône */
-		height: auto; /* Hauteur automatique pour garder les proportions */
-		transform: translateY(0px);
-	}
-	h4 .icon {
-		width: 15px; /* Largeur de l'icône */
-		height: auto; /* Hauteur automatique pour garder les proportions */
-		transform: translateY(1px);
-
-	}
-	h5 .icon {
-		width: 18px; /* Largeur de l'icône */
-		height: auto; /* Hauteur automatique pour garder les proportions */
-		transform: translateY(0px);
-	}
-
-
-	.nav-center ul {
-        gap: 10px; /* Réduit l'espace entre les éléments sur les petits écrans */
-		left : 15%;
-    }
-
-    .nav-center li a {
-        opacity: 0; /* Cache les liens */
-    }
-
-	#header-container {
-		position: relative; /* Positionnement relatif pour permettre le positionnement absolu des éléments enfants */
-		width: 100%;
-		height: 100vh;
-		z-index: -1; /* Derrière les autres éléments */
-		transform: translateX(40px);
-	}
-	#ecole42-container {
-		height: 110vh;
-		transform: translateY(350px);
-	}
-	#ecole42-container h2 {
-		font-size: 1.5em;
-		margin-right: 10%;
-		transform: translate(-50px, 150px);
-	}
-	#ecole42-container h3 {
-		font-size: 1em;
-		margin-left: 65%;
-		transform: translate(-50px, 150px);
-	}
-	#ecole42-container h4 {
-		font-size: 0.6em;
-		margin-left: 5%;
-		width: 90%;
-	}
-	#description_minishell {
-		font-size: 0.7em;
-		max-width: 80%;
-	}
-	#description_cub3d {
-		font-size: 0.7em;
-		max-width: 80%;
-	}
-	#description_Solong {
-		font-size: 0.7em;
-		max-width: 80%;
-	}
-	#description_pushswap {
-		font-size: 0.7em;
-		max-width: 80%;
-	}
-	#description_philo {
-		font-size: 0.7em;
-		max-width: 80%;
-	}
-	#description_minitalk {
-		font-size: 0.7em;
-		max-width: 80%;
-	}
-	#description_minishell h3 {
-		font-size: 1.5em;
-		transform: translate(-50px, -450px);
-	}
-	#description_cub3d h3 {
-		font-size: 1.5em;
-		transform: translate(-50px, -350px);
-	}
-	#description_Solong h3 {
-		font-size: 1.5em;
-		transform: translate(-50px, -350px);
-	}
-	#description_pushswap h3 {
-		font-size: 1.5em;
-		transform: translate(-50px, -350px);
-	}
-	#description_philo h3 {
-		font-size: 1.5em;
-		transform: translate(-50px, -400px);
-	}
-	#description_minitalk h3 {
-		font-size: 1.5em;
-		transform: translate(-50px, -350px);
-	}
-	#description_minishell nav ul {
-		transform: translateY(50px);
-		gap : 10px;
-	}
-	#description_cub3d nav ul {
-		transform: translateY(50px);
-	}
-	#description_Solong nav ul {
-		transform: translateY(50px);
-	}
-	#description_pushswap nav ul {
-		transform: translateY(50px);
-	}
-	#description_philo nav ul {
-		transform: translateY(50px);
-	}
-	#description_minitalk nav ul {
-		transform: translateY(50px);
-	}
-	.back-button {
-		width: 100px;
-		height: 100px;
-		transform: translate(0px, 500px);
-	}
-	#header-container canvas {
-        width: 100%;
-        height: 300px; /* Ajuster la hauteur à ce que tu veux */
-    }
-	#videoJeux {
-		transform: translate(40px, 0px);
-		height: 60vh;
-		width: 100%; /* Augmente la largeur au-delà de 100% */
-	}
-	#videoJeux p {
-		font-size: 0.8em;
-		text-align: justify;
-	}
-	.jeux {
-		width: 80%;
-	}
-	footer {
-		transform: translateY(400px);
-	}
-	#videoJeux nav ul {
-		transform: translate(0px, 50px);
-	}
-	#contact-container {
-		transform: translateY(400px);
-		height: 90vh;
-	}
-	#contact-container h4 {
-		font-size: 1.5em;
-		transform: translate(0px, 50px);
-	}
-	#contact-container h5 {
-		font-size: 1em;
-		transform: translate(0px, 200px);
-		width: 80%;
-	}
-	#contact nav ul {
-		transform: translate(0px, -75px);
-	}
-	#contact nav ul li a {
-		font-size: 20px;
-	}
-	#contact-container h2 {
-		font-size: 1em;
-		transform: translate(110px, 340px);
-		width: 80%;
-	}
-	.image_bg {
-		transform: translate(50px, 50px);
-		width: 80%;
-		height: auto;
-	}
-	.aria_baniere {
-		display: inline; /* Affiche l'image */
-		transform: translate(90px, 650px);
-		width: 55%;
-		height: auto;
-	}
-}
-
-
-@media (max-width: 480px) {
-    .nav-center ul {
-        gap: 5px; /* Réduit davantage l'espace entre les éléments */
-		left : 5%;
-    }
-
-    .nav-center li a {
-        padding: 6px 12px; /* Réduit encore le padding des liens */
-    }
 }
