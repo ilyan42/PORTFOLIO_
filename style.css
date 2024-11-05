@@ -169,16 +169,16 @@ h2 {
 
 
 
-.card h3
-{
-	font-size: 1.2vw;
+.card h3 {
 	margin-bottom: 2vh;
-	color: #ffffff;
-	text-decoration: underline;
+    font-size: clamp(0.8em, 1.2vw, 1.2em); /* 16px est la taille minimale, 1.2vw est la taille idéale, 24px est la taille maximale */
+    color: #ffffff;
+    text-decoration: underline;
 }
 
 .card h4 {
 	font-size: 1.2vw;
+    font-size: clamp(0.8em, 1.2vw, 1.2em); /* 16px est la taille minimale, 1.2vw est la taille idéale, 24px est la taille maximale */
 	margin-bottom: 2vh;
 	color: #ffffff;
 	text-decoration: underline;
@@ -186,6 +186,7 @@ h2 {
 
 .card h5 {
 	font-size: 1.2vw;
+    font-size: clamp(0.8em, 1.2vw, 1.2em); /* 16px est la taille minimale, 1.2vw est la taille idéale, 24px est la taille maximale */
 	margin-bottom: 2vh;
 	color: #ffffff;
 	text-decoration: underline;
@@ -203,6 +204,7 @@ h2 {
 
 .card p {
 	font-size: 0.8vw;
+    font-size: clamp(0.5em, 0.8vw, 0.8em); /* 16px est la taille minimale, 1.2vw est la taille idéale, 24px est la taille maximale */
 	color: #666;
 	text-align: justify !important;
 	font-family: Arial, Helvetica, sans-serif;
@@ -250,6 +252,7 @@ h5 .icon {
 
 #unity-texte h3 {
     font-size: 1.1vw;
+    font-size: clamp(0.25em, 1.1vw, 1.1em);
     color: #ffffff;
     text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8);
     font-family: 'Courier New', Courier, monospace;
@@ -311,6 +314,7 @@ h5 .icon {
 
 #videoJeux h6 {
 	font-size: 1.5vw;
+    font-size: clamp(0.8em, 1.5vw, 1.5em); /* 16px est la taille minimale, 1.2vw est la taille idéale, 24px est la taille maximale */
     color: #000000;
     text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8); 
     margin-bottom: 10px;
@@ -352,7 +356,8 @@ h5 .icon {
 
 
 h6 {
-    font-size: 1.5vw;
+	font-size: 1.5vw;
+    font-size: clamp(0.8em, 1.5vw, 1.5em); /* 16px est la taille minimale, 1.2vw est la taille idéale, 24px est la taille maximale */
     color: #000000;
     text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8);
     margin-bottom: 10px;
@@ -362,6 +367,7 @@ h6 {
 
 p {
     font-size: 1vw;
+    font-size: clamp(0.5em, 1vw, 1em); /* 16px est la taille minimale, 1.2vw est la taille idéale, 24px est la taille maximale */
     color: #ffffff;
     line-height: 1.6;
 	text-align: left;
@@ -395,7 +401,7 @@ p {
 	max-width: 1200px;
 	min-width: 300px;
 	height: 90vh; 
-	margin-top: 10%;
+	margin-top: 10vh;
 	overflow: hidden !important; 
 }
 
@@ -421,6 +427,7 @@ p {
     text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8); 
     text-align: right;
     font-size: 2.5vw;
+    font-size: clamp(0.8em, 2.5vw, 2.5em); /* 16px est la taille minimale, 1.2vw est la taille idéale, 24px est la taille maximale */
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 300; 
     margin: 0;
@@ -433,6 +440,7 @@ p {
     color: #ffffff;
     text-align: left;
     font-size: 1.5vw;
+    font-size: clamp(0.8em, 1.5vw, 1.5em); /* 16px est la taille minimale, 1.2vw est la taille idéale, 24px est la taille maximale */
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 300;
 	margin-left: 70%;
@@ -447,6 +455,7 @@ p {
     border-radius: 5px;
     cursor: pointer;
     font-size: 1.1vw;
+    font-size: clamp(0.8em, 1.1vw, 1.1em); /* 16px est la taille minimale, 1.2vw est la taille idéale, 24px est la taille maximale */
     text-decoration: underline;
 	background-color: #25252500;
 }
@@ -461,6 +470,7 @@ p {
     text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8);
     text-align: justify;
     font-size: 1vw;
+    font-size: clamp(0.65em, 1vw, 1em); /* 16px est la taille minimale, 1.2vw est la taille idéale, 24px est la taille maximale */
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 300;
     padding: 10px;
@@ -475,17 +485,18 @@ p {
 #description_minishell {
 	color: #ffffff;
 	text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8);
-	font-size: 1.2em;
 	font-family: Arial, Helvetica, sans-serif;
 	font-weight: 20;
 	max-width: 70%;
 	margin-right: auto;
 	opacity: 0;
     transition: opacity 1s ease-in-out;
-	transform: translateY(100px);
+	/* transform: translateY(100px); */
 }
 
 #description_minishell p {
+	font-size: 1.2vw;
+    font-size: clamp(0.5em, 1.2vw, 1.2em); /* 16px est la taille minimale, 1.2vw est la taille idéale, 24px est la taille maximale */
 	text-align: justify;
 }
 
@@ -493,16 +504,19 @@ p {
     opacity: 1;
 }
 
+#description_minishell nav ul li {
+    margin-bottom: 2vh; /* Ajuste la valeur pour l'espacement souhaité */
+}
+
 #description_minishell nav ul {
     list-style: none;
-    padding: 0;
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     left: 0;
-    margin-bottom: 10%;
     transform: translateY(100px);
+	margin-bottom: 10vh;
 	
 }
 
@@ -525,7 +539,6 @@ p {
 #description_cub3d {
 	color: #ffffff;
 	text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8);
-	font-size: 1.2em;
 	font-family: Arial, Helvetica, sans-serif;
 	font-weight: 20;
 	max-width: 70%;
@@ -536,11 +549,17 @@ p {
 }
 
 #description_cub3d p {
+	font-size: 1.2vw;
+    font-size: clamp(0.5em, 1.2vw, 1.2em); /* 16px est la taille minimale, 1.2vw est la taille idéale, 24px est la taille maximale */
 	text-align: justify;
 }
 
 #description_cub3d.show {
 	opacity: 1;
+}
+
+#description_cub3d nav ul li {
+    margin-bottom: 2vh; /* Ajuste la valeur pour l'espacement souhaité */
 }
 
 #description_cub3d nav ul {
@@ -574,7 +593,6 @@ p {
 #description_Solong {
 	color: #ffffff;
 	text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8);
-	font-size: 1.2em;
 	font-family: Arial, Helvetica, sans-serif;
 	font-weight: 20;
 	max-width: 70%;
@@ -585,11 +603,17 @@ p {
 }
 
 #description_Solong p {
+	font-size: 1.2vw;
+    font-size: clamp(0.5em, 1.2vw, 1.2em); /* 16px est la taille minimale, 1.2vw est la taille idéale, 24px est la taille maximale */
 	text-align: justify;
 }
 
 #description_Solong.show {
 	opacity: 1;
+}
+
+#description_Solong nav ul li {
+    margin-bottom: 2vh; /* Ajuste la valeur pour l'espacement souhaité */
 }
 
 #description_Solong nav ul {
@@ -623,7 +647,6 @@ p {
 #description_pushswap {
 	color: #ffffff;
 	text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8);
-	font-size: 1.2em;
 	font-family: Arial, Helvetica, sans-serif;
 	font-weight: 20;
 	max-width: 70%;
@@ -634,11 +657,17 @@ p {
 }
 
 #description_pushswap p {
+	font-size: 1.2vw;
+    font-size: clamp(0.5em, 1.2vw, 1.2em); /* 16px est la taille minimale, 1.2vw est la taille idéale, 24px est la taille maximale */
 	text-align: justify;
 }
 
 #description_pushswap.show {
 	opacity: 1;
+}
+
+#description_pushswap nav ul li {
+    margin-bottom: 2vh; /* Ajuste la valeur pour l'espacement souhaité */
 }
 
 #description_pushswap nav ul {
@@ -672,7 +701,6 @@ p {
 #description_philo {
 	color: #ffffff;
 	text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8);
-	font-size: 1.2em;
 	font-family: Arial, Helvetica, sans-serif;
 	font-weight: 20;
 	max-width: 70%;
@@ -683,11 +711,17 @@ p {
 }
 
 #description_philo p {
+	font-size: 1.2vw;
+    font-size: clamp(0.5em, 1.2vw, 1.2em); /* 16px est la taille minimale, 1.2vw est la taille idéale, 24px est la taille maximale */
 	text-align: justify;
 }
 
 #description_philo.show {
 	opacity: 1;
+}
+
+#description_philo nav ul li {
+    margin-bottom: 2vh; /* Ajuste la valeur pour l'espacement souhaité */
 }
 
 #description_philo nav ul {
@@ -722,7 +756,6 @@ p {
 #description_minitalk {
 	color: #ffffff; /* Couleur du texte */
 	text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8); /* Ombre bleue pour créer un effet de contour */
-	font-size: 1.2em;
 	font-family: Arial, Helvetica, sans-serif;
 	font-weight: 20; /* Makes the text thinner */
 	max-width: 70%;
@@ -734,11 +767,17 @@ p {
 }
 
 #description_minitalk p {
+	font-size: 1.2vw;
+    font-size: clamp(0.5em, 1.2vw, 1.2em); /* 16px est la taille minimale, 1.2vw est la taille idéale, 24px est la taille maximale */
 	text-align: justify;
 }
 
 #description_minitalk.show {
 	opacity: 1;
+}
+
+#description_minitalk nav ul li {
+    margin-bottom: 2vh; /* Ajuste la valeur pour l'espacement souhaité */
 }
 
 #description_minitalk nav ul {
@@ -818,11 +857,12 @@ p {
 
 #description_minishell h3 {
     font-size: 2.5vw;
+    font-size: clamp(1em, 2.5vw, 2.5em); /* 16px est la taille minimale, 1.2vw est la taille idéale, 24px est la taille maximale */
     color: #ffffff;
     text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8);
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     margin-left: 50%;
-	margin-top: -60%;
+	margin-top: -60%; 
 }
 
 #description_cub3d h3 {
@@ -904,6 +944,7 @@ p {
 	text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8);
 	text-align: left;
 	font-size: 2vw;
+    font-size: clamp(1em, 2vw, 2em); /* 16px est la taille minimale, 1.2vw est la taille idéale, 24px est la taille maximale */
 	font-family: Arial, Helvetica, sans-serif;
 	font-weight: 300; /* Rend le texte plus léger */
 	margin: 0; /* Enlève les marges pour un ajustement fluide */
@@ -915,6 +956,7 @@ p {
 	text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8); /* Ombre bleue pour créer un effet de contour */
 	text-align: left; /* Centrer le texte */
 	font-size: 1.4vw; /* Ajuste la taille du texte pour être responsive */
+    font-size: clamp(0.7em, 1.4vw, 1.4em); /* 16px est la taille minimale, 1.2vw est la taille idéale, 24px est la taille maximale */
 	font-family: 'Times New Roman', Times, serif;
 	font-weight: 300; /* Rend le texte plus léger */
 	/* transform: translate(100px, 50px); */
@@ -928,6 +970,7 @@ p {
 	text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8); /* Ombre bleue pour créer un effet de contour */
 	text-align: justify; /* Centrer le texte */
 	font-size: 1.2vw; /* Ajuste la taille du texte pour être responsive */
+    font-size: clamp(0.6em, 1.2vw, 1.2em); /* 16px est la taille minimale, 1.2vw est la taille idéale, 24px est la taille maximale */
 	font-family: 'Times New Roman', Times, serif;
 	font-weight: 300; /* Rend le texte plus léger */
 	margin: 10px 0; /* Ajoute une marge verticale pour espacer les titres */
@@ -941,6 +984,7 @@ p {
 	text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8); /* Ombre bleue pour créer un effet de contour */
 	text-align: justify; /* Centrer le texte */
 	font-size: 1.2vw; /* Ajuste la taille du texte pour être responsive */
+    font-size: clamp(0.6em, 1.2vw, 1.2em); /* 16px est la taille minimale, 1.2vw est la taille idéale, 24px est la taille maximale */
 	font-family: 'Times New Roman', Times, serif;
 	font-weight: 300; /* Rend le texte plus léger */
 	margin: 10px 0; /* Ajoute une marge verticale pour espacer les titres */
@@ -971,6 +1015,7 @@ p {
     padding: 10px 20px; /* Padding pour plus de surface cliquable */
     background-color: #1e1e1e; /* Couleur de fond des liens */
 	font-size: 1.2vw;
+    font-size: clamp(0.6em, 1.2vw, 1.2em); /* 16px est la taille minimale, 1.2vw est la taille idéale, 24px est la taille maximale */
 	font-family: 'Times New Roman', Times, serif;
 }
 
