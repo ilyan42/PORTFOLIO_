@@ -343,10 +343,13 @@ h5 .icon {
     text-decoration: none;
     color: #ffffff;
     text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8);
-    padding: 10px 20px;
+    /* padding: 10px 20px; */
     background-color: #333;
     display: inline-flex; /* Cela permet à l'icône et au texte de rester sur la même ligne */
     align-items: center; /* Cela aligne verticalement l'icône et le texte */
+	justify-content: center;
+	min-width: 5vh; /* Assure une largeur minimale pour le bouton */
+    min-height: 5vh; /* Assure une hauteur minimale pour le bouton */
 }
 
 #videoJeux nav ul li a .icon {
@@ -396,7 +399,6 @@ p {
 	flex-direction: column;
 	padding: 20px;
 	box-sizing: border-box;
-
 
 	width: 85%;
 	max-width: 1200px;
