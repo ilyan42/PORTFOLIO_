@@ -253,8 +253,8 @@ h5 .icon {
 #unity-texte h3 {
     font-size: 1.1vw;
     font-size: clamp(0.25em, 1.1vw, 1.1em);
-    color: #ffffff;
-    text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8);
+    color: #000000;
+    text-shadow: 2px 2px 5px rgba(255, 0, 0, 0.8);
     font-family: 'Courier New', Courier, monospace;
     margin-right: 10px; /* Espace entre le texte et l'image */
 }
@@ -265,7 +265,7 @@ h5 .icon {
 }
 
 .conteneur-jeux #unity-texte img {
-    max-width: 100vh;
+    max-width: 250vh;
     width: 10%;
     height: auto;
     margin-left: 1vh;
@@ -470,7 +470,7 @@ p {
     text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8);
     text-align: justify;
     font-size: 1vw;
-    font-size: clamp(0.65em, 1vw, 1em); /* 16px est la taille minimale, 1.2vw est la taille idéale, 24px est la taille maximale */
+    font-size: clamp(0.5em, 1vw, 1em); /* 16px est la taille minimale, 1.2vw est la taille idéale, 24px est la taille maximale */
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 300;
     padding: 10px;
@@ -861,8 +861,8 @@ p {
     color: #ffffff;
     text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8);
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    margin-left: 50%;
-	margin-top: -60%; 
+    /* margin-left: 50%; */
+	/* margin-bottom: 50vh;  */
 }
 
 #description_cub3d h3 {
@@ -870,8 +870,8 @@ p {
     color: #ffffff;
     text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8);
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    margin-left: 50%;
-	margin-top: -40%;
+    /* margin-left: 50%;
+	margin-top: -40%; */
 }
 
 #description_Solong h3 {
@@ -879,8 +879,9 @@ p {
     color: #ffffff;
     text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8);
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    margin-left: 50%;
-	margin-top: -40%;
+    /* margin-left: 50%;
+	margin-top: -40%; */
+	/* transform : translateY(30%); */
 }
 
 #description_pushswap h3 {
@@ -888,8 +889,8 @@ p {
     color: #ffffff;
     text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8);
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    margin-left: 50%;
-	margin-top: -40%;
+    /* margin-left: 50%;
+	margin-top: -40%; */
 }
 
 #description_philo h3 {
@@ -897,8 +898,8 @@ p {
     color: #ffffff;
     text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8);
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    margin-left: 50%;
-	margin-top: -40%;
+    /* margin-left: 50%;
+	margin-top: -40%; */
 }
 
 #description_minitalk h3 {
@@ -906,8 +907,8 @@ p {
     color: #ffffff;
     text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8);
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    margin-left: 50%;
-	margin-top: -40%;
+    /* margin-left: 50%;
+	margin-top: -40%; */
 }
 
 #cursor-light {
