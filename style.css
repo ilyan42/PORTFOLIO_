@@ -15,12 +15,26 @@ body {
 }
 
 .container {
+	/* background-color: #00aaff; */
+	z-index: 1;
 	max-width: 100%;
 	width: 100%;
 	margin: 0 auto;
 }
 
+header .container {
+    /* background-color: #00344e34; */
+    background-image: url("image/test.png");
+    background-size: cover; /* L'image couvre toute la zone */
+    background-repeat: no-repeat; /* Empêche la répétition */
+    background-position: center; /* Centre l'image dans le conteneur */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 header {
+	/* background-color: #00aaff; */
 	height: 100vh;
 	display: flex;
 	justify-content: center;
@@ -420,9 +434,9 @@ p {
 
 
 .image42 {
-    width: 100%;
+    width: 5vw;
     height: auto;
-    max-width: 100px;
+    /* max-width: 100px; */
 }
 
 #ecole42-container h2 {
@@ -478,10 +492,10 @@ p {
     font-weight: 300;
     padding: 10px;
     margin: 10px auto;
-    width: 60%;
+    width: 50%;
     box-sizing: border-box;
-	margin-right: 37%;
-	transform: translateY(-130%);
+	margin-right: 50%;
+	transform: translateY(-80%);
 }
 
 
@@ -498,8 +512,8 @@ p {
 }
 
 #description_minishell p {
-	font-size: 1.2vw;
-    font-size: clamp(0.5em, 1.2vw, 1.2em); /* 16px est la taille minimale, 1.2vw est la taille idéale, 24px est la taille maximale */
+	font-size: 1vw;
+    font-size: clamp(0.5em, 1vw, 1em); /* 16px est la taille minimale, 1.2vw est la taille idéale, 24px est la taille maximale */
 	text-align: justify;
 }
 
@@ -518,16 +532,17 @@ p {
     flex-direction: column;
     justify-content: flex-start;
     left: 0;
-    transform: translateY(100px);
+    /* transform: translateY(100px); */
+	margin-top: 3vh;
 	margin-bottom: 10vh;
 	
 }
 
 #description_minishell nav ul li a .icon{
-	width: 18px;
+	width: 1.5vw;
+	/* font-size: clamp(0.8em, 1.5vw, 1.5em); */
 	height: auto;
-	margin-left: 8px;
-	transform: translateY(5px);
+	margin-left: 1vw;
 }
 
 #description_minishell nav ul li a {
@@ -536,7 +551,8 @@ p {
     padding: 10px 20px;
     background-color: #1e1e1e;
     border-radius: 500px;
-	font-size: small;
+	font-size : 1vw;
+    font-size: clamp(0.3em, 1vw, 1em); /* 16px est la taille minimale, 1.2vw est la taille idéale, 24px est la taille maximale */
 }
 
 #description_cub3d {
@@ -548,12 +564,13 @@ p {
 	margin-right: auto;
 	opacity: 0;
 	transition: opacity 1s ease-in-out;
-	transform: translateY(100px);
+	/* transform: translateY(100px); */
+	/* margin-bottom: 50vh; */
 }
 
 #description_cub3d p {
-	font-size: 1.2vw;
-    font-size: clamp(0.5em, 1.2vw, 1.2em); /* 16px est la taille minimale, 1.2vw est la taille idéale, 24px est la taille maximale */
+	font-size: 1vw;
+    font-size: clamp(0.5em, 1vw, 1em); /* 16px est la taille minimale, 1.2vw est la taille idéale, 24px est la taille maximale */
 	text-align: justify;
 }
 
@@ -574,14 +591,15 @@ p {
     justify-content: flex-start;
     left: 0;
 	margin-bottom: 10%;
-	transform: translateY(100px);
+	/* transform: translateY(100px); */
+	margin-top: 3vh;
 }
 
 #description_cub3d nav ul li a .icon{
-	width: 18px;
+	width: 1.5vw;
+	/* font-size: clamp(0.8em, 1.5vw, 1.5em); */
 	height: auto;
-	margin-left: 8px;
-	transform: translateY(5px);
+	margin-left: 1vw;
 }
 
 #description_cub3d nav ul li a {
@@ -590,7 +608,8 @@ p {
     padding: 10px 20px;
     background-color: #1e1e1e;
     border-radius: 500px;
-	font-size: small;
+	font-size : 1vw;
+    font-size: clamp(0.3em, 1vw, 1em); /* 16px est la taille minimale, 1.2vw est la taille idéale, 24px est la taille maximale */
 }
 
 #description_Solong {
@@ -606,8 +625,8 @@ p {
 }
 
 #description_Solong p {
-	font-size: 1.2vw;
-    font-size: clamp(0.5em, 1.2vw, 1.2em); /* 16px est la taille minimale, 1.2vw est la taille idéale, 24px est la taille maximale */
+	font-size: 1vw;
+    font-size: clamp(0.5em, 1vw, 1em); /* 16px est la taille minimale, 1.2vw est la taille idéale, 24px est la taille maximale */
 	text-align: justify;
 }
 
@@ -628,14 +647,14 @@ p {
     justify-content: flex-start;
     left: 0;
 	margin-bottom: 10%;
-	transform: translateY(100px);
+	margin-top: 3vh;
 }
 
 #description_Solong nav ul li a .icon{
-	width: 18px;
+	width: 1.5vw;
+	/* font-size: clamp(0.8em, 1.5vw, 1.5em); */
 	height: auto;
-	margin-left: 8px;
-	transform: translateY(5px);
+	margin-left: 1vw;
 }
 
 #description_Solong nav ul li a {
@@ -644,7 +663,8 @@ p {
     padding: 10px 20px;
     background-color: #1e1e1e;
     border-radius: 500px;
-	font-size: small;
+	font-size : 1vw;
+    font-size: clamp(0.3em, 1vw, 1em); /* 16px est la taille minimale, 1.2vw est la taille idéale, 24px est la taille maximale */
 }
 
 #description_pushswap {
@@ -660,8 +680,8 @@ p {
 }
 
 #description_pushswap p {
-	font-size: 1.2vw;
-    font-size: clamp(0.5em, 1.2vw, 1.2em); /* 16px est la taille minimale, 1.2vw est la taille idéale, 24px est la taille maximale */
+	font-size: 1vw;
+    font-size: clamp(0.5em, 1vw, 1em); /* 16px est la taille minimale, 1.2vw est la taille idéale, 24px est la taille maximale */
 	text-align: justify;
 }
 
@@ -682,14 +702,14 @@ p {
     justify-content: flex-start;
     left: 0;
 	margin-bottom: 10%;
-	transform: translateY(100px);
+	margin-top: 3vh;
 }
 
 #description_pushswap nav ul li a .icon{
-	width: 18px;
+	width: 1.5vw;
+	/* font-size: clamp(0.8em, 1.5vw, 1.5em); */
 	height: auto;
-	margin-left: 8px;
-	transform: translateY(5px);
+	margin-left: 1vw;
 }
 
 #description_pushswap nav ul li a {
@@ -698,7 +718,8 @@ p {
     padding: 10px 20px;
     background-color: #1e1e1e;
     border-radius: 500px;
-	font-size: small;
+	font-size : 1vw;
+    font-size: clamp(0.3em, 1vw, 1em); /* 16px est la taille minimale, 1.2vw est la taille idéale, 24px est la taille maximale */
 }
 
 #description_philo {
@@ -714,8 +735,8 @@ p {
 }
 
 #description_philo p {
-	font-size: 1.2vw;
-    font-size: clamp(0.5em, 1.2vw, 1.2em); /* 16px est la taille minimale, 1.2vw est la taille idéale, 24px est la taille maximale */
+	font-size: 1vw;
+    font-size: clamp(0.5em, 1vw, 1em); /* 16px est la taille minimale, 1.2vw est la taille idéale, 24px est la taille maximale */
 	text-align: justify;
 }
 
@@ -735,16 +756,16 @@ p {
     flex-direction: row; /* Aligne les éléments en ligne (horizontalement) */
     justify-content: flex-start; /* Aligne les éléments à droite */
     left: 0; /* Aligne le conteneur UL à droite */
-	margin-bottom: 10%;
-	transform: translateY(50px); /* Déplace l'image vers le bas */
+	/* margin-bottom: 10%; */
+	margin-top: 3vh;
 
 }
 
 #description_philo nav ul li a .icon{
-	width: 18px; /* Largeur de l'icône */
-	height: auto; /* Hauteur automatique pour garder les proportions */
-	margin-left: 8px; /* Espace entre l'icône et le texte */
-	transform: translateY(5px); /* Déplace l'image vers le bas */
+	width: 1.5vw;
+	/* font-size: clamp(0.8em, 1.5vw, 1.5em); */
+	height: auto;
+	margin-left: 1vw;
 }
 
 #description_philo nav ul li a {
@@ -753,10 +774,12 @@ p {
     padding: 10px 20px; /* Padding pour plus de surface cliquable */
     background-color: #1e1e1e; /* Couleur de fond des liens */
     border-radius: 500px; /* Coins arrondis */
-	font-size: small;
+	font-size : 1vw;
+    font-size: clamp(0.3em, 1vw, 1em); /* 16px est la taille minimale, 1.2vw est la taille idéale, 24px est la taille maximale */
 }
 
-#description_minitalk {
+#description_minitalk
+{
 	color: #ffffff; /* Couleur du texte */
 	text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8); /* Ombre bleue pour créer un effet de contour */
 	font-family: Arial, Helvetica, sans-serif;
@@ -766,12 +789,11 @@ p {
 	opacity: 0;
 	transition: opacity 1s ease-in-out;
 	transform: translateY(100px); /* Déplace l'image vers le bas */
-
 }
 
 #description_minitalk p {
-	font-size: 1.2vw;
-    font-size: clamp(0.5em, 1.2vw, 1.2em); /* 16px est la taille minimale, 1.2vw est la taille idéale, 24px est la taille maximale */
+	font-size: 1vw;
+    font-size: clamp(0.5em, 1vw, 1em); /* 16px est la taille minimale, 1.2vw est la taille idéale, 24px est la taille maximale */
 	text-align: justify;
 }
 
@@ -792,15 +814,15 @@ p {
     justify-content: flex-start; /* Aligne les éléments à droite */
     left: 0; /* Aligne le conteneur UL à droite */
 	margin-bottom: 10%;
-	transform: translateY(100px); /* Déplace l'image vers le bas */
+	margin-top: 3vh;
 
 }
 
 #description_minitalk nav ul li a .icon{
-	width: 18px; /* Largeur de l'icône */
-	height: auto; /* Hauteur automatique pour garder les proportions */
-	margin-left: 8px; /* Espace entre l'icône et le texte */
-	transform: translateY(5px); /* Déplace l'image vers le bas */
+	width: 1.5vw;
+	/* font-size: clamp(0.8em, 1.5vw, 1.5em); */
+	height: auto;
+	margin-left: 1vw;
 }
 
 #description_minitalk nav ul li a {
@@ -809,8 +831,9 @@ p {
     padding: 10px 20px; /* Padding pour plus de surface cliquable */
     background-color: #1e1e1e; /* Couleur de fond des liens */
     border-radius: 500px; /* Coins arrondis */
-	font-size: small;
-	transform: translateY(500px); /* Déplace l'image vers le bas */
+	font-size : 1vw;
+    font-size: clamp(0.3em, 1vw, 1em); /* 16px est la taille minimale, 1.2vw est la taille idéale, 24px est la taille maximale */
+	/* transform: translateY(500px); Déplace l'image vers le bas */
 }
 
 /* Responsiveness */
@@ -838,10 +861,10 @@ p {
     font-size: 1.5vw;
     cursor: pointer;
     position: absolute;
-    width: 10vh;  /* Largeur du bouton */
-    height: 10vh; /* Hauteur du bouton */
+    width: 5vw;  /* Largeur du bouton */
+    height: 5vw; /* Hauteur du bouton */
     transition: color 0.3s ease;
-	transform: translateY(500%);
+	/* transform: translateY(400%); */
 }
 
 
@@ -870,6 +893,7 @@ p {
 
 #description_cub3d h3 {
     font-size: 2.5vw;
+    font-size: clamp(1em, 2.5vw, 2.5em); /* 16px est la taille minimale, 1.2vw est la taille idéale, 24px est la taille maximale */
     color: #ffffff;
     text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8);
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -879,6 +903,7 @@ p {
 
 #description_Solong h3 {
     font-size: 2.5vw;
+    font-size: clamp(1em, 2.5vw, 2.5em); /* 16px est la taille minimale, 1.2vw est la taille idéale, 24px est la taille maximale */
     color: #ffffff;
     text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8);
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -889,6 +914,7 @@ p {
 
 #description_pushswap h3 {
     font-size: 2.5vw;
+    font-size: clamp(1em, 2.5vw, 2.5em); /* 16px est la taille minimale, 1.2vw est la taille idéale, 24px est la taille maximale */
     color: #ffffff;
     text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8);
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -898,6 +924,7 @@ p {
 
 #description_philo h3 {
     font-size: 2.5vw;
+    font-size: clamp(1em, 2.5vw, 2.5em); /* 16px est la taille minimale, 1.2vw est la taille idéale, 24px est la taille maximale */
     color: #ffffff;
     text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8);
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -907,6 +934,7 @@ p {
 
 #description_minitalk h3 {
     font-size: 2.5vw;
+    font-size: clamp(1em, 2.5vw, 2.5em); /* 16px est la taille minimale, 1.2vw est la taille idéale, 24px est la taille maximale */
     color: #ffffff;
     text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8);
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -929,99 +957,103 @@ p {
     transform: translate(-50%, -50%); /* Centre la brume sur le curseur */
 }
 
-#contact-container {
-	background-color: #36353593;
-	margin: 0 auto;
-	border-radius: 50px;
-	border: 2px solid #ffffff;
-	display: flex;
-	flex-direction: column;
-	padding: 2vh;
-	box-sizing: border-box;
-	width: 85%;
+/* Style pour le footer */
+footer {
+	margin-top: 10vh;
+    /* background-color: #1e1e1e; */
+	background-image: url('image/bg_footer.png');
+	background-size: cover; /* L'image couvre toute la zone */
+    background-repeat: no-repeat; /* Empêche la répétition */
+    background-position: center; /* Centre l'image dans le conteneur */
+    /* padding: 20px 0; */
+    color: #ffffff;
+    text-align: center;
 	height: 50vh;
-	margin-top: 10%;
+}
+
+#contact-container {
+    margin: 0 auto;
+    /* border-radius: 50px; */
+    /* border: 2px solid #ffffff; */
+    display: flex;
+    flex-direction: column;
+    padding: 2vh;
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+    margin-top: 2%; /* Moins d'espacement en bas de la page */
 }
 
 #contact-container h3 {
-	color: #ffffff;
-	text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8);
-	text-align: left;
-	font-size: 2vw;
-    font-size: clamp(1em, 2vw, 2em); /* 16px est la taille minimale, 1.2vw est la taille idéale, 24px est la taille maximale */
-	font-family: Arial, Helvetica, sans-serif;
-	font-weight: 300; /* Rend le texte plus léger */
-	margin: 0; /* Enlève les marges pour un ajustement fluide */
-	margin-right: 19%;
+    color: #ffffff;
+    text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8);
+    text-align: left;
+    font-size: clamp(1em, 1.5vw, 1.5em);
+    font-family: Arial, Helvetica, sans-serif;
+    /* font-weight: 300; */
+    margin: 0;
+    margin-left: 2.5%;
+	margin-top: -2%;
 }
 
 #contact-container h4 {
-	color: #ffffff; /* Couleur du texte */
-	text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8); /* Ombre bleue pour créer un effet de contour */
-	text-align: left; /* Centrer le texte */
-	font-size: 1.4vw; /* Ajuste la taille du texte pour être responsive */
-    font-size: clamp(0.7em, 1.4vw, 1.4em); /* 16px est la taille minimale, 1.2vw est la taille idéale, 24px est la taille maximale */
-	font-family: 'Times New Roman', Times, serif;
-	font-weight: 300; /* Rend le texte plus léger */
-	/* transform: translate(100px, 50px); */
-	/* margin-right: 10%; */
-	margin-top: 3%;
-	margin-left: 3%;
+    color: #ffffff;
+    text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8);
+    text-align: left;
+    font-size: clamp(0.7em, 1.4vw, 1.4em);
+    font-family: 'Times New Roman', Times, serif;
+    /* font-weight: 300; */
+    margin-top: 3%;
+    margin-left: 3%;
 }
 
 #contact-container h5 {
-	color: #ffffff; /* Couleur du texte */
-	text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8); /* Ombre bleue pour créer un effet de contour */
-	text-align: justify; /* Centrer le texte */
-	font-size: 1.2vw; /* Ajuste la taille du texte pour être responsive */
-    font-size: clamp(0.6em, 1.2vw, 1.2em); /* 16px est la taille minimale, 1.2vw est la taille idéale, 24px est la taille maximale */
-	font-family: 'Times New Roman', Times, serif;
-	font-weight: 300; /* Rend le texte plus léger */
-	margin: 10px 0; /* Ajoute une marge verticale pour espacer les titres */
-	width: 30%;
-	/* transform: translate(800px, 20px); */
-	margin-left: 60%;
+    color: #ffffff;
+    text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8);
+    text-align: justify;
+    font-size: clamp(0.6em, 1vw, 1em);
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 300;
+    margin: 10px 0;
+    width: 30%;
+    margin-left: 60%;
+	/* transform: translateY(-50%); */
 }
 
 #contact-container h2 {
-	color: #ffffff; /* Couleur du texte */
-	text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8); /* Ombre bleue pour créer un effet de contour */
-	text-align: justify; /* Centrer le texte */
-	font-size: 1.2vw; /* Ajuste la taille du texte pour être responsive */
-    font-size: clamp(0.6em, 1.2vw, 1.2em); /* 16px est la taille minimale, 1.2vw est la taille idéale, 24px est la taille maximale */
-	font-family: 'Times New Roman', Times, serif;
-	font-weight: 300; /* Rend le texte plus léger */
-	margin: 10px 0; /* Ajoute une marge verticale pour espacer les titres */
-	width: 30%;
-	/* transform: translate(950px, 120px); */
-	margin-left: 60%;
+    color: #ffffff;
+    text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8);
+    text-align: justify;
+    font-size: clamp(0.4em, 1.2vw, 1.2em);
+    font-family: 'Times New Roman', Times, serif;
+    /* font-weight: 300; */
+    /* margin: 10px 0; */
+    width: 30%;
+    margin-left: 80%;
+	/* transform: translateY(-50%); */
 }
 
-#contact nav ul {
-    list-style: none; /* Enlève les puces */
-    padding: 0; /* Enlève le padding par défaut */
-    position: relative; /* Positionnement relatif */
-    display: flex; /* Utilise Flexbox */
-    flex-direction: column; /* Aligne les éléments en colonne (verticalement) */
-    justify-content: flex-start; /* Aligne les éléments au début */
-    left: 0; /* Aligne le conteneur UL à gauche */
-    margin-bottom: 10%;
-    /* transform: translate(100px, -70px); */
-	gap : 10px;
-	margin-top: -5%;
-	margin-left: 10%;
+footer nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    margin-top: -5%;
+    margin-left: 2%;
 }
 
-#contact nav ul li a {
-	text-decoration: none; /* Enlève le soulignement des liens */
-    color: #ffffff; /* Couleur du texte */
-	text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8); /* Ombre bleue pour créer un effet de contour */
-    padding: 10px 20px; /* Padding pour plus de surface cliquable */
-    background-color: #1e1e1e; /* Couleur de fond des liens */
-	font-size: 1.2vw;
-    font-size: clamp(0.6em, 1.2vw, 1.2em); /* 16px est la taille minimale, 1.2vw est la taille idéale, 24px est la taille maximale */
-	font-family: 'Times New Roman', Times, serif;
+footer nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8);
+    padding: 10px 20px;
+    /* background-color: #1e1e1e; */
+    font-size: clamp(0.6em, 1.2vw, 1.2em);
+    font-family: 'Times New Roman', Times, serif;
 }
+
 
 .aria_baniere {
 	display: none;
