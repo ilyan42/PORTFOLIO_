@@ -971,7 +971,7 @@ footer {
     color: #ffffff;
     text-align: center;
 	height: auto;
-	width: 90%;
+	width: 100%;
 	margin-left: 50%;
 	transform: translateX(-50%);
 }
@@ -1064,7 +1064,7 @@ footer nav ul li a {
 #panel {
     opacity: 0;
     padding: 20px;
-    border: 1px solid #ccc;
+    border: 1px solid #000000;
     background-color: #424242;
     width: 80%;
     height: 100%;
@@ -1072,7 +1072,8 @@ footer nav ul li a {
     top: 0;
     left: -100%; /* Hors de l'écran */
     z-index: 9999;
-    transition: left 0.5s ease-in-out, opacity 0.5s ease-in-out;
+	transform: translateX(-100%);
+    transition: left 0.5s ease-in-out, opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
 
 #panel h5 {
@@ -1086,9 +1087,10 @@ footer nav ul li a {
 }
 
 #panel.show {
-    visibility: visible; /* Affiche le panel */
+    visibility: visible;
     opacity: 1;
-    left: 1%; /* Défile vers la position 1% du côté gauche */
+    left: 1%;
+    transform: translateX(0); /* Ajout d'une transformation */
 }
 
 #toggleButton {
@@ -1110,6 +1112,7 @@ footer nav ul li a {
     z-index: 9998;
     text-align: center; /* Centre le texte (si tu en as) */
     line-height: 50px; /* Centre le texte verticalement */
+	/* border: 1px solid #000000 */
 
 }
 
@@ -1137,6 +1140,7 @@ footer nav ul li a {
 	top: 2.5%;
 	/* left: 1%; */
 	z-index: 9999;
+	/* border: 1px solid #000000 */
 }
 
 
@@ -1203,5 +1207,8 @@ footer nav ul li a {
 		left: 25%;
 		right: 25%;
 		bottom: 25%;
+	}
+	#cursor-light {
+		display: none;
 	}
 }
