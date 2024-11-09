@@ -7,7 +7,7 @@
 body {
 	font-family: 'Roboto', sans-serif;
 	background-color: #000000;
-	color: #333;
+	color: #333333;
 	line-height: 1.6;
 	transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 	overflow-x: hidden;
@@ -24,7 +24,7 @@ body {
 
 header .container {
     /* background-color: #00344e34; */
-    background-image: url("image/test.png");
+    background-image: url("image/ilyan.jpg");
     background-size: cover; /* L'image couvre toute la zone */
     background-repeat: no-repeat; /* Empêche la répétition */
     background-position: center; /* Centre l'image dans le conteneur */
@@ -968,7 +968,10 @@ footer {
     /* padding: 20px 0; */
     color: #ffffff;
     text-align: center;
-	height: 30vw;
+	height: auto;
+	width: 90%;
+	margin-left: 50%;
+	transform: translateX(-50%);
 }
 
 #contact-container {
@@ -1030,6 +1033,7 @@ footer {
     /* margin: 10px 0; */
     width: 30%;
     margin-left: 80%;
+	margin-bottom: 20%;
 	/* transform: translateY(-50%); */
 }
 
@@ -1040,7 +1044,7 @@ footer nav ul {
     flex-direction: column;
     align-items: flex-start;
     gap: 10px;
-    margin-top: -5%;
+    margin-bottom: 10%;
     margin-left: 2%;
 }
 
@@ -1055,6 +1059,141 @@ footer nav ul li a {
 }
 
 
+#panel {
+    opacity: 0;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #424242;
+    width: 80%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: -100%; /* Hors de l'écran */
+    z-index: 9999;
+    transition: left 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+#panel h5 {
+	color: #ffffff;
+	text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8);
+	font-size: 1.5vw;
+	font-size: clamp(0.2em, 1.5vw, 1.5em); /* 16px est la taille minimale, 1.2vw est la taille idéale, 24px est la taille maximale */
+	font-family: Arial, Helvetica, sans-serif;
+	margin: 0;
+	margin-bottom: 20%;
+}
+
+#panel.show {
+    visibility: visible; /* Affiche le panel */
+    opacity: 1;
+    left: 1%; /* Défile vers la position 1% du côté gauche */
+}
+
+#toggleButton {
+	display: none;
+    background-color: #1E3A8A; /* Bleu foncé */
+    width: 50px; /* Largeur du bouton */
+    height: 50px; /* Hauteur du bouton */
+    border-radius: 50%; /* Forme circulaire */
+    background-image: url('image/parametter_icon.png'); /* Image de fond */
+    background-size: 40px 40px; /* Ajuste la taille de l'image */
+    background-position: center; /* Centre l'image dans le bouton */
+    background-repeat: no-repeat; /* Empêche la répétition de l'image */
+    color: white; /* Couleur du texte (si nécessaire) */
+    font-size: 2vw;
+    cursor: pointer;
+    position: fixed;
+    top: 2.5%;
+    left: 2.5%;
+    z-index: 9998;
+    text-align: center; /* Centre le texte (si tu en as) */
+    line-height: 50px; /* Centre le texte verticalement */
+
+}
+
+#closeButtonPanel {
+    background-color: #1E3A8A; /* Bleu foncé */
+    width: 50px; /* Largeur du bouton */
+    height: 50px; /* Hauteur du bouton */
+    border-radius: 50%; /* Forme circulaire */
+	background-image: url('image/parametter_icon.png'); /* Image de fond */
+    background-size: 40px 40px; /* Ajuste la taille de l'image */
+    background-position: center; /* Centre l'image dans le bouton */
+    background-repeat: no-repeat; /* Empêche la répétition de l'image */
+    color: white; /* Couleur du texte (si nécessaire) */
+    font-size: 2vw;
+    cursor: pointer;
+    position: fixed;
+    display: block;
+    text-align: center; /* Centre le texte (si tu en as) */
+    line-height: 50px; /* Centre le texte verticalement */
+
+	padding: 10px 20px;
+    font-size: 2vw;
+	cursor: pointer;
+	position: fixed;
+	top: 2.5%;
+	/* left: 1%; */
+	z-index: 9999;
+}
+
+
 .aria_baniere {
 	display: none;
+}
+
+.nav-centerV2 ul {
+	position: fixed;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	justify-content: left;
+	gap: 1vh;
+	flex-wrap: wrap;
+	overflow: auto;
+	z-index: 4;
+	transition: opacity 0.3s, transform 0.3s;
+	opacity: 1;
+	max-width: 90vw;
+	flex-direction: column;
+	top: 20%;
+}
+
+.nav-centerV2.hidden {
+	opacity: 0;
+	transform: translateY(-100%);
+}
+
+.nav-centerV2 li {
+	margin: 0;
+}
+
+.nav-centerV2 li a {
+	text-decoration: none;
+	color: #000000;
+	padding: 0px 20px;
+	border-radius: 5px;
+	font-family: Arial, Helvetica, sans-serif;
+	transition: background-color 0.3s, color 0.3s, transform 0.3s;
+	font-weight: normal;
+}
+
+.nav-centerV2 li a:hover {
+	color: #ffffff;
+	background-color: transparent;
+	transform: scale(1.1);
+}
+
+
+@media screen and (max-width: 768px) {
+
+	.nav-center ul {
+		display: none;
+	}
+
+	#toggleButton {
+		display: block;
+	}
+
 }

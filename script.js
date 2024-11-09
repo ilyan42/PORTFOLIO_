@@ -36,13 +36,15 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 
+
+
     // Ajouter un bouton "Retour en haut" après défilement
     const backToTopButton = document.createElement('button');
     backToTopButton.innerText = '⬆️';
     backToTopButton.id = 'back-to-top';
     backToTopButton.style.position = 'fixed';
-    backToTopButton.style.bottom = '20px';
-    backToTopButton.style.right = '20px';
+    backToTopButton.style.bottom = '0vh';
+    backToTopButton.style.right = '10%';
     backToTopButton.style.padding = '10px 15px';
     backToTopButton.style.backgroundColor = '#333';
     backToTopButton.style.color = '#fff';
@@ -179,4 +181,28 @@ document.addEventListener("DOMContentLoaded", function() {
         light.style.left = `${e.clientX}px`;
         light.style.top = `${e.clientY}px`;
     });
+
+	function closePanel() {
+		const panel = document.getElementById('panel');
+		panel.classList.remove('show');
+	}
+	
+	// Ouvre le panel lorsque tu cliques sur le bouton
+	document.getElementById('toggleButton').addEventListener('click', function() {
+		const panel = document.getElementById('panel');
+		panel.classList.add('show');
+	});
+
+	document.getElementById('closeButtonPanel').addEventListener('click', function() {
+		const panel = document.getElementById('panel');
+		panel.classList.remove('show');
+	});
+	
+	// Ferme le panel lorsque tu cliques sur n'importe quel lien
+	const navvLinks = document.querySelectorAll('.nav-centerV2 a');
+	navvLinks.forEach(link => {
+		link.addEventListener('click', closePanel);
+	});
+
+
 });
