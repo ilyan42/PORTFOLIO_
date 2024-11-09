@@ -83,16 +83,16 @@
         scene.add(model);
 
         // Ajustements de position et d'échelle du modèle en fonction de la taille de l'écran
-        if (window.innerWidth > 1200) {
+        if (window.innerWidth > 768) {
             model.position.set(0, 2, 0);
             camera.position.set(5, 5, 8);
             model.scale.set(1, 1.4, 1.2);
-        } else {
-            model.position.set(-3, 0, -10);
-            camera.position.set(5, 8, 8);
-            model.scale.set(0.2, 0.9, 0.3);
         }
-
+		else {
+			model.position.set(0, 0, 0);
+			camera.position.set(0, 3, 5);
+			model.scale.set(0.5, 0.5, 0.5);
+		}
         function animateThree() {
             requestAnimationFrame(animateThree);
             model.rotation.y += 0.008;
