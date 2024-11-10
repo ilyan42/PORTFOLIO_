@@ -1,0 +1,677 @@
+#ecole42-container {
+	background-color: #36353593;
+	margin: 0 auto;
+	border-radius: 50px;
+	border: 2px solid #ffffff; 
+	display: flex;
+	flex-direction: column;
+	padding: 20px;
+	box-sizing: border-box;
+
+	width: 85%;
+	max-width: 1200px;
+	min-width: 300px;
+	height: 90vh; 
+	margin-top: 30vh;
+	overflow: hidden !important; 
+}
+
+.image_bg {
+	position: relative;
+	width: 50%;
+	height: auto;
+	z-index: -2;
+	margin-left: 25%;
+	margin-top: -50%;
+}
+
+
+
+.image42 {
+    width: 5vw;
+    height: auto;
+    /* max-width: 100px; */
+}
+
+#ecole42-container h2 {
+    color: #ffffff;
+    text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8); 
+    text-align: right;
+    font-size: 2.5vw;
+    font-size: clamp(0.8em, 2.5vw, 2.5em); /* 16px est la taille minimale, 1.2vw est la taille idéale, 24px est la taille maximale */
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 300; 
+    margin: 0;
+	margin-right: 19%;
+	margin-bottom: 5%;
+	transform: translateY(-50%);
+}
+
+#ecole42-container h3 {
+    color: #ffffff;
+    text-align: left;
+    font-size: 1.5vw;
+    font-size: clamp(0.8em, 1.5vw, 1.5em); /* 16px est la taille minimale, 1.2vw est la taille idéale, 24px est la taille maximale */
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 300;
+	margin-left: 70%;
+	transform: translateY(-100%);
+}
+
+.button {
+    color: #fffcfc;
+    text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1vw;
+    font-size: clamp(0.8em, 1.1vw, 1.1em); /* 16px est la taille minimale, 1.2vw est la taille idéale, 24px est la taille maximale */
+    text-decoration: underline;
+	background-color: #25252500;
+}
+
+.button:hover {
+    color: #9992f4;
+    text-shadow: none;
+}
+
+#ecole42-container h4 {
+    color: #ffffff;
+    text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8);
+    text-align: justify;
+    font-size: 1vw;
+    font-size: clamp(0.5em, 1vw, 1em); /* 16px est la taille minimale, 1.2vw est la taille idéale, 24px est la taille maximale */
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    padding: 10px;
+    margin: 10px auto;
+    width: 50%;
+    box-sizing: border-box;
+	margin-right: 50%;
+	transform: translateY(-80%);
+}
+
+
+#description_minishell {
+	color: #ffffff;
+	text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8);
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: 20;
+	max-width: 70%;
+	margin-right: auto;
+	opacity: 0;
+    transition: opacity 1s ease-in-out;
+	/* transform: translateY(100px); */
+}
+
+#description_minishell p {
+	font-size: 1vw;
+    font-size: clamp(0.5em, 1vw, 1em); /* 16px est la taille minimale, 1.2vw est la taille idéale, 24px est la taille maximale */
+	text-align: justify;
+}
+
+#description_minishell.show {
+    opacity: 1;
+}
+
+#description_minishell nav ul li {
+    margin-bottom: 2vh; /* Ajuste la valeur pour l'espacement souhaité */
+}
+
+#description_minishell nav ul {
+    list-style: none;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    left: 0;
+    /* transform: translateY(100px); */
+	margin-top: 3vh;
+	margin-bottom: 10vh;
+	
+}
+
+#description_minishell nav ul li a .icon{
+	width: 1.5vw;
+	/* font-size: clamp(0.8em, 1.5vw, 1.5em); */
+	height: auto;
+	margin-left: 1vw;
+}
+
+#description_minishell nav ul li a {
+	text-decoration: none;
+    color: #ffffff;
+    padding: 10px 20px;
+    background-color: #1e1e1e;
+    border-radius: 500px;
+	font-size : 1vw;
+    font-size: clamp(0.3em, 1vw, 1em); /* 16px est la taille minimale, 1.2vw est la taille idéale, 24px est la taille maximale */
+}
+
+#description_cub3d {
+	color: #ffffff;
+	text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8);
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: 20;
+	max-width: 70%;
+	margin-right: auto;
+	opacity: 0;
+	transition: opacity 1s ease-in-out;
+	/* transform: translateY(100px); */
+	/* margin-bottom: 50vh; */
+}
+
+#description_cub3d p {
+	font-size: 1vw;
+    font-size: clamp(0.5em, 1vw, 1em); /* 16px est la taille minimale, 1.2vw est la taille idéale, 24px est la taille maximale */
+	text-align: justify;
+}
+
+#description_cub3d.show {
+	opacity: 1;
+}
+
+#description_cub3d nav ul li {
+    margin-bottom: 2vh; /* Ajuste la valeur pour l'espacement souhaité */
+}
+
+#description_cub3d nav ul {
+    list-style: none;
+    padding: 0;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    left: 0;
+	margin-bottom: 10%;
+	/* transform: translateY(100px); */
+	margin-top: 3vh;
+}
+
+#description_cub3d nav ul li a .icon{
+	width: 1.5vw;
+	/* font-size: clamp(0.8em, 1.5vw, 1.5em); */
+	height: auto;
+	margin-left: 1vw;
+}
+
+#description_cub3d nav ul li a {
+	text-decoration: none;
+    color: #ffffff;
+    padding: 10px 20px;
+    background-color: #1e1e1e;
+    border-radius: 500px;
+	font-size : 1vw;
+    font-size: clamp(0.3em, 1vw, 1em); /* 16px est la taille minimale, 1.2vw est la taille idéale, 24px est la taille maximale */
+}
+
+#description_Solong {
+	color: #ffffff;
+	text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8);
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: 20;
+	max-width: 70%;
+	margin-right: auto;
+	opacity: 0;
+	transition: opacity 1s ease-in-out;
+	transform: translateY(100px);
+}
+
+#description_Solong p {
+	font-size: 1vw;
+    font-size: clamp(0.5em, 1vw, 1em); /* 16px est la taille minimale, 1.2vw est la taille idéale, 24px est la taille maximale */
+	text-align: justify;
+}
+
+#description_Solong.show {
+	opacity: 1;
+}
+
+#description_Solong nav ul li {
+    margin-bottom: 2vh; /* Ajuste la valeur pour l'espacement souhaité */
+}
+
+#description_Solong nav ul {
+    list-style: none;
+    padding: 0;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    left: 0;
+	margin-bottom: 10%;
+	margin-top: 3vh;
+}
+
+#description_Solong nav ul li a .icon{
+	width: 1.5vw;
+	/* font-size: clamp(0.8em, 1.5vw, 1.5em); */
+	height: auto;
+	margin-left: 1vw;
+}
+
+#description_Solong nav ul li a {
+	text-decoration: none;
+    color: #ffffff;
+    padding: 10px 20px;
+    background-color: #1e1e1e;
+    border-radius: 500px;
+	font-size : 1vw;
+    font-size: clamp(0.3em, 1vw, 1em); /* 16px est la taille minimale, 1.2vw est la taille idéale, 24px est la taille maximale */
+}
+
+#description_pushswap {
+	color: #ffffff;
+	text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8);
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: 20;
+	max-width: 70%;
+	margin-right: auto;
+	opacity: 0;
+	transition: opacity 1s ease-in-out;
+	transform: translateY(100px);
+}
+
+#description_pushswap p {
+	font-size: 1vw;
+    font-size: clamp(0.5em, 1vw, 1em); /* 16px est la taille minimale, 1.2vw est la taille idéale, 24px est la taille maximale */
+	text-align: justify;
+}
+
+#description_pushswap.show {
+	opacity: 1;
+}
+
+#description_pushswap nav ul li {
+    margin-bottom: 2vh; /* Ajuste la valeur pour l'espacement souhaité */
+}
+
+#description_pushswap nav ul {
+    list-style: none;
+    padding: 0;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    left: 0;
+	margin-bottom: 10%;
+	margin-top: 3vh;
+}
+
+#description_pushswap nav ul li a .icon{
+	width: 1.5vw;
+	/* font-size: clamp(0.8em, 1.5vw, 1.5em); */
+	height: auto;
+	margin-left: 1vw;
+}
+
+#description_pushswap nav ul li a {
+	text-decoration: none;
+    color: #ffffff;
+    padding: 10px 20px;
+    background-color: #1e1e1e;
+    border-radius: 500px;
+	font-size : 1vw;
+    font-size: clamp(0.3em, 1vw, 1em); /* 16px est la taille minimale, 1.2vw est la taille idéale, 24px est la taille maximale */
+}
+
+#description_philo {
+	color: #ffffff;
+	text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8);
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: 20;
+	max-width: 70%;
+	margin-right: auto;
+	opacity: 0;
+	transition: opacity 1s ease-in-out;
+	transform: translateY(100px);
+}
+
+#description_philo p {
+	font-size: 1vw;
+    font-size: clamp(0.5em, 1vw, 1em); /* 16px est la taille minimale, 1.2vw est la taille idéale, 24px est la taille maximale */
+	text-align: justify;
+}
+
+#description_philo.show {
+	opacity: 1;
+}
+
+#description_philo nav ul li {
+    margin-bottom: 2vh; /* Ajuste la valeur pour l'espacement souhaité */
+}
+
+#description_philo nav ul {
+    list-style: none; /* Enlève les puces */
+    padding: 0; /* Enlève le padding par défaut */
+    position: relative; /* Positionnement absolu */
+    display: flex; /* Utilise Flexbox */
+    flex-direction: row; /* Aligne les éléments en ligne (horizontalement) */
+    justify-content: flex-start; /* Aligne les éléments à droite */
+    left: 0; /* Aligne le conteneur UL à droite */
+	/* margin-bottom: 10%; */
+	margin-top: 3vh;
+
+}
+
+#description_philo nav ul li a .icon{
+	width: 1.5vw;
+	/* font-size: clamp(0.8em, 1.5vw, 1.5em); */
+	height: auto;
+	margin-left: 1vw;
+}
+
+#description_philo nav ul li a {
+	text-decoration: none; /* Enlève le soulignement des liens */
+    color: #ffffff; /* Couleur du texte */
+    padding: 10px 20px; /* Padding pour plus de surface cliquable */
+    background-color: #1e1e1e; /* Couleur de fond des liens */
+    border-radius: 500px; /* Coins arrondis */
+	font-size : 1vw;
+    font-size: clamp(0.3em, 1vw, 1em); /* 16px est la taille minimale, 1.2vw est la taille idéale, 24px est la taille maximale */
+}
+
+#description_minitalk
+{
+	color: #ffffff; /* Couleur du texte */
+	text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8); /* Ombre bleue pour créer un effet de contour */
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: 20; /* Makes the text thinner */
+	max-width: 70%;
+	margin-right: auto; /* Laisser l'espace restant à droite */
+	opacity: 0;
+	transition: opacity 1s ease-in-out;
+	transform: translateY(100px); /* Déplace l'image vers le bas */
+}
+
+#description_minitalk p {
+	font-size: 1vw;
+    font-size: clamp(0.5em, 1vw, 1em); /* 16px est la taille minimale, 1.2vw est la taille idéale, 24px est la taille maximale */
+	text-align: justify;
+}
+
+#description_minitalk.show {
+	opacity: 1;
+}
+
+#description_minitalk nav ul li {
+    margin-bottom: 2vh; /* Ajuste la valeur pour l'espacement souhaité */
+}
+
+#description_minitalk nav ul {
+    list-style: none; /* Enlève les puces */
+    padding: 0; /* Enlève le padding par défaut */
+    position: relative; /* Positionnement absolu */
+    display: flex; /* Utilise Flexbox */
+    flex-direction: row; /* Aligne les éléments en ligne (horizontalement) */
+    justify-content: flex-start; /* Aligne les éléments à droite */
+    left: 0; /* Aligne le conteneur UL à droite */
+	margin-bottom: 10%;
+	margin-top: 3vh;
+
+}
+
+#description_minitalk nav ul li a .icon{
+	width: 1.5vw;
+	/* font-size: clamp(0.8em, 1.5vw, 1.5em); */
+	height: auto;
+	margin-left: 1vw;
+}
+
+#description_minitalk nav ul li a {
+	text-decoration: none; /* Enlève le soulignement des liens */
+    color: #ffffff; /* Couleur du texte */
+    padding: 10px 20px; /* Padding pour plus de surface cliquable */
+    background-color: #1e1e1e; /* Couleur de fond des liens */
+    border-radius: 500px; /* Coins arrondis */
+	font-size : 1vw;
+    font-size: clamp(0.3em, 1vw, 1em); /* 16px est la taille minimale, 1.2vw est la taille idéale, 24px est la taille maximale */
+	/* transform: translateY(500px); Déplace l'image vers le bas */
+}
+
+/* Responsiveness */
+
+
+#back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+    font-size: 24px;
+}
+
+.back-button {
+    background: url('image/flechegauche.png') no-repeat center center;
+    background-size: contain; /* S'assure que l'image s'adapte à la taille du bouton */
+    border: none;
+    color: #ffffff;
+    font-size: 1.5vw;
+    cursor: pointer;
+    position: absolute;
+    width: 5vw;  /* Largeur du bouton */
+    height: 5vw; /* Hauteur du bouton */
+    transition: color 0.3s ease;
+	/* transform: translateY(400%); */
+}
+
+
+.back-button:hover {
+    color: #00aaff;
+}
+
+#video_in_description {
+    width: 80%; /* Prend toute la largeur du conteneur */
+    height: auto; /* Hauteur automatique pour garder le ratio */
+    box-shadow: 0 0 5px rgb(255, 255, 255); /* Ombre légère pour la vidéo */
+    margin-top: 20px; /* Espacement au-dessus de la vidéo */
+	margin-left: 140%;
+	transform: translateY(-400px);
+}
+
+#description_minishell h3 {
+    font-size: 2.5vw;
+    font-size: clamp(1em, 2.5vw, 2.5em); /* 16px est la taille minimale, 1.2vw est la taille idéale, 24px est la taille maximale */
+    color: #ffffff;
+    text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    /* margin-left: 50%; */
+	/* margin-bottom: 50vh;  */
+}
+
+#description_cub3d h3 {
+    font-size: 2.5vw;
+    font-size: clamp(1em, 2.5vw, 2.5em); /* 16px est la taille minimale, 1.2vw est la taille idéale, 24px est la taille maximale */
+    color: #ffffff;
+    text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    /* margin-left: 50%;
+	margin-top: -40%; */
+}
+
+#description_Solong h3 {
+    font-size: 2.5vw;
+    font-size: clamp(1em, 2.5vw, 2.5em); /* 16px est la taille minimale, 1.2vw est la taille idéale, 24px est la taille maximale */
+    color: #ffffff;
+    text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    /* margin-left: 50%;
+	margin-top: -40%; */
+	/* transform : translateY(30%); */
+}
+
+#description_pushswap h3 {
+    font-size: 2.5vw;
+    font-size: clamp(1em, 2.5vw, 2.5em); /* 16px est la taille minimale, 1.2vw est la taille idéale, 24px est la taille maximale */
+    color: #ffffff;
+    text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    /* margin-left: 50%;
+	margin-top: -40%; */
+}
+
+#description_philo h3 {
+    font-size: 2.5vw;
+    font-size: clamp(1em, 2.5vw, 2.5em); /* 16px est la taille minimale, 1.2vw est la taille idéale, 24px est la taille maximale */
+    color: #ffffff;
+    text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    /* margin-left: 50%;
+	margin-top: -40%; */
+}
+
+#description_minitalk h3 {
+    font-size: 2.5vw;
+    font-size: clamp(1em, 2.5vw, 2.5em); /* 16px est la taille minimale, 1.2vw est la taille idéale, 24px est la taille maximale */
+    color: #ffffff;
+    text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				<!-- <div id="ecole42-container"> -->
+					<!-- <div id="ecole42-texte">
+						<img src="image/42-removebg-preview.png" alt="42baniere" class="image42">
+					</div>
+					<div id="ecole42">
+						<h2>Projets</h2>
+						<h3><button id="projet_minishell" class="button">Minishell</button></h3>
+						<h3><button id="projet_cub3d" class="button">Cub3D</button></h3>
+						<h3><button id="projet_Solong" class="button">So_long</button></h3>
+						<h3><button id="projet_pushswap" class="button">Push_swap</button></h3>
+						<h3><button id="projet_philo" class="button">Philosophers</button></h3>
+						<h3><button id="projet_minitalk" class="button">Minitalk</button></h3>
+						<h4>Au cours de mon expérience en tant qu'étudiant à l'école 42, 
+							j'ai eu l'opportunité de travailler sur plusieurs projets majeurs. 
+							Ces projets m'ont permis de développer mes compétences techniques et 
+							de renforcer ma capacité à collaborer efficacement avec d'autres personnes. 
+							Parmi les projets les plus significatifs auxquels j'ai participé  Chacun 
+							de ces projets m'a offert des défis uniques et a contribué de manière substantielle 
+							à ma croissance professionnelle et personnelle. </h4>
+					</div>
+					<div id="description_minishell" class="description">
+						<h3>MINISHELL</h3>
+						<p>Minishell est un projet de l'école 42 qui consiste à recréer un shell basique. 
+							Un shell est un interpréteur de commandes qui permet à l'utilisateur de communiquer 
+							avec le système d'exploitation. Le but de ce projet est de comprendre le fonctionnement 
+							d'un shell et d'apprendre à manipuler les processus et les signaux. 
+							Pour ce faire, j'ai dû implémenter plusieurs fonctionnalités, telles que l'exécution 
+							de commandes, la gestion des variables d'environnement, la gestion des signaux, 
+							la gestion des erreurs, etc. Ce projet m'a permis de renforcer mes compétences en 
+							programmation système et de mieux comprendre le fonctionnement des systèmes d'exploitation.</p>
+							<nav>
+								<ul>
+									<li><a href="https://github.com/ilyan42/MINISHELL" target="_blank">Minishell: code source<img src="image/github.png" alt="GitHub" class="icon"></a></li>
+									<li><a href="https://www.youtube.com/watch?v=_s6Wd49w2jI" target="_blank">Video du projet<img src="image/ytb_icon.png" alt="GitHub" class="icon"></a></li>
+								</ul>
+							</nav>
+						<button id="backButton" class="back-button"></button>
+					</div>
+
+					<div id="description_cub3d" class="description">
+						<h3>CUB3D</h3>
+						<p>Cub3D est un projet de l'école 42 qui consiste à recréer un moteur graphique en utilisant 
+							la bibliothèque graphique miniLibX. Le but de ce projet est de comprendre le fonctionnement 
+							d'un moteur graphique 3D et d'apprendre à manipuler les raycasting. 
+							Pour ce faire, j'ai dû implémenter plusieurs fonctionnalités, telles que le rendu d'une carte 
+							3D, le déplacement du joueur, la gestion des textures, la gestion des collisions, etc. 
+							Ce projet m'a permis de renforcer mes compétences en programmation graphique et de mieux 
+							comprendre le fonctionnement des moteurs graphiques 3D.</p>
+							<nav>
+								<ul>
+									<li><a href="https://github.com/ilyan42/CUB3D" target="_blank">Cub3D: code source<img src="image/github.png" alt="GitHub" class="icon"></a></li>
+								</ul>
+							</nav>
+						<button id="backButton" class="back-button"></button>
+					</div>
+
+
+					<div id="description_Solong" class="description">
+						<h3>SO_LONG</h3>
+						<p>So_long est un projet de l'école 42 qui consiste à recréer un jeu de type "Sokoban" en utilisant 
+							la bibliothèque graphique miniLibX. Le but de ce projet est de comprendre le fonctionnement d'un 
+							moteur de jeu en 2D et d'apprendre à manipuler les événements clavier et souris. 
+							Pour ce faire, j'ai dû implémenter plusieurs fonctionnalités, telles que le rendu d'une carte 2D, 
+							le déplacement du joueur, la gestion des ennemis, la gestion des objets, etc. 
+							Ce projet m'a permis de renforcer mes compétences en programmation de jeux vidéo et de mieux 
+							comprendre le fonctionnement des moteurs de jeu en 2D.</p>
+							<nav>
+								<ul>
+									<li><a href="https://github.com/ilyan42/FT_PACMAN" target="_blank">So_long: code source<img src="image/github.png" alt="GitHub" class="icon"></a></li>
+								</ul>
+							</nav>
+						<button id="backButton" class="back-button"></button>
+					</div>
+
+					<div id="description_pushswap" class="description">
+						<h3>PUSH_SWAP</h3>
+						<p>Push_swap est un projet de l'école 42 qui consiste à trier une pile d'entiers en utilisant un 
+							ensemble d'instructions prédéfinies. Le but de ce projet est de comprendre le fonctionnement des 
+							algorithmes de tri et d'apprendre à optimiser leur complexité. 
+							Pour ce faire, j'ai dû implémenter un algorithmes de tri, l'algorithme de tri "push_swap", et l'optimiser 
+							pour trier une pile d'entiers dans l'ordre croissant. 
+							Ce projet m'a permis de renforcer mes compétences en algorithmique et de mieux comprendre le 
+							fonctionnement des algorithmes de tri.
+						</p>
+							<nav>
+								<ul>
+									<li><a href="https://github.com/ilyan42/PUSH_SWAP" target="_blank">Push_Swap: code source<img src="image/github.png" alt="GitHub" class="icon"></a></li>
+								</ul>
+							</nav>
+						<button id="backButton" class="back-button"></button>
+					</div>
+
+					<div id="description_philo" class="description">
+						<h3>PHILOSOPHERS</h3>
+						<p>Philosophers est un projet de l'école 42 qui consiste à simuler le problème des philosophes 
+							dîneurs en utilisant des threads et des mutex. Le but de ce projet est de comprendre le 
+							fonctionnement des threads et des mutex et d'apprendre à les manipuler pour résoudre un problème 
+							de synchronisation. 
+							Pour ce faire, j'ai dû implémenter un programme qui simule le comportement de plusieurs philosophes 
+							dîneurs qui partagent des ressources communes (les fourchettes) et doivent éviter les situations de 
+							conflit (les interblocages et les courses critiques). Ce projet m'a permis de renforcer mes compétences 
+							en programmation concurrente et de mieux comprendre le fonctionnement des threads et des mutex.
+						</p>
+							<nav>
+								<ul>
+									<li><a href="https://github.com/ilyan42/PHILOSOPHERS" target="_blank">Philosophers: code source<img src="image/github.png" alt="GitHub" class="icon"></a></li>
+								</ul>
+							</nav>
+						<button id="backButton" class="back-button"></button>
+					</div>
+
+					<div id="description_minitalk" class="description">
+						<h3>MINITALK</h3>
+						<p>Minitalk est un projet de l'école 42 qui consiste à créer un programme client-serveur qui permet 
+							de communiquer en utilisant des signaux. Le but de ce projet est de comprendre le fonctionnement des 
+							signaux et d'apprendre à les manipuler pour établir une communication bidirectionnelle entre deux 
+							processus. 
+							Pour ce faire, j'ai dû implémenter un programme client qui envoie un message à un programme serveur 
+							en utilisant des signaux, et un programme serveur qui reçoit le message et l'affiche à l'écran. 
+							Ce projet m'a permis de renforcer mes compétences en programmation système et de mieux comprendre le 
+							fonctionnement des signaux.</p>
+							<nav>
+								<ul>
+									<li><a href="https://github.com/ilyan42/MINITALK" target="_blank">Minitalk: code source<img src="image/github.png" alt="GitHub" class="icon"></a></li>
+								</ul>
+							</nav>
+						<button id="backButton" class="back-button"></button>
+					</div> -->
