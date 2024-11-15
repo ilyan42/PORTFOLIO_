@@ -4,9 +4,16 @@
 	box-sizing: border-box;
 }
 
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
 body {
 	font-family: 'Roboto', sans-serif;
-	background-color: #000000;
+	background-color: rgb(36,35,43,255);
 	color: #333333;
 	line-height: 1.6;
 	transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
@@ -163,11 +170,11 @@ h2 {
 	background-color: #282828;
 	padding: 2vh;
 	border-radius: 2vh;
-	border: 2px solid #ffffff;
+	border: 2px solid #000000;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 	flex: 1;
 	min-width: 25vh;
-	max-width: 42vh;
+	max-width: 50vh;
 	text-align: center;
 	font-style: justify;
 }
@@ -217,8 +224,8 @@ h2 {
 }
 
 .card p {
-	font-size: 0.8vw;
-    font-size: clamp(0.5em, 0.8vw, 0.8em); /* 16px est la taille minimale, 1.2vw est la taille idéale, 24px est la taille maximale */
+	font-size: 1vw;
+    font-size: clamp(0.5em, 1vw, 1em); /* 16px est la taille minimale, 1.2vw est la taille idéale, 24px est la taille maximale */
 	color: #666;
 	text-align: justify !important;
 	font-family: Arial, Helvetica, sans-serif;
@@ -291,7 +298,7 @@ h5 .icon {
 
 #threejs-container {
     border-radius: 50px;
-    border: 2px solid #ffffff;
+    border: 2px solid #000000;
     overflow: hidden;
     min-width: 300px;
     max-width: 2000px;
@@ -310,7 +317,7 @@ h5 .icon {
     
     text-align: center;
     border-radius: 30px;
-    border: 2px solid #ffffff;
+    border: 2px solid #000000;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
     background-color: rgba(51, 51, 51, 0.9); 
@@ -424,30 +431,25 @@ p {
 
 /* Style pour le footer */
 footer {
-    background-image: url('image/bg_footer.png');
+    background-image: url('image/footerv3.jpg');
     background-size: cover; /* L'image couvre toute la zone */
     background-repeat: no-repeat; /* Empêche la répétition */
     background-position: center; /* Centre l'image dans le conteneur */
     color: #ffffff;
-    text-align: center;
+    /* text-align: center; */
     height: 60vh;
     width: 100%;
-    position: relative; /* Position relative pour garder l'élément dans le flux normal */
-	margin-top: 20vh;
-	/* margin-top: auto; */
+    margin-top: 20vh;
+    position: relative;
+    z-index: 0;
 }
 
 #contact-container {
-    margin: 0 auto;
-    /* border-radius: 50px; */
-    /* border: 2px solid #ffffff; */
-    display: flex;
-    flex-direction: column;
-    padding: 2vh;
-    box-sizing: border-box;
-    width: 100% !important;
+    margin: 0;
+    padding: 0;
     height: auto;
-    margin-top: 2%; /* Moins d'espacement en bas de la page */
+    width: 100%;
+    box-sizing: border-box;
 }
 
 #contact-container h3 {
@@ -465,25 +467,27 @@ footer {
 #contact-container h4 {
     color: #ffffff;
     text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8);
-    text-align: left;
-    font-size: clamp(0.7em, 1.4vw, 1.4em);
-    font-family: 'Times New Roman', Times, serif;
-    /* font-weight: 300; */
-    margin-top: 3%;
-    margin-left: 3%;
+    text-align: center;
+    font-size: clamp(1.2em, 2vw, 2em);
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 5vh;
+    text-decoration: underline; /* Ajoute le soulignement */
+    text-decoration-color: rgba(255, 242, 0, 0.772); /* Change la couleur du soulignement en violet */
+    text-decoration-thickness: 3px; /* Épaisseur du soulignement */
 }
 
 #contact-container h5 {
     color: #ffffff;
     text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8);
-    text-align: justify;
-    font-size: clamp(0.6em, 1vw, 1em);
-    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    font-size: clamp(0.8em, 1.3vw, 1.3em);
+    font-family: Arial, Helvetica, sans-serif;
     font-weight: 300;
     margin: 10px 0;
-    width: 30%;
-    margin-left: 60%;
-	/* transform: translateY(-50%); */
+    width: 50%;
+	margin-left: 50%;
+	transform: translateX(-50%);
+	margin-top: 10vh;
 }
 
 #contact-container h2 {
@@ -491,7 +495,7 @@ footer {
     text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8);
     text-align: justify;
     font-size: clamp(0.4em, 1.2vw, 1.2em);
-    font-family: 'Times New Roman', Times, serif;
+    font-family: Arial, Helvetica, sans-serif;
     /* font-weight: 300; */
     /* margin: 10px 0; */
     width: 30%;
@@ -505,10 +509,11 @@ footer nav ul {
     padding: 0;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-    margin-bottom: 10%;
-    margin-left: 2%;
+    align-items: center; /* Centre les éléments horizontalement */
+    justify-content: center; /* Centre les éléments verticalement */
+    margin: 0;
+    height: 100%;
+	margin-top: 5vh;
 }
 
 footer nav ul li a {
@@ -517,8 +522,11 @@ footer nav ul li a {
     text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.8);
     padding: 10px 20px;
     /* background-color: #1e1e1e; */
-    font-size: clamp(0.6em, 1.2vw, 1.2em);
-    font-family: 'Times New Roman', Times, serif;
+    font-size: clamp(1.2em, 1.7vw, 1.7em);
+    font-family: Arial, Helvetica, sans-serif;
+	/* text-align: center; */
+	justify-content: center;
+	
 }
 
 
@@ -653,31 +661,35 @@ footer nav ul li a {
 }
 
 .projects42 {
-	/* background-color: #252525;
-	padding: 2vh;
-	border-radius: 2vh;
-	border: 2px solid #ffffff;
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-	flex: 1;
-	min-width: 25vh;
-	max-width: 70vh; */
-	/* text-align: center;
-	font-style: justify; */
-	/* min-height: 40vh;
-	max-height: 80vh;
-	height: 80vh; */
-	background-color: #282828;
-	padding: 3vh;
-	border-radius: 2vh;
-	border: 2px solid #ffffff;
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-	flex: 1;
-	min-width: 25vh;
-	max-width: 50vh;
-	text-align: left;
-	font-style: justify;
-	min-height: 50vh; /* Augmente la hauteur minimale */
-	max-height: 90vh; /* Augmente la hauteur maximale */
+    position: relative;  
+    background-color: #282828;
+    padding: 3vh;
+    border-radius: 2vh;
+    border: 2px solid #000000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    min-width: 25vh;
+    max-width: 50vh;
+    text-align: left;
+    font-style: justify;
+    /* Supprimer les propriétés height pour laisser le contenu définir la taille */
+    height: auto;  /* Ajuste la hauteur en fonction du contenu */
+    max-height: none;  /* Empêche la hauteur maximale de restreindre le contenu */
+}
+
+.projects42 nav ul {
+    position: absolute;  /* Absolu pour fixer l'icône dans le coin */
+    bottom: 10px;        /* Ajuste la distance du bas */
+    left: 10px;          /* Ajuste la distance du côté gauche */
+    margin: 0;
+    padding: 0;
+}
+
+.projects42 nav ul .icon {
+    width: 4vw;
+    height: auto;
+    display: block;
+    z-index: 10;  /* S'assurer que l'icône est au-dessus des autres éléments */
 }
 
 .ecole-42 {
@@ -702,10 +714,10 @@ footer nav ul li a {
 
 .ecole-42 h3 {
 	margin-bottom: 2vh;
-	font-size: clamp(0.8em, 1.2vw, 1.2em); 
+	font-size: clamp(0.8em, 1.5vw, 1.5em); 
 	color: #ffffff;
 	text-decoration: underline;
-	margin-top: 2vh;
+	margin-top: 4vh;
 	flex-direction: column;
 }
 
@@ -739,11 +751,12 @@ footer nav ul li a {
 }
 
 .ecole-42 p {
-	font-size: 1vw;
-	font-size: clamp(0.5em, 1vw, 1em);
+	font-size: 1.2vw;
+	font-size: clamp(0.5em, 1.2vw, 1.2em);
 	color: #ffffff;
 	text-align: justify;
 	font-family: Arial, Helvetica, sans-serif;
+	margin-bottom: 15vh;
 }
 
 #projet_cub3d {
@@ -786,20 +799,6 @@ footer nav ul li a {
 	background-size: 120%; /* Zoom à 120% */
 }
 
-.projects42 nav ul {
-	list-style: none;
-	padding: 10px 20px;
-	position: relative; 
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-start;
-}
-
-.projects42 nav ul .icon {
-	width: 3vw;
-	height: auto;
-	margin-left: 8px; /* Ajoute un espace entre le texte et l'icône */
-}
 
 
 .cards-containert {
