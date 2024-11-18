@@ -805,11 +805,44 @@ footer nav ul li a {
 }
 
 
-
 .cards-containert {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+}
+
+
+#lang-text {
+    color: #ffffff;
+    font-size: 1.5vw;
+    font-size: clamp(0.5em, 1.5vw, 1.5em); /* 16px est la taille minimale, 1.2vw est la taille idéale, 24px est la taille maximale */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.lang-list {
+	display: none;
+    position: absolute;
+	top: 50%;
+    left: 50%;
+    background-color: #333;
+    padding: 10px;
+    border-radius: 5px;
+    list-style: none;
+	z-index: 9999;
+	width: 30vh;
+	transform: translate(-50%, -50%);
+	height: 30vh;
+	text-align: center;
+}
+
+.lang-item {
+    color: rgb(0, 0, 0);
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.lang-item:hover {
+    background-color: #444;
 }
 
 @media screen and (max-width: 768px) {

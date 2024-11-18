@@ -203,5 +203,112 @@ document.addEventListener("DOMContentLoaded", function() {
 	});
 
 
+    const langButton = document.getElementById('lang-button');
+    const langText = document.getElementById('lang-text');
+    const langList = document.getElementById('lang-list');
+    const langItems = document.querySelectorAll('.lang-item');
+    
+    // Cacher ou afficher la liste des langues au clic sur le bouton
+    langButton.addEventListener('click', function() {
+        if (langList.style.display === 'block') {
+            langList.style.display = 'none';  // Masquer la liste
+        } else {
+            langList.style.display = 'block'; // Afficher la liste
+        }
+    });
+    
+    // Langues définies
+    const fr = {
+        'home': 'Accueil',
+        'about': 'À propos',
+        'projects': 'Projets',
+        'contact': 'Contact',
+        'toggleButton': 'Menu',
+        'closeButtonPanel': 'Fermer',
+        'lang': 'Langue',
+        'lang-menu': ['Français', 'Anglais', 'Español'],
+        'Code par ilyan': 'Code Par Ilyan',
+        'Mon experience': 'Mon expérience',
+        'Etudiant a 42 lyon': 'Étudiant à 42 Lyon',
+        "En tant qu'étudiant à l'école 42, je me consacre à l'apprentissage continu en informatique. Je développe mes compétences en programmation et en résolution de problèmes techniques au sein de cette école innovante.": "En tant qu'étudiant à l'école 42, je me consacre à l'apprentissage continu en informatique. Je développe mes compétences en programmation et en résolution de problèmes techniques au sein de cette école innovante. ",
+        'développeur de jeux vidéo': 'Développeur de jeux vidéo',
+    };
+    
+    const en = {
+        'home': 'Home',
+        'about': 'About',
+        'projects': 'Projects',
+        'contact': 'Contact',
+        'toggleButton': 'Menu',
+        'closeButtonPanel': 'Close',
+        'lang': 'Language',
+        'lang-menu': ['French', 'English', 'Spanish'],
+        'Code par ilyan': 'Code By Ilyan',
+        'Mon experience': 'My experience',
+        'Etudiant a 42 lyon': 'Student at 42 Lyon',
+        "En tant qu'étudiant à l'école 42, je me consacre à l'apprentissage continu en informatique. Je développe mes compétences en programmation et en résolution de problèmes techniques au sein de cette école innovante.": "As a student at 42 school, I am dedicated to continuous learning in computer science. I am developing my programming skills and technical problem-solving within this innovative school.",
+        'développeur de jeux vidéo': 'Video game developer',
+    };
+    
+    const es = {
+        'home': 'Inicio',
+        'about': 'Acerca de',
+        'projects': 'Proyectos',
+        'contact': 'Contacto',
+        'toggleButton': 'Menú',
+        'closeButtonPanel': 'Cerrar',
+        'lang': 'Idioma',
+        'lang-menu': ['Francés', 'Inglés', 'Español'],
+        'Code par ilyan': 'Código Por Ilyan',
+        'Mon experience': 'Mi experiencia',
+        'Etudiant a 42 lyon': 'Estudiante en 42 Lyon',
+        "En tant qu'étudiant à l'école 42, je me consacre à l'apprentissage continu en informatique. Je développe mes compétences en programmation et en résolution de problèmes techniques au sein de cette école innovante.": "Como estudiante en la escuela 42, estoy dedicado al aprendizaje continuo en ciencias de la computación. Estoy desarrollando mis habilidades de programación y resolución de problemas técnicos dentro de esta escuela innovadora.",
+        'développeur de jeux vidéo': 'Desarrollador de videojuegos',
+    };
+    
+    // Fonction pour mettre à jour les éléments avec data-translate
+    function changeLanguage(language) {
+        let translations;
+        if (language === 'fr') {
+            translations = fr;
+        } else if (language === 'en') {
+            translations = en;
+        } else if (language === 'es') {
+            translations = es;
+        }
+    
+        // Mettre à jour tous les éléments avec l'attribut data-translate
+        document.querySelectorAll('[data-translate]').forEach(element => {
+            const key = element.getAttribute('data-translate');
+            
+            // Si une traduction est trouvée, ne changer que le texte et préserver les autres éléments
+            if (translations[key]) {
+                // On peut tester si l'élément contient du texte seulement, ou d'autres éléments comme une image
+                element.innerText = translations[key];
+            }
+        });
+    }
+    
+    // Gestion des événements pour changer la langue
+    langItems.forEach(item => {
+        item.addEventListener('click', function() {
+            let language;
+            if (item.innerText === 'Français') {
+                language = 'fr';
+            } else if (item.innerText === 'Anglais') {
+                language = 'en';
+            } else if (item.innerText === 'Español') {
+                language = 'es';
+            }
+            langText.innerText = item.innerText; // Met à jour le texte du bouton
+            langList.style.display = 'none'; // Cache la liste
+            changeLanguage(language); // Applique la langue sélectionnée
+        });
+    });
+
+
+
+
+
 
 });

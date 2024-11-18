@@ -17,14 +17,23 @@
 	<header>
 		<button id="toggleButton"></button>
 		
+		<div id="lang">
+			<!-- <span id="lang-text">Français</span> -->
+			<ul id="lang-list" class="lang-list"> <!-- Liste déroulante des langues -->
+				<li class="lang-item">Français</li>
+				<li class="lang-item">Anglais</li>
+				<li class="lang-item">Español</li>
+			</ul>
+		</div>
+
 		<div id="panel" class="hidden">
 			<button id="closeButtonPanel"></button>
 			<nav class="nav-centerV2">
 				<ul>
-					<li><a href="#home">// Home</a></li>
-					<li><a href="#about">// Experience</a></li>
-					<li><a href="#projects">// Projets</a></li>
-					<li><a href="#contact">// Me Contacter</a></li>
+					<li><a href="#home" data-translate="home">// Home</a></li>
+					<li><a href="#about" data-translate="about">// About</a></li>
+					<li><a href="#projects" data-translate="projects">// Projects</a></li>
+					<li><a href="#contact" data-translate="contact">// Contact</a></li>
 				</ul>
 			</nav>
 			<!-- <h5>&copy; 2024 Ilyan_Bendib.com</h2> -->
@@ -34,23 +43,25 @@
 		<div class="container">
 			<div id="header-container">
 
-				<h1>Code By Ilyan</h1>
+				<h1 data-translate="Code par ilyan">Code Par Ilyan</h1>
 			</div>
 
 			<nav class="nav-right">
 				<ul>
 					<li><a href="https://github.com/ilyan42" target="_blank">GitHub<img src="image/github.png" alt="GitHub" class="icon"></a></li>
 					<li><a href="page1.php">Mail<img src="image/mail.png" alt="Mail" class="icon"></a></li>
-					<li><a href="page2.php">Profile<img src="image/pp.png" alt="Profile" class="icon"></a></li>
+					<button id="lang-button">
+						<span id="lang-text">Français</span> <!-- Le texte de la langue -->
+					</button>
 				</ul>
 			</nav>
 			
 			<nav class="nav-center">
 				<ul>
-					<li><a href="#home">// Home</a></li>
-					<li><a href="#about">// Experience</a></li>
-					<li><a href="#projects">// Projets</a></li>
-					<li><a href="#contact">// Me Contacter</a></li>
+					<li><a href="#home" data-translate="home">// Home</a></li>
+					<li><a href="#about" data-translate="about">// About</a></li>
+					<li><a href="#projects" data-translate="projects">// Projects</a></li>
+					<li><a href="#contact" data-translate="contact">// Contact</a></li>
 				</ul>
 			</nav>
 		</div>
@@ -59,7 +70,7 @@
     <main>
         <section id="about">
             <div class="container">
-                <h2>Mon experience</h2>
+                <h2 data-translate="Mon experience">Mon experience</h2>
             </div>
         </section>
 
@@ -68,15 +79,17 @@
         <!-- Conteneur pour le modèle 3D -->
 		<div class="cards-container">
 			<div class="card">
-				<h3><img src="image/logo42.png" alt="logo42" class="icon"> Etudiant a 42 lyon</h3>
-				<p class="custom-paragraphe">En tant qu'étudiant à l'école 42, je me consacre à l'apprentissage continu en informatique. Je développe mes compétences en programmation et en résolution de problèmes techniques au sein de cette école innovante.</p>
+				<h3 data-translate="Etudiant a 42 lyon">
+					<img src="image/logo42.png" alt="logo42" class="icon"> Etudiant a 42 lyon
+				</h3>				
+				<p data-translate="En tant qu'étudiant à l'école 42, je me consacre à l'apprentissage continu en informatique. Je développe mes compétences en programmation et en résolution de problèmes techniques au sein de cette école innovante." class="custom-paragraphe">En tant qu'étudiant à l'école 42, je me consacre à l'apprentissage continu en informatique. Je développe mes compétences en programmation et en résolution de problèmes techniques au sein de cette école innovante.</p>
 				<h3>
 					<img src="image/langage C icon.png" alt="langageC" class="icon">
 					<img src="image/langage c++ icon.png" alt="langageC++" class="icon">
 				</h3>
 			</div>
 			<div class="card">
-				<h4><img src="image/logounity.png" alt="logounity" class="icon"> Game Developer</h4>
+				<h4 data-translate="développeur de jeux vidéo"><img src="image/logounity.png" alt="logounity" class="icon"> Développeur de jeux vidéo</h4>
 				<p class="custom-paragraphe">En tant que passionné de jeux vidéo, je crée et développe mes propres jeux en utilisant des outils comme Unity. Je me concentre sur la réalisation de projets personnels qui me permettent d'explorer ma créativité et mes compétences techniques.</p>
 				<h4>
 					<img src="image/c sharp_icon.png" alt="unity" class="icon">
