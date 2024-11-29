@@ -563,12 +563,13 @@ p {
     gap: 20px; /* Espacement entre les images */
     width: 100%;
     margin-bottom: 20px;
+	/* width: clamp(10em, 35vw, 35em); */
 	margin-top: 2vh;
 }
 
 /* Style des images */
 #ImagePremierJeux img {
-	width: clamp(20em, 35vw, 35em);
+	width: clamp(18em, 35vw, 35em);
     height: auto;
     border-radius: 8px;
     object-fit: cover; /* Assure que l'image reste bien proportionnée */
@@ -1099,4 +1100,14 @@ footer nav ul li a {
 	.container-unreal {
 		height: 100vh;
 	}
+    .container-unreal {
+        flex-direction: column; /* Passe en colonnes */
+    }
+
+    .left-zone, .right-zone {
+        flex: none; /* Les zones ne prennent plus 50% */
+        width: 100%; /* Chaque zone occupe toute la largeur */
+        height: 50%; /* Chaque zone occupe 50% de la hauteur */
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); /* Rectangle plein */
+    }
 }
