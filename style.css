@@ -416,6 +416,206 @@ p {
 	height: 150px;
 }
 
+/* Conteneur principal */
+/* Conteneur principal */
+/* Conteneur principal */
+/* Conteneur principal */
+.container-unreal {
+    position: relative;
+    width: 80%;
+    height: 90vh;
+    margin: auto; /* Centré */
+    display: flex;
+    overflow: hidden;
+    border-radius: 20px; /* Coins arrondis */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Ombre extérieure */
+	margin-top: 20vh;
+	border : 2px solid #000000;
+	background: #000000;
+}
+
+/* Zone gauche */
+.left-zone {
+    flex: 1;
+    background: linear-gradient(135deg, #7e0000, #000000); /* Dégradé bleu */
+    clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%); /* Ajustement des angles */
+    position: relative;
+    margin: 0;
+}
+
+/* Zone droite */
+.right-zone {
+    flex: 1;
+    background: linear-gradient(135deg, #000000, #ffcc00); /* Dégradé orange */
+    clip-path: polygon(10% 0, 100% 0, 100% 100%, 0% 100%); /* Ajustement des angles */
+    position: relative;
+    margin: 0;
+}
+
+
+/* Boutons couvrant toute la zone */
+.zone-button1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    z-index: 2;
+}
+
+.zone-button2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    z-index: 2;
+}
+
+/* Images couvrant toute la zone */
+.zone-button1 img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+	object-fit: contain;
+    z-index: 1;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+/* Texte des boutons */
+.zone-button1 h6 {
+    position: relative;
+	top : -35%;
+	left : -10%;
+    z-index: 3;
+    font-size: 2.5vw;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+	font-family: 'Black Ops One', cursive;
+}
+
+.zone-button2 h6 {
+	position: relative;
+	top : 0%;
+	left : 0%;
+	z-index: 3;
+	font-size: 24px;
+	font-weight: bold;
+	color: #fff;
+	text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Effet au survol */
+.zone-button:hover img {
+    opacity: 1; /* Image plus visible */
+}
+
+.premierJeux {
+    width: 80%;
+    margin: 20px auto; /* Centré avec un espacement autour */
+    display: none;
+    flex-direction: column;
+    align-items: center; /* Centré horizontalement */
+    justify-content: center; /* Centré verticalement */
+    border-radius: 15px;
+    padding: 20px;
+    background: #f9f9f9; /* Couleur de fond douce */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombre douce */
+
+}
+
+/* Conteneur d'images */
+#ImagePremierJeux {
+    display: none; /* Flex pour disposer les images en ligne */
+    justify-content: center; /* Centré horizontalement */
+    flex-wrap: wrap; /* Permet de faire passer les images à la ligne si nécessaire */
+    align-items: center; /* Centré verticalement */
+    gap: 20px; /* Espacement entre les images */
+    width: 100%;
+    margin-bottom: 20px;
+	margin-top: 2vh;
+}
+
+/* Style des images */
+#ImagePremierJeux img {
+	width: clamp(20em, 35vw, 35em);
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover; /* Assure que l'image reste bien proportionnée */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Ombre autour des images */
+}
+
+
+/* Conteneur des liens */
+#LinkPremierJeux {
+    display: none;
+    flex-direction: column; /* Alignement des liens en colonne */
+    gap: 2vh; /* Espacement entre les liens */
+    width: 10vw; /* Ajuste la largeur au contenu */
+	width: clamp(10em, 15vw, 15em);
+    margin-left: 2vh;
+    margin-top: 1vh; /* Espacement par rapport au dessus */
+    align-items: left; /* Centre les liens horizontalement */
+}
+
+/* Style des liens */
+#LinkPremierJeux a {
+    font-size: 16px;
+    font-weight: bold;
+    color: #0066cc; /* Bleu clair */
+    text-decoration: none;
+    padding: 10px 20px;
+    background: #e0e0e0; /* Fond gris clair */
+    border-radius: 5px;
+    transition: background 0.3s ease, color 0.3s ease;
+    display: inline-block; /* Pour éviter qu'ils ne prennent toute la largeur */
+    text-align: left; /* Centrer le texte dans chaque lien */
+}
+
+/* Effet au survol des liens */
+#LinkPremierJeux a:hover {
+    background: #0066cc; /* Fond bleu clair au survol */
+    color: #fff; /* Texte blanc */
+}
+
+
+
+
+
+
+
+
+
 
 
 #cursor-light {
@@ -595,7 +795,7 @@ footer nav ul li a {
     width: 50px; /* Largeur du bouton */
     height: 50px; /* Hauteur du bouton */
     border-radius: 50%; /* Forme circulaire */
-	background-image: url('image/parametter_icon.png'); /* Image de fond */
+	background-image: url('image/option.png'); /* Image de fond */
     background-size: 40px 40px; /* Ajuste la taille de l'image */
     background-position: center; /* Centre l'image dans le bouton */
     background-repeat: no-repeat; /* Empêche la répétition de l'image */
@@ -869,6 +1069,10 @@ footer nav ul li a {
     outline: none;
 }
 
+
+
+
+
 @media screen and (max-width: 768px) {
 
 	.nav-center ul {
@@ -891,5 +1095,8 @@ footer nav ul li a {
 	}
 	#cursor-light {
 		display: none;
+	}
+	.container-unreal {
+		height: 100vh;
 	}
 }
