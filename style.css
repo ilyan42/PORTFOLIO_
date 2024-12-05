@@ -764,7 +764,7 @@ footer nav ul li a {
 #panel.show {
     visibility: visible;
     opacity: 1;
-    left: 1%;
+    left: 0%;
     transform: translateX(0); /* Ajout d'une transformation */
 }
 
@@ -889,12 +889,14 @@ footer nav ul li a {
     left: 10px;          /* Ajuste la distance du côté gauche */
     margin: 0;
     padding: 0;
+    display: flex;
+    gap : 10px;
 }
 
 .projects42 nav ul .icon {
-    width: 4vw;
+    width: 2.5vw;
     height: auto;
-    display: block;
+    display: inline-block;
     z-index: 10;  /* S'assurer que l'icône est au-dessus des autres éléments */
 }
 
@@ -1014,9 +1016,8 @@ footer nav ul li a {
 
 
 #lang-text {
-    color: #ffffff;
-    font-size: 1.5vw;
-    font-size: clamp(0.5em, 1.5vw, 1.5em); /* 16px est la taille minimale, 1.2vw est la taille idéale, 24px est la taille maximale */
+    color: #a52424;
+    font-size: clamp(1em, 1.5vw, 1.5em); /* 16px est la taille minimale, 1.2vw est la taille idéale, 24px est la taille maximale */
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -1057,7 +1058,6 @@ footer nav ul li a {
     border: none; /* Retirer les bordures par défaut du bouton */
     cursor: pointer; /* Donner une indication visuelle qu'il est cliquable */
     transition: background-color 0.3s, transform 0.3s; /* Augmenté à 0.5s */
-	font-size: 0.8vw;
 }
 
 .styled-button:hover {
