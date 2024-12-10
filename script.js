@@ -351,11 +351,13 @@ document.addEventListener("DOMContentLoaded", function() {
 	const ImagePremierJeux = document.getElementById('ImagePremierJeux');
 	const LinkPremierJeux = document.getElementById('LinkPremierJeux');
 	const containerUnreal = document.querySelector('.container-unreal');
+    const backButton = document.getElementById('back');
 	
 	// Ajouter un événement au bouton
 	const firstGameButton = document.getElementsByClassName('zone-button1')[0];  // Prendre le premier élément de la collection
 	
-	if (firstGameButton) {
+	if (firstGameButton)
+    {
 		firstGameButton.addEventListener('click', function() {
 			// Masquer la zone gauche et droite
 			if (leftZones.length > 0) {
@@ -376,6 +378,37 @@ document.addEventListener("DOMContentLoaded", function() {
 			if (containerUnreal) {
 				containerUnreal.style.background = 'linear-gradient(135deg, #7e0000, #000000)';
 			}
+            if (backButton) {
+                backButton.style.display = 'flex';  // Afficher le bouton de retour
+            }
 		});
 	}
+
+    if (backButton)
+    {
+        backButton.addEventListener('click', function() {
+            // Afficher la zone gauche et droite
+            if (leftZones.length > 0) {
+                leftZones[0].style.display = 'flex';  // Afficher le premier élément de la collection
+            }
+            if (rightZones.length > 0) {
+                rightZones[0].style.display = 'flex';  // Afficher le premier élément de la collection
+            }
+            if (premierJeux.length > 0) {
+                premierJeux[0].style.display = 'none';  // Masquer le premier élément de la collection
+            }
+            if (ImagePremierJeux) {
+                ImagePremierJeux.style.display = 'none';  // Masquer l'image
+            }
+            if (LinkPremierJeux) {
+                LinkPremierJeux.style.display = 'none';  // Masquer le lien
+            }
+            if (containerUnreal) {
+                containerUnreal.style.background = '#000000';
+            }
+            if (backButton) {
+                backButton.style.display = 'none';  // Masquer le bouton de retour
+            }
+        });
+    }
 });
