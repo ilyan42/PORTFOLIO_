@@ -207,15 +207,36 @@ document.addEventListener("DOMContentLoaded", function() {
     const langText = document.getElementById('lang-text');
     const langList = document.getElementById('lang-list');
     const langItems = document.querySelectorAll('.lang-item');
+    const closeButtonLang = document.getElementById('closeButtonLang');
+
+    // Fonction pour ouvrir/fermer la liste des langues
+    function toggleLangList() {
+        langList.classList.toggle('active'); // Bascule la classe 'active' pour ouvrir/fermer
+    }
     
-    // Cacher ou afficher la liste des langues au clic sur le bouton
-    langButton.addEventListener('click', function() {
-        if (langList.style.display === 'block') {
-            langList.style.display = 'none';  // Masquer la liste
-        } else {
-            langList.style.display = 'block'; // Afficher la liste
-        }
+    // Fonction pour fermer la liste des langues
+    function closeLangList() {
+        langList.classList.remove('active');
+    }
+    
+    // Ouvre ou ferme la liste des langues au clic sur le bouton
+    langButton.addEventListener('click', toggleLangList);
+    
+    // Ferme la liste des langues lorsque l'on clique sur un item de langue
+    langItems.forEach(item => {
+        item.addEventListener('click', () => {
+            // Vous pouvez éventuellement mettre à jour `langText` avec le texte de la langue sélectionnée
+            langText.textContent = item.textContent;
+            closeLangList(); // Ferme la liste après avoir sélectionné une langue
+        });
     });
+    
+    // Ferme la liste des langues lorsqu'on clique sur le bouton "Back"
+    closeButtonLang.addEventListener('click', closeLangList);
+
+    // Fermer la liste des langues au clic sur un lien
+
+
     
     // Langues définies
     const fr = {
@@ -339,7 +360,7 @@ document.addEventListener("DOMContentLoaded", function() {
 			const langText = document.getElementById('lang-text');
 			const langList = document.getElementById('lang-list');
 			langText.innerText = item.innerText; // Met à jour le texte du bouton avec emoji inclus
-			langList.style.display = 'none'; // Cache la liste
+			langList.style.display = closeLangList(); // Ferme la liste des langues après avoir sélectionné une langue
 			changeLanguage(language); // Applique la langue sélectionnée
 		});
 	});
@@ -411,4 +432,22 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         });
     }
+
+    // const toggleLangButton = document.getElementById('lang-button');
+    // const langgList = document.querySelector('.lang-list');
+
+    // toggleLangButton.addEventListener('click', () => {
+    //     if (langgList.classList.contains('active')) {
+    //         langgList.classList.remove('active'); // Cache la liste
+    //         setTimeout(() => {
+    //             langgList.style.display = 'none'; // Cache complètement après l'animation
+    //         }, 500); // Correspond à la durée de la transition CSS
+    //     } else {
+    //         langgList.style.display = 'block'; // Affiche la liste
+    //         setTimeout(() => {
+    //             langgList.classList.add('active'); // Démarre la transition
+    //         }, 10); // Petit délai pour garantir l'animation
+    //     }
+    // });
+
 });

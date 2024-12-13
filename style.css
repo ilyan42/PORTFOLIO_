@@ -1042,28 +1042,63 @@ footer nav ul li a {
     min-height: 100vh;
 }
 
+#lang {
+    position: relative; /* Position relative pour positionner le bouton à l'intérieur du panel */
+    z-index: 9995;
+}
+
 
 #lang-text {
     color: #ffffff;
-    font-size: clamp(1em, 1.5vw, 1.5em); /* 16px est la taille minimale, 1.2vw est la taille idéale, 24px est la taille maximale */
+    font-size: clamp(1em, 1.5vw, 1.5em);
     font-family: Arial, Helvetica, sans-serif;
 }
 
 .lang-list {
-	display: none;
-    position: absolute;
-	top: 50%;
+    visibility: hidden; /* Masqué par défaut */
+    position: fixed;
+    top: -50%; /* Initialement en dehors de la vue */
     left: 50%;
-    background-color: #333;
+    background-color: rgba(0, 0, 0, 0.461); /* Fond semi-transparent */
+    backdrop-filter: blur(10px); /* Flou en arrière-plan */
     padding: 10px;
-    border-radius: 5px;
+    border-radius: 15px;
     list-style: none;
-	z-index: 9999;
-	width: 30vh;
-	transform: translate(-50%, -50%);
-	height: 30vh;
-	text-align: center;
+    z-index: 9990;
+    width: 30vh;
+    height: 30vh;
+    transform: translate(-50%, 0%);
+    text-align: center;
+    opacity: 0; /* Initialement transparent */
+    transition: top 0.5s ease-in-out, opacity 0.5s ease-in-out, transform 0.5s ease-in-out, visibility 0s 0.5s;
 }
+
+.lang-list.active {
+    visibility: visible; /* Rendre visible */
+    opacity: 1; /* Complètement visible */
+    top: 0%; /* Déplace le panneau vers le haut */
+    transform: translate(-50%, 0%);
+    transition: top 0.5s ease-in-out, opacity 0.5s ease-in-out, transform 0.5s ease-in-out, visibility 0s;
+}
+
+.closeButtonLang {
+    position: absolute;
+    bottom: 10px; /* Décale le bouton de quelques pixels du bas */
+    right: 10px; /* Décale le bouton de quelques pixels de la droite */
+    color: #ffffff;
+    font-size: 1.5em;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    /* z-index: 10000; */
+}
+
+.closeButtonLang:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
 
 .lang-item {
     color: rgb(255, 255, 255);
